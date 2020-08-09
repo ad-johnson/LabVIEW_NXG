@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="49BD6D791287E691DF8D2C2D01D00CDD36C54AADEADB0ABC7DE55A16E880AA180A7106B2F4A861D7CF4DEB3865498B3CFF07A379F7645BF9EA000BEFDC6B0577" Timestamp="1D657A79CD5323E" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@06279977c4b041a49cedbda10d6a6cfa" Id="af4e79cd246c453984c911ac32634166" xmlns="http://www.ni.com/MocCommon">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;A structured Test Result format for display by a Test Suite.&amp;nbsp; Typically, a concrete Test will populate the Class Under Test and Test Id and leave the Detail and Result fields to be populated by an Asserter.&lt;/p&gt;</p.UserDescription>
+		<Icon Id="bbee5066846642d6a4c274c087c6c2ad" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="e29c53e5d5ca4f8d8010c4512b8a11fd" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="f812892e22344e599eafcb2e0f8d1c1e" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@06279977c4b041a49cedbda10d6a6cfa" Id="35a7d21569b74b55adf14c532a07c611" Name="Test Formatter">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>""</Field1>
+					<Field2>""</Field2>
+					<Field3>False</Field3>
+					<Field4>""</Field4>
+				</Cluster>
+			</p.DefaultValue>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="93fe8ced863f4eb4a98ab04b2750579b" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="5912ae2911214af0ae251c3b0288e89b" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="6082452209fb444eb0d8197a5150894f" Name="FormattedTestResult.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="527c6ab77f3e42679a8c3fd0d684da20" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Indicator" Id="b97628f108024ca8a364eb6365c80c29" xmlns="http://www.ni.com/MocCommon">
+					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@06279977c4b041a49cedbda10d6a6cfa" Height="[float]128" Id="b4f678ead82d4ca4b83d79035c0011da" Label="[UIModel]5e3b352930204888b9192b3e70a2fba6" Left="[float]72" TabIndex="[int]0" Top="[float]56" Value="{DataItemBinding Id=35a7d21569b74b55adf14c532a07c611}" Width="[float]744" xmlns="http://www.ni.com/PanelCommon">
+						<StringControl AcceptsReturn="[bool]False" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="831cb18619334189a236128d96e854cf" IsReadOnly="[bool]True" Label="[UIModel]e1d613c0925143ad864c3f0acaa4c227" Left="[float]351" TabIndex="[int]0" Text="{ClusterBinding FieldName=Test\ ID}" Top="[float]23" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]327" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Id of the Test</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="e1d613c0925143ad864c3f0acaa4c227" LabelOwner="[UIModel]831cb18619334189a236128d96e854cf" Left="[float]351" Text="[string]Test ID" Top="[float]3" Width="[float]36" />
+						<LED BaseName="[string]Round LED" FalseBackground="[SMSolidColorBrush]#ffff0000" FalseContent="[string]Off" Height="[float]24" Id="d56a52131783432eb3948ebb6f801781" IsReadOnly="[bool]True" Label="[UIModel]b4bb160192a446bfa2ebb690ce4e3867" Left="[float]699" Shape="[LEDShape]Round" TabIndex="[int]1" Top="[float]49" TrueBackground="[SMSolidColorBrush]#ff00b050" TrueContent="[string]On" Value="{ClusterBinding FieldName=Pass-Fail}" Width="[float]24" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Test result</p.InfoTipDescription>
+						</LED>
+						<Label Height="[float]0" Id="b4bb160192a446bfa2ebb690ce4e3867" LabelOwner="[UIModel]d56a52131783432eb3948ebb6f801781" Left="[float]699" Text="[string]Pass-Fail" Top="[float]29" Visible="[bool]False" Width="[float]0" />
+						<StringControl AcceptsReturn="[bool]False" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="751d605c15124b7582b8588fb1fed6c6" IsReadOnly="[bool]True" Label="[UIModel]6c127c1dca014c058f913ac0220e0030" Left="[float]14" TabIndex="[int]2" Text="{ClusterBinding FieldName=Class\ Under\ Test}" Top="[float]23" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]319" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Class being tested</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="6c127c1dca014c058f913ac0220e0030" LabelOwner="[UIModel]751d605c15124b7582b8588fb1fed6c6" Left="[float]14" Text="[string]Class Under Test" Top="[float]3" Width="[float]87" />
+						<StringControl AcceptsReturn="[bool]False" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="3782645828884448ad432ef5931f27cc" IsReadOnly="[bool]True" Label="[UIModel]91eae678249e45c5941cd7308d649094" Left="[float]14" TabIndex="[int]3" Text="{ClusterBinding FieldName=Detail}" Top="[float]77" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]664" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Message describing test result - typically populated by an assertion</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="91eae678249e45c5941cd7308d649094" LabelOwner="[UIModel]3782645828884448ad432ef5931f27cc" Left="[float]14" Text="[string]Detail" Top="[float]57" Width="[float]31" />
+					</Cluster>
+					<Label Height="[float]16" Id="5e3b352930204888b9192b3e70a2fba6" LabelOwner="[UIModel]b4f678ead82d4ca4b83d79035c0011da" Left="[float]72" Text="[string]Test Formatter" Top="[float]36" Width="[float]76" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="06279977c4b041a49cedbda10d6a6cfa">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Class Under Test" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Test ID" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Pass-Fail" DataType="Boolean" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Detail" DataType="String" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

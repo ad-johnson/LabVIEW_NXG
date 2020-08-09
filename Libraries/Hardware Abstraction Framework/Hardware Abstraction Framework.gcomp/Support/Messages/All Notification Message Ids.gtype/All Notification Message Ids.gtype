@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="0CB7B75C80FFE86C7748BD29A2DC2015A6272207C1411CBFA77F2E204B1708E7C8EF752F85B9EBC900E6D88CD208A1181907C1942CE14CAA9742C7810D1BD324" Timestamp="1D66E4BB39AB787" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@68066c06aad7435481b79f7ae2e590f2" Id="ce2c535cbb9a4b87b59210bb80ff760b" xmlns="http://www.ni.com/MocCommon">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;A complete list of all Message IDs used to send to framework consumers&amp;nbsp;to ensure consistency across use.&lt;/p&gt;</p.UserDescription>
+		<Icon Id="3fcb39dcd49f4b44864aad23bd0cf2b0" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="b75755e91b79401195c533f5fbfe0ccb" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="5cecb9f87bb145b783e77f679f144e24" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@68066c06aad7435481b79f7ae2e590f2" Id="e4cf6e9003c04e4d9b1f356d383796c1" Name="Message IDs">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>Initialise</Field1>
+					<Field2>Exit</Field2>
+					<Field3>Error</Field3>
+					<Field4>Result</Field4>
+					<Field5>Done</Field5>
+				</Cluster>
+			</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;A complete list of all Message IDs used to send to framework consumers&amp;nbsp;to ensure consistency across use.&lt;/p&gt;</p.UserDescription>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="e704e291fcaa45e68e0966caa35415c7" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="e2dc71ad9a4444278c77a13f1baca5db" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="da632d9f0e08494fb0a8dfdb49973268" Name="All Notification Message Ids.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="294ba64f5bb44d819730a2c05c276e8e" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Indicator" Id="890b27f6daa34ccca354e7e54b6b27dc" xmlns="http://www.ni.com/MocCommon">
+					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@68066c06aad7435481b79f7ae2e590f2" Height="[float]269" Id="b97babdf87cb4526b93d00acc76e0781" Label="[UIModel]edecd337c78240639b6137720800bd1d" Left="[float]34" TabIndex="[int]0" Top="[float]44" Value="{DataItemBinding Id=e4cf6e9003c04e4d9b1f356d383796c1}" Width="[float]104" xmlns="http://www.ni.com/PanelCommon">
+						<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">All Message IDs used to notify framework consumers</p.InfoTipDescription>
+						<StringControl AcceptsReturn="[bool]False" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="41781ab3cd694af095f681d94b0fc43c" IsReadOnly="[bool]True" Label="[UIModel]3e03c5439cd24dcda5420fee4622dfd4" Left="[float]8" TabIndex="[int]0" Text="{ClusterBinding FieldName=Initialise}" Top="[float]24" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Sent when the application needs to initialise itself.</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="3e03c5439cd24dcda5420fee4622dfd4" LabelOwner="[UIModel]41781ab3cd694af095f681d94b0fc43c" Left="[float]8" Text="[string]Initialise" Top="[float]4" Width="[float]43" />
+						<StringControl AcceptsReturn="[bool]False" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="91fff3521a304de49083b7720d814f95" IsReadOnly="[bool]True" Label="[UIModel]dc0693cbdc484b6998877e1f7a95e50f" Left="[float]8" TabIndex="[int]1" Text="{ClusterBinding FieldName=Exit}" Top="[float]74" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Sent when the application should exit.  Allows for a clean tidyup to occur.</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="dc0693cbdc484b6998877e1f7a95e50f" LabelOwner="[UIModel]91fff3521a304de49083b7720d814f95" Left="[float]8" Text="[string]Exit" Top="[float]54" Width="[float]19" />
+						<StringControl AcceptsReturn="[bool]False" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="9c643bf28cdc4342adae18209a0be0ff" IsReadOnly="[bool]True" Label="[UIModel]b230df44b29b43408344764f2df33cd8" Left="[float]8" TabIndex="[int]2" Text="{ClusterBinding FieldName=Error}" Top="[float]124" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Sent when an Error occurs.</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="b230df44b29b43408344764f2df33cd8" LabelOwner="[UIModel]9c643bf28cdc4342adae18209a0be0ff" Left="[float]8" Text="[string]Error" Top="[float]104" Width="[float]26" />
+						<StringControl AcceptsReturn="[bool]False" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="ed569f8c617d4d39992995eb66f76ea6" IsReadOnly="[bool]True" Label="[UIModel]f527ccaadc64e62917e5e60cfe85685" Left="[float]8" TabIndex="[int]3" Text="{ClusterBinding FieldName=Result}" Top="[float]175" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Sent by the Framework along with result data as an Executable finishes processing.</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="f527ccaadc64e62917e5e60cfe85685" LabelOwner="[UIModel]ed569f8c617d4d39992995eb66f76ea6" Left="[float]8" Text="[string]Result" Top="[float]155" Width="[float]32" />
+						<StringControl AcceptsReturn="[bool]False" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="b99ec22f833c49d88b0d72acf26f2054" IsReadOnly="[bool]True" Label="[UIModel]e6ca133f26d3414e86c6c4ad991d8a72" Left="[float]7" TabIndex="[int]4" Text="{ClusterBinding FieldName=Done}" Top="[float]228" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Sent by the Framework when all processing is complete.</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="e6ca133f26d3414e86c6c4ad991d8a72" LabelOwner="[UIModel]b99ec22f833c49d88b0d72acf26f2054" Left="[float]7" Text="[string]Done" Top="[float]208" Width="[float]29" />
+					</Cluster>
+					<Label Height="[float]16" Id="edecd337c78240639b6137720800bd1d" LabelOwner="[UIModel]b97babdf87cb4526b93d00acc76e0781" Left="[float]34" Text="[string]Message IDs" Top="[float]24" Width="[float]67" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="68066c06aad7435481b79f7ae2e590f2">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Initialise" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Exit" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Error" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Result" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Done" DataType="String" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

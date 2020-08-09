@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="A12E008E422AA0BD1DF8A828B688F73C1E157C94B503669E2E40C01C1303F2DC0CDDD776D5D00E7CAC22FDE7015BDEE4D94AB5614D634F7AE08250A6454C4957" Timestamp="1D665BD3B9348DC" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@da83ecd35f2c4d608f4d917ab376a189" Id="db225cd7af7c422d8f99189c3048053e" xmlns="http://www.ni.com/MocCommon">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Contains a mapping from an Executable Setting name to a Driver Setting name (equivalent for the instrument) and Data Type.&lt;/p&gt;</p.UserDescription>
+		<Icon Id="ffa26d57dd184e608bab04ca25a8019d" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="d74141f751604ef0ab6010157b9a6bb0" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="19f41fd67d304f76906b8c8c34d2f92c" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@da83ecd35f2c4d608f4d917ab376a189" Id="c93817ea378e477c952fc647a510c0be" Name="Mapping">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>""</Field1>
+					<Field2>""</Field2>
+					<Field3>""</Field3>
+				</Cluster>
+			</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Structure containing the mapping.&lt;/p&gt;</p.UserDescription>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="95997115185e4fd193d2719f930cd2ce" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="db10637d50c84e788b2e96f5973c559f" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="174f63e74ac4b1b9a1cfcd8568dbbea" Name="Setting Map Structure.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="37ec64b4d9bf49eaadb7aab0176fd11f" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="ef932f8384ce4ce7a7d7d02217bcfae9" xmlns="http://www.ni.com/MocCommon">
+					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@da83ecd35f2c4d608f4d917ab376a189" Height="[float]163" Id="c1e2b805784541a9a2f90e653f3dea7e" Label="[UIModel]b0dc0352dab84a53b8c68cdf4a65d9cc" Left="[float]96" TabIndex="[int]0" Top="[float]147" Value="{DataItemBinding Id=c93817ea378e477c952fc647a510c0be}" Width="[float]149" xmlns="http://www.ni.com/PanelCommon">
+						<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Structure containing the mapping</p.InfoTipDescription>
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="a11cc1f0e3bd4e94a95b75bbfdd9fc35" IsReadOnly="[bool]False" Label="[UIModel]ed261f7900f3455884c89ec44b1d9e7f" Left="[float]8" TabIndex="[int]0" Text="{ClusterBinding FieldName=Executable\ Setting\ Name}" Top="[float]26" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Executable Setting Name.</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="ed261f7900f3455884c89ec44b1d9e7f" LabelOwner="[UIModel]a11cc1f0e3bd4e94a95b75bbfdd9fc35" Left="[float]8" Text="[string]Executable Setting Name" Top="[float]6" Width="[float]133" />
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="3de112e0da6841acaa1399502ab8f4f6" IsReadOnly="[bool]False" Label="[UIModel]35a5cdc7eac54f82a64a126ee4435d33" Left="[float]8" TabIndex="[int]1" Text="{ClusterBinding FieldName=Driver\ Setting\ Name}" Top="[float]77" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Driver Setting name that is equivalent to the Executable Setting Name.</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="35a5cdc7eac54f82a64a126ee4435d33" LabelOwner="[UIModel]3de112e0da6841acaa1399502ab8f4f6" Left="[float]8" Text="[string]Driver Setting Name" Top="[float]57" Width="[float]108" />
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="6c1fd54a712343fc94bf904eeb15d2a7" IsReadOnly="[bool]False" Label="[UIModel]d7416bd4d18f462b9a4ccf2ef983141d" Left="[float]8" TabIndex="[int]2" Text="{ClusterBinding FieldName=Driver\ Setting\ Data\ Type}" Top="[float]125" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Driver Setting data type, from the available Valid Data Types.</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="d7416bd4d18f462b9a4ccf2ef983141d" LabelOwner="[UIModel]6c1fd54a712343fc94bf904eeb15d2a7" Left="[float]8" Text="[string]Driver Setting Data Type" Top="[float]105" Width="[float]129" />
+					</Cluster>
+					<Label Height="[float]16" Id="b0dc0352dab84a53b8c68cdf4a65d9cc" LabelOwner="[UIModel]c1e2b805784541a9a2f90e653f3dea7e" Left="[float]96" Text="[string]Mapping" Top="[float]127" Width="[float]48" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="da83ecd35f2c4d608f4d917ab376a189">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Executable Setting Name" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Driver Setting Name" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Driver Setting Data Type" DataType="String" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

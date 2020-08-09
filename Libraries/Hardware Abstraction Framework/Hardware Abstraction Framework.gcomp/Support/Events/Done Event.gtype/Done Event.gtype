@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="E8AD813823B983198E61E41F8BFBAD8DF601866A37D6965EBF80BBB99B0AB52C318B4841CE6693915328E8D42218E3F5F311F4125D9276A9F8386FD9DA16013E" Timestamp="1D6628E72A3D9AA" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@722b6719cec34ab39eb8b8f3b32586b8" Id="568149bb812f462c80ca382f64908532" xmlns="http://www.ni.com/MocCommon">
+		<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+			<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Support::Events::Event Data.gtype" />
+		</p.TypeDefinitionTargets>
+		<Icon Id="bd918c97700546fba5bc02c91589b224" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="5d3a778a5cd4e7b9a8f66cc5f71b0d4" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="35e19803f798435d9ee16da3e2c993c3" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@722b6719cec34ab39eb8b8f3b32586b8" Id="7f8dffe04f2748bdbf39780b79605f56" Name="Done Event">
+			<p.DefaultValue>0</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Support::Events::Event Data.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="5243749d549544519614fd0d2ceb4a8c" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="849441731c64c64b8bd2b3074f8afa9" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="ffc46f7fd5d6410480917c9240a26229" Name="Done Event.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="2ceb318521b344c8832e2fcbc19d8fea" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Indicator" Id="8857f0f7fd8a45b0b02f333f334d8f84" xmlns="http://www.ni.com/MocCommon">
+					<OpaqueRefnum BaseName="[string]OpaqueRefnum" Height="[float]24" Id="aeef159f40f14515b5ec78f281eda200" Label="[UIModel]8367d18c0a2642ba8685eec0272bac58" Left="[float]100" RefnumType="[Type]@722b6719cec34ab39eb8b8f3b32586b8" TabIndex="[int]0" Top="[float]100" Value="{DataItemBinding Id=7f8dffe04f2748bdbf39780b79605f56}" Width="[float]24" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<Label Id="8367d18c0a2642ba8685eec0272bac58" LabelOwner="[UIModel]aeef159f40f14515b5ec78f281eda200" Left="[float]100" Text="[string]Done Event" Top="[float]80" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="722b6719cec34ab39eb8b8f3b32586b8">
+			<Attributed AttributedType="@64e7c03cc3184d358220757ca8d02c44">
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]Refnum" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="64e7c03cc3184d358220757ca8d02c44">
+			<Event Id="1" Name="Done" GenericTypeDefinition="Void">
+				<Parameters>
+					<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="Optional" Name="event data" DataType="@be5d8b6eada047f49a320d92926669a1" />
+				</Parameters>
+			</Event>
+		</p.TypeReference>
+		<p.TypeReference TypeId="be5d8b6eada047f49a320d92926669a1">
+			<Attributed AttributedType="@1fb2455c77d748eb8d8cfc335f00cfca">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Support::Events" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="1fb2455c77d748eb8d8cfc335f00cfca">
+			<Typedef TypedefName="Event Data.gtype" UnderlyingType="@bb6675134c5a43d9a5f5e7b8f14bbb03" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="bb6675134c5a43d9a5f5e7b8f14bbb03">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Raiser Name" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Raiser Id" DataType="String" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

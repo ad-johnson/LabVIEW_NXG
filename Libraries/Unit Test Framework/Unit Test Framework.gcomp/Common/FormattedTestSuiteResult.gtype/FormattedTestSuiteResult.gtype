@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="8B170651B4EE13671D011A94EFD96A144AE73AEA4271018C51CF94E5CFEB38ECBAA3D0B7D74369D1BD54D683ADA90FD4FE058D0F017E9859CE2287CD92051684" Timestamp="1D657A7B74043D6" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@9fa599c3b23a4f20bdad8ae5833f69ea" Id="b5e91ed0e9db4ebeae6f7c24af8a8446" xmlns="http://www.ni.com/MocCommon">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;A type used to format the results of a Test Suite for display by a Test Coordinator.&lt;/p&gt;</p.UserDescription>
+		<Icon Id="9e1a993895b4057af11e939a4b58599" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="a6913ece8a1b4edaa9ba30a6d7865b16" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="ae5298f2929409d90321e45f6123434" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@9fa599c3b23a4f20bdad8ae5833f69ea" Id="4fe0ecb10de248969f65902bedb561c9" Name="FormattedSuiteResult">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>""</Field1>
+					<Field2>0</Field2>
+					<Field3>0</Field3>
+					<Field4>False</Field4>
+				</Cluster>
+			</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Representation of the results of running a suite of tests.&lt;/p&gt;</p.UserDescription>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="649c9f1009ef4a529f113f617848e8f0" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="c5760a7beadb48a6bea609b85cf877cd" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="6d530d33e07e4f32b08a3811bfe86b80" Name="FormattedTestSuiteResult.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="2be01073e454401c904fde3447ac14c4" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Indicator" Id="9975a4878a9145cebffa87361ab0924c" xmlns="http://www.ni.com/MocCommon">
+					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@9fa599c3b23a4f20bdad8ae5833f69ea" Height="[float]81" Id="7d8291fda87743b9a14c9212e7ff461b" Label="[UIModel]f4ff32cb0d9249978ed83fabb653f8f7" Left="[float]78" TabIndex="[int]0" Top="[float]74" Value="{DataItemBinding Id=4fe0ecb10de248969f65902bedb561c9}" Width="[float]743" xmlns="http://www.ni.com/PanelCommon">
+						<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Test Suite result</p.InfoTipDescription>
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="e16b66b3df06434e86941f97b7c85ddf" IsReadOnly="[bool]True" Label="[UIModel]d84a079afa6340ac965ab19d843eb32b" Left="[float]17" TabIndex="[int]0" Text="{ClusterBinding FieldName=Test\ Suite}" Top="[float]29" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]527" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Test Suite name</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="d84a079afa6340ac965ab19d843eb32b" LabelOwner="[UIModel]e16b66b3df06434e86941f97b7c85ddf" Left="[float]17" Text="[string]Test Suite" Top="[float]9" Width="[float]51" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="ea8e354d0a19495193b2c8c116eb6815" Interval="[uint]1" IsReadOnly="[bool]True" Label="[UIModel]ad48bec01ba241b3bcaf415ae068839c" Left="[float]564" TabIndex="[int]1" Top="[float]29" Value="{ClusterBinding FieldName=Passes}" ValueFormatter="[string]LV:0" ValueType="[Type]UInt32" Width="[float]38" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Number of tests that passed</p.InfoTipDescription>
+						</NumericText>
+						<Label Height="[float]16" Id="ad48bec01ba241b3bcaf415ae068839c" LabelOwner="[UIModel]ea8e354d0a19495193b2c8c116eb6815" Left="[float]564" Text="[string]Passes" Top="[float]9" Width="[float]34" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="f76b835de7c6491788ca389c35776537" Interval="[uint]1" IsReadOnly="[bool]True" Label="[UIModel]1ee0350a87604c26b9cd0822fe7a6039" Left="[float]623" TabIndex="[int]2" Top="[float]29" Value="{ClusterBinding FieldName=Fails}" ValueFormatter="[string]LV:0" ValueType="[Type]UInt32" Width="[float]36" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Number of tests that failed</p.InfoTipDescription>
+						</NumericText>
+						<Label Height="[float]16" Id="1ee0350a87604c26b9cd0822fe7a6039" LabelOwner="[UIModel]f76b835de7c6491788ca389c35776537" Left="[float]623" Text="[string]Fails" Top="[float]9" Width="[float]23" />
+						<LED BaseName="[string]Round LED" FalseBackground="[SMSolidColorBrush]#ffff0000" FalseContent="[string]Off" Height="[float]24" Id="d3d37af04843d49eb88482c79bb61d" IsReadOnly="[bool]True" Label="[UIModel]3ae337f2f17419cbe15735be377bc82" Left="[float]691" Shape="[LEDShape]Round" TabIndex="[int]3" Top="[float]29" TrueBackground="[SMSolidColorBrush]#ff00b050" TrueContent="[string]On" Value="{ClusterBinding FieldName=Pass-Fail}" Width="[float]24" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Quick glance pass/fail indicator</p.InfoTipDescription>
+						</LED>
+						<Label Height="[float]16" Id="3ae337f2f17419cbe15735be377bc82" LabelAlignment="[PartAlignment]TopCenter" LabelOwner="[UIModel]d3d37af04843d49eb88482c79bb61d" Left="[float]681" Text="[string]Pass-Fail" Top="[float]9" Width="[float]45" />
+					</Cluster>
+					<Label Height="[float]16" Id="f4ff32cb0d9249978ed83fabb653f8f7" LabelOwner="[UIModel]7d8291fda87743b9a14c9212e7ff461b" Left="[float]78" Text="[string]FormattedSuiteResult" Top="[float]54" Width="[float]114" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="9fa599c3b23a4f20bdad8ae5833f69ea">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Test Suite" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Passes" DataType="UInt32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Fails" DataType="UInt32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Pass-Fail" DataType="Boolean" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>
