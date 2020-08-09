@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="B1950F468FA0AF8E768684C16262817B7A54CFED992C2CEAFA6896169E06EC06D7A06DB8660A9EDFBB611721CAFD0E70553367059DE928812FC1794E8C0B9704" Timestamp="1D66E4AE8D7D91A" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@bb6675134c5a43d9a5f5e7b8f14bbb03" Id="945dcbc59e74465ba7c9c7944c986753" xmlns="http://www.ni.com/MocCommon">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Data structure passed when a framework event is raised.&lt;/p&gt;</p.UserDescription>
+		<Icon Id="17fc2e3e3e544070a6ef83da657868d7" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3034c3dc8ea147faa59f7729ff3b27ee" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="15fa707384ab414b92d4080606f69ac0" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@bb6675134c5a43d9a5f5e7b8f14bbb03" Id="a84a852eab4b492e96bb32b727b2a335" Name="Event Data Structure">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>""</Field1>
+					<Field2>""</Field2>
+				</Cluster>
+			</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Data structure used to provide raiser information for an event.&lt;/p&gt;</p.UserDescription>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="1a875dbe8a474812b11e3d341f9b43f2" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="9fe3ebfb2c3a40bcb81c33d364cbb264" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="e6fdf3c87ab1465bb393c958ac32bd78" Name="Event Data.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="fd9e04e228b64ef69e22afbf25d889b6" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="298c82d18ccf436fa1ba0ab03e2e4630" xmlns="http://www.ni.com/MocCommon">
+					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@bb6675134c5a43d9a5f5e7b8f14bbb03" Height="[float]146" Id="60e212d86de54f84aeb88015a54e5aaf" Label="[UIModel]d7f5a3fc4fa54a54883330a71aa9bf8d" Left="[float]44" TabIndex="[int]0" Top="[float]92" Value="{DataItemBinding Id=a84a852eab4b492e96bb32b727b2a335}" Width="[float]255" xmlns="http://www.ni.com/PanelCommon">
+						<StringControl AcceptsReturn="[bool]False" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="334a7442d8d940c794e106a50f91a63d" Label="[UIModel]60fba87d903342a29dabb9a95a93dcbc" Left="[float]10" TabIndex="[int]0" Text="{ClusterBinding FieldName=Raiser\ Name}" Top="[float]30" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]219" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Readable name of the raiser</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="60fba87d903342a29dabb9a95a93dcbc" LabelOwner="[UIModel]334a7442d8d940c794e106a50f91a63d" Left="[float]10" Text="[string]Raiser Name" Top="[float]10" Width="[float]67" />
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="6586d043ec0e4a26bb8c511142bac0d5" Label="[UIModel]c2d767681774d97962771f3727b8c92" Left="[float]10" TabIndex="[int]1" Text="{ClusterBinding FieldName=Raiser\ Id}" Top="[float]89" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]219" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">UUID of the raiser</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="c2d767681774d97962771f3727b8c92" LabelOwner="[UIModel]6586d043ec0e4a26bb8c511142bac0d5" Left="[float]10" Text="[string]Raiser Id" Top="[float]69" Width="[float]46" />
+					</Cluster>
+					<Label Height="[float]16" Id="d7f5a3fc4fa54a54883330a71aa9bf8d" LabelOwner="[UIModel]60e212d86de54f84aeb88015a54e5aaf" Left="[float]44" Text="[string]Event Data Structure" Top="[float]72" Width="[float]108" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="bb6675134c5a43d9a5f5e7b8f14bbb03">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Raiser Name" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Raiser Id" DataType="String" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

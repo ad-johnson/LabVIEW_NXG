@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="E4B3FD8BEEA7B83C2E22B711403AFED303FEDD67515A40A95EAE2306FDC4B6211C929B85475EFD909D230748C0AFCD1E42BB705DE584C730128908967953685F" Timestamp="1D65B8DACD12347" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@6ebbb0223674488285572b68b4383402" Id="96c303731dfc4cc38fa1582eee3a3472" xmlns="http://www.ni.com/MocCommon">
+		<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+			<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Support::Messages::Message.gtype" />
+		</p.TypeDefinitionTargets>
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Type to hold all the message queues used by the framework.&amp;nbsp; These are used for internal communication as well as external messaging for framework consumers &amp;ndash;&amp;nbsp;errors, results, progress etc.&lt;/p&gt;</p.UserDescription>
+		<Icon Id="71d455ace7b04949a26eedf5a949e161" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="334b0ab558b845d1a1e2ffbe23ebb0dd" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="9581a60b9a00465bbe77ef07f0e594b5" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@6ebbb0223674488285572b68b4383402" Id="54192718b7c42f3a1fe401aaac8135f" Name="Message Queues">
+			<p.DefaultValue>0_0_</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Support::Messages::Message.gtype" />
+			</p.TypeDefinitionTargets>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Container for all message queues.&lt;/p&gt;</p.UserDescription>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="665944683aa343a7aacf2c1799d354d4" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="e4a3f7b9d9e74c059ba5c09cf22701d1" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="d5fe75716734436b93ba127e4b15084c" Name="All Message Queues.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="cce35461bec4c9bb376c073014cfd9a" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="226a0b69fafa4f948f25aa7e2138f943" xmlns="http://www.ni.com/MocCommon">
+					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@6ebbb0223674488285572b68b4383402" Height="[float]114" Id="67bb28423ee5472b80d8b474216fee09" Label="[UIModel]ac736606289e48d999c44ec6d47d5532" Left="[float]58" TabIndex="[int]0" Top="[float]70" Value="{DataItemBinding Id=54192718b7c42f3a1fe401aaac8135f}" Width="[float]111" xmlns="http://www.ni.com/PanelCommon">
+						<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Container for all message queues</p.InfoTipDescription>
+						<OpaqueRefnum BaseName="[string]OpaqueRefnum" Height="[float]24" Id="c8e57051b3d04ec6ba980f3752fbc444" Label="[UIModel]f8a91c1f1c2b49b18d42179b77003970" Left="[float]9" RefnumType="[Type]@ad09babbe7f34c88aba7942b330b1d19" TabIndex="[int]0" Top="[float]20" Value="{ClusterBinding FieldName=Internal}" Width="[float]24" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Message queue for internal messaging</p.InfoTipDescription>
+						</OpaqueRefnum>
+						<Label Height="[float]16" Id="f8a91c1f1c2b49b18d42179b77003970" LabelOwner="[UIModel]c8e57051b3d04ec6ba980f3752fbc444" Left="[float]9" Text="[string]Internal" Top="[float]0" Width="[float]41" />
+						<OpaqueRefnum BaseName="[string]OpaqueRefnum" Height="[float]24" Id="a565e66ce1414ab0b81987ef45a3d2c2" Label="[UIModel]2eab047add194ce5a7a7177ce3793778" Left="[float]9" RefnumType="[Type]@ad09babbe7f34c88aba7942b330b1d19" TabIndex="[int]1" Top="[float]74" Value="{ClusterBinding FieldName=Notifications}" Width="[float]24" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Message queue for framework consumer notifications.</p.InfoTipDescription>
+						</OpaqueRefnum>
+						<Label Height="[float]16" Id="2eab047add194ce5a7a7177ce3793778" LabelOwner="[UIModel]a565e66ce1414ab0b81987ef45a3d2c2" Left="[float]9" Text="[string]Notifications" Top="[float]54" Width="[float]68" />
+					</Cluster>
+					<Label Height="[float]16" Id="ac736606289e48d999c44ec6d47d5532" LabelOwner="[UIModel]67bb28423ee5472b80d8b474216fee09" Left="[float]58" Text="[string]Message Queues" Top="[float]50" Width="[float]91" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="6ebbb0223674488285572b68b4383402">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Internal" DataType="@ad09babbe7f34c88aba7942b330b1d19" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Notifications" DataType="@ad09babbe7f34c88aba7942b330b1d19" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="ad09babbe7f34c88aba7942b330b1d19">
+			<Attributed AttributedType="@b1e424db4b8e4a4884f364fd6daced06">
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]Refnum" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="b1e424db4b8e4a4884f364fd6daced06">
+			<Composite Id="1" Name="NationalInstruments.SourceModel.DataTypes.Queue" ReferenceClass="" Sealed="" GenericTypeDefinition="@8df4ac86da134e4083db34816410b812">
+				<ClosedGenericParameters>
+					<TypeRef>@b519a193105d474fbb629762e3fcd918</TypeRef>
+				</ClosedGenericParameters>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="8df4ac86da134e4083db34816410b812">
+			<Attributed AttributedType="@ab8c912dc884453b9cf3e7cedfe558c8">
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]Refnum" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="b519a193105d474fbb629762e3fcd918">
+			<Attributed AttributedType="@9d43018306124fb38d0fb6169f579c23">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Support::Messages" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="ab8c912dc884453b9cf3e7cedfe558c8">
+			<Composite Id="1" Name="NationalInstruments.SourceModel.DataTypes.Queue" ReferenceClass="" Sealed="" GenericTypeDefinition="@8df4ac86da134e4083db34816410b812">
+				<GenericParameters>
+					<Generic GenericName="DataType" />
+				</GenericParameters>
+				<BaseType>Void</BaseType>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="9d43018306124fb38d0fb6169f579c23">
+			<Typedef TypedefName="Message.gtype" UnderlyingType="@e9bd8d6648c2464d9f6cf7f2665d6099" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="e9bd8d6648c2464d9f6cf7f2665d6099">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Message Id" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Message Data" DataType="@bd2232353db34e3ebe062acdcac878ce" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="bd2232353db34e3ebe062acdcac878ce">
+			<Composite Id="1" Name="Variant" Sealed="" GenericTypeDefinition="Void" BaseType="Void" />
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

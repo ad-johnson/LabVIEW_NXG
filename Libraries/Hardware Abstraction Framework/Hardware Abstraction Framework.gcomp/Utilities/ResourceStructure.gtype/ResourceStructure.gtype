@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="075D4FD21A7ED11CA600E2A68414E3D202ADF785028DE78B8B53A97C706FB9ECC03DAF44F16B888DECDBD5556622E4AE9673615A4267040AD39B7B5B19411CAD" Timestamp="1D659DF83028257" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@3b31be6a50824c3d90ab194971838d56" Id="55905a339ff8489e8234f715344c71e5" xmlns="http://www.ni.com/MocCommon">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Represents a summary Resource information type.&lt;/p&gt;</p.UserDescription>
+		<Icon Id="d248eb7821d840bbaf790ef50dfc4d94" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="b99e669b2b4742bbb0399dbb0d2af288" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="51a8cd7f7dd546e8b28c4422457a9ffc" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@3b31be6a50824c3d90ab194971838d56" Id="3c78acd662ed4127a859e2dd119d18f7" Name="Resource Summary">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>""</Field1>
+					<Field2>""</Field2>
+				</Cluster>
+			</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Structure to hold summary information about Resources connected to the system.&lt;/p&gt;</p.UserDescription>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="e753712c3a2a46e0a66ad3976c4d6b35" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="37862cd98a084a94bb5b71713f59bfe0" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="58aeb20cafb4437286d83773d9366c40" Name="DriverStructure.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="517717d3989947329f0e82069a2c1eb7" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="c4554615c55b46c19c946ded63bd89d4" xmlns="http://www.ni.com/MocCommon">
+					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@3b31be6a50824c3d90ab194971838d56" Height="[float]117" Id="81717fbc0d5744e5b62dd5ec2056a25a" Label="[UIModel]d40f3a9623584c92a16825fbb65e7564" Left="[float]72" TabIndex="[int]0" Top="[float]84" Value="{DataItemBinding Id=3c78acd662ed4127a859e2dd119d18f7}" Width="[float]244" xmlns="http://www.ni.com/PanelCommon">
+						<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Summary Resource details</p.InfoTipDescription>
+						<StringControl AcceptsReturn="[bool]False" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="3617e0861aab4a9aa7865b59a464e45c" Label="[UIModel]9a91c192e6684008a46d897e5bcd9050" Left="[float]10" TabIndex="[int]0" Text="{ClusterBinding FieldName=Alias}" Top="[float]22" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]210" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Driver alias, if defined to the system.</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="9a91c192e6684008a46d897e5bcd9050" LabelOwner="[UIModel]3617e0861aab4a9aa7865b59a464e45c" Left="[float]10" Text="[string]Alias" Top="[float]2" Width="[float]25" />
+						<StringControl AcceptsReturn="[bool]False" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="9b3f1d92875646da99280eeb1f54030e" Label="[UIModel]c2cc15103b24156997ac8d2cd9acf9b" Left="[float]9" TabIndex="[int]1" Text="{ClusterBinding FieldName=Canonical}" Top="[float]74" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]212" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Resource canonical name</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="c2cc15103b24156997ac8d2cd9acf9b" LabelOwner="[UIModel]9b3f1d92875646da99280eeb1f54030e" Left="[float]9" Text="[string]Canonical" Top="[float]54" Width="[float]52" />
+					</Cluster>
+					<Label Height="[float]16" Id="d40f3a9623584c92a16825fbb65e7564" LabelOwner="[UIModel]81717fbc0d5744e5b62dd5ec2056a25a" Left="[float]72" Text="[string]Resource Summary" Top="[float]64" Width="[float]102" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="3b31be6a50824c3d90ab194971838d56">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Alias" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Canonical" DataType="String" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

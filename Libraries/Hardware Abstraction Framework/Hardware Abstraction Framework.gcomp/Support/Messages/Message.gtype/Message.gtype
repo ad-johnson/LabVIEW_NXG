@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="347EC21E8E2E6823BFE70248564B90365A4D691BC5B7F4BF0B28C40282F934B292EECA8C82C1A94DD9AD2A8AD5D89C9C3C95CA1678861D4E7222985230D27B45" Timestamp="1D66E4BE39F325D" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@e9bd8d6648c2464d9f6cf7f2665d6099" Id="9ac13d0dcd744b89952bc2fe6cb30ab9" xmlns="http://www.ni.com/MocCommon">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Represents a message to pass in the Message Queue.&lt;/p&gt;</p.UserDescription>
+		<Icon Id="8534811551c54011a6742e569692c387" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="dafbfd089b724d52b1635faa54fa383f" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="e4ddf76b69ad435abe72ec832d835f89" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@e9bd8d6648c2464d9f6cf7f2665d6099" Id="369169a717c4f0dadba4617e7b3c805" Name="Message Structure">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>Unique identifier for the message.</Field1>
+					<Field2>
+						<Variant>
+							<InnerType>Void</InnerType>
+							<VariantData>null</VariantData>
+						</Variant>
+					</Field2>
+				</Cluster>
+			</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Message structure that is placed on the queue.&lt;/p&gt;</p.UserDescription>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="670d9b5ebc754ffcb52b355f6dff05d0" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="adbd0e8fffb24688a28a581e8a1855c4" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="81c5a3cdab554b2781d37be971b8bcc3" Name="Message.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="512eac1b89844e23a736e357274f33ba" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="c233b8c71ed44ec693eddbcc6e7ad972" xmlns="http://www.ni.com/MocCommon">
+					<Cluster AutoArrange="[AutoArrange]ArrangeVertically" ClusterType="[Type]@e9bd8d6648c2464d9f6cf7f2665d6099" Height="[float]164" Id="30e723074ce840d2a2a1f7bdc4aa631b" IsTabStop="[bool]True" Label="[UIModel]614ea104e95b46cd88c3106f471745d3" Left="[float]45" TabIndex="[int]0" Top="[float]60" Value="{DataItemBinding Id=369169a717c4f0dadba4617e7b3c805}" Width="[float]166" xmlns="http://www.ni.com/PanelCommon">
+						<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Message structure that is placed on the queue</p.InfoTipDescription>
+						<StringControl AcceptsReturn="[bool]False" Height="[float]25" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="4fdb35b2022447cd99d284dfeec01133" IsTabStop="[bool]True" Label="[UIModel]88cdec65ec7a41c7bd867666689f0191" Left="[float]4" TabIndex="[int]0" Text="{ClusterBinding FieldName=Message\ Id}" TextDisplayMode="[SMTextDisplayMode]Default" Top="[float]24" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]149" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Unique identifier for the message</p.InfoTipDescription>
+						</StringControl>
+						<Label Height="[float]16" Id="88cdec65ec7a41c7bd867666689f0191" LabelOwner="[UIModel]4fdb35b2022447cd99d284dfeec01133" Left="[float]4" Text="[string]Message Id" Top="[float]4" Width="[float]60" />
+						<VariantControl BaseName="[string]Variant" Height="[float]75" Id="b943871b76114af98aebf260e7be829c" IsTabStop="[bool]True" Label="[UIModel]154673996e7e421b9ccac398b8a920d2" Left="[float]4" TabIndex="[int]1" Top="[float]77" VariantValue="{ClusterBinding FieldName=Message\ Data}" Width="[float]150" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Message data construct.  The message receiver must know how to parse the contents.</p.InfoTipDescription>
+						</VariantControl>
+						<Label Height="[float]16" Id="154673996e7e421b9ccac398b8a920d2" LabelOwner="[UIModel]b943871b76114af98aebf260e7be829c" Left="[float]4" Text="[string]Message Data" Top="[float]57" Width="[float]75" />
+					</Cluster>
+					<Label Height="[float]16" Id="614ea104e95b46cd88c3106f471745d3" LabelOwner="[UIModel]30e723074ce840d2a2a1f7bdc4aa631b" Left="[float]45" Text="[string]Message Structure" Top="[float]40" Width="[float]98" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="e9bd8d6648c2464d9f6cf7f2665d6099">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Message Id" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Message Data" DataType="@bd2232353db34e3ebe062acdcac878ce" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="bd2232353db34e3ebe062acdcac878ce">
+			<Composite Id="1" Name="Variant" Sealed="" GenericTypeDefinition="Void" BaseType="Void" />
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>
