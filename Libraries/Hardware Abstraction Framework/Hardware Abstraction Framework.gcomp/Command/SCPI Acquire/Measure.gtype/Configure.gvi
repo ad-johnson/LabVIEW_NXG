@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="03238508499889D3A69FDCFC8030DDCD73AE08904D8011DC287D8DCA0BD58FE90456E89A50A2F5EB0A3990E8D5F47E82C9A5B953B991F53EDB6979701445B954" Timestamp="1D6731DF9AB367B" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="1D5E533729862FCACFBD456459B79544B1019DFAF868D42113B195B6F7CEC2C34AE21990F8A6BFE322F33817B4B5152A8BA436C95482DF2105384CDE82087F7E" Timestamp="1D674ACBC7C7F8D" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
@@ -9,6 +9,7 @@
 		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
 	</SourceModelFeatureSet>
 	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Sets up the Measure Executable with the function to run and a buffer for storing results on the Instrument.&lt;/p&gt;</p.UserDescription>
 		<Icon Id="18" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
 			<IconPanel Height="[float]40" Id="20" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
 				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" HorizontalAlignment="[HorizontalAlignment]Stretch" Id="4c124b3aa2594ac3a6667265a5735025" Left="[float]0" TemplateName="[string]Banner" Top="[float]0" VerticalAlignment="[VerticalAlignment]Stretch" Width="[float]40">
@@ -55,13 +56,13 @@
 				<p.Text>Error out</p.Text>
 			</NodeLabel>
 			<DataAccessor Bounds="130 360 40 15" DataItem="16" Id="29" Label="30" xmlns="http://www.ni.com/MocCommon">
-				<Terminal DataType="@db2da17826a34458b2e9a63276c23ecf" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@8fa9f2aa523a4de780d31a3cfd1944ca" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
 			<NodeLabel AttachedTo="29" Bounds="64 360 61 14" Id="30" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>Measure in</p.Text>
 			</NodeLabel>
 			<DataAccessor Bounds="575 385 40 15" DataItem="17" Id="31" Label="32" xmlns="http://www.ni.com/MocCommon">
-				<Terminal DataType="@db2da17826a34458b2e9a63276c23ecf" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@8fa9f2aa523a4de780d31a3cfd1944ca" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
 			<NodeLabel AttachedTo="31" Bounds="620 385 69 14" Id="32" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>Measure out</p.Text>
@@ -69,12 +70,12 @@
 			<CaseStructure Bounds="210 340 330 185" DataType="Error" Id="33" Selected="34" UserSelectorBounds="112 0 106.5 17">
 				<CaseStructure.Case Bounds="5 5 320 175" Id="34" Pattern="No Error">
 					<Wire Id="67" Joints="N(36:34)|(4,135) N(37:34)|(316,135)" xmlns="http://www.ni.com/PlatformFramework" />
-					<PropertyNode Bounds="110 40 135 50" HasErrorTerminals="False" Id="36bc6082394440fdafa11e56097fbc2b" InstanceDataType="@db2da17826a34458b2e9a63276c23ecf" ListViewAutoSize="False" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
+					<PropertyNode Bounds="110 40 135 50" HasErrorTerminals="False" Id="36bc6082394440fdafa11e56097fbc2b" InstanceDataType="@8fa9f2aa523a4de780d31a3cfd1944ca" ListViewAutoSize="False" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
 						<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 							<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Command::SCPI Acquire::Measure.gtype" />
 						</p.TypeDefinitionTargets>
 						<PropertyItemTerminal Action="Write" DataType="UInt16" Hotspot="0 15" Id="c0t0v" Path="Function" PathElementMemberKinds="Field" Usage="Required" />
-						<PropertyItemTerminal Action="Write" DataType="String" Hotspot="0 30" Id="c1t0v" Path="Store Name" PathElementMemberKinds="Field" Usage="Required" />
+						<PropertyItemTerminal Action="Write" DataType="String" Hotspot="0 30" Id="c1t0v" Path="Buffer Name" PathElementMemberKinds="Field" Usage="Required" />
 					</PropertyNode>
 					<Wire Id="f3cde56982ba4209add93fdb0a88b648" Joints="N(39:34)|(4,20) h(36) v(25) N(36bc6082394440fdafa11e56097fbc2b:instance in)|(110,45)" xmlns="http://www.ni.com/PlatformFramework" />
 					<Wire Id="9ca89bfeaccd4dd48df79965a832785a" Joints="N(ba1f554f82e6477bb7a7577b2a83c141:34)|(4,90) h(35) v(-20) N(36bc6082394440fdafa11e56097fbc2b:c1t0v)|(110,70)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -105,8 +106,8 @@
 			<NodeLabel AttachedTo="349d2031891e4dc582c04f36f69c9d6f" Bounds="78 395 47 14" Id="7b7988249224e32a7dcb0283c579145" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>Function</p.Text>
 			</NodeLabel>
-			<NodeLabel AttachedTo="26a0d2f2d4864f4c8f9aa22d187d1145" Bounds="59 430 66 14" Id="e21aac1b69724fe398768bdc502c7731" xmlns="http://www.ni.com/PlatformFramework">
-				<p.Text>Store Name</p.Text>
+			<NodeLabel AttachedTo="26a0d2f2d4864f4c8f9aa22d187d1145" Bounds="55 430 70 14" Id="e21aac1b69724fe398768bdc502c7731" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Buffer Name</p.Text>
 			</NodeLabel>
 			<Wire Id="ac03ada8f4444420b9d1989a3c2320a5" Joints="N(349d2031891e4dc582c04f36f69c9d6f:Value)|(170,400) N(4da29065addc4264b3b3af87fcd3370f:33)|(206,400)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="5eebd82b5cd54f4d860cd6888ffb1793" Joints="N(26a0d2f2d4864f4c8f9aa22d187d1145:Value)|(170,435) N(ba1f554f82e6477bb7a7577b2a83c141:33)|(206,435)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -137,22 +138,22 @@
 			</Cluster>
 			<Label Height="[float]16" Id="108" LabelOwner="[UIModel]101" Left="[float]544" Text="[string]Error out" Top="[float]352" Width="[float]47" xmlns="http://www.ni.com/PanelCommon" />
 			<PanelExecutionWindow Id="109" />
-			<ValueClassControl BaseName="[string]Measure" Id="cc731da9400b43d58b2128e0a1671afa" IsTabStop="[bool]False" Label="[UIModel]ec5c4d55e2294cfab87a7097ecd0f864" LabelLinked="[bool]True" Left="[float]100" TabIndex="[int]2" Top="[float]52" Value="{DataItemBinding Id=16}" ValueClassControl="[Type]@db2da17826a34458b2e9a63276c23ecf" p4:ControlDefinitionChecksum="EbkDXrEloxCI7cI/Yn5XRzVdz+cTbh7pfKAEtWwl+lo=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/MocCommon">
+			<ValueClassControl BaseName="[string]Measure" Id="cc731da9400b43d58b2128e0a1671afa" IsTabStop="[bool]False" Label="[UIModel]ec5c4d55e2294cfab87a7097ecd0f864" LabelLinked="[bool]True" Left="[float]100" TabIndex="[int]2" Top="[float]52" Value="{DataItemBinding Id=16}" ValueClassControl="[Type]@8fa9f2aa523a4de780d31a3cfd1944ca" p4:ControlDefinitionChecksum="EbkDXrEloxCI7cI/Yn5XRzVdz+cTbh7pfKAEtWwl+lo=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/MocCommon">
 				<p4:p.TypeDefinitionTargets>
 					<p4:TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Command::SCPI Acquire::Measure.gtype::ControlDefinition" />
 				</p4:p.TypeDefinitionTargets>
 			</ValueClassControl>
 			<Label Height="[float]16" Id="ec5c4d55e2294cfab87a7097ecd0f864" LabelOwner="[UIModel]cc731da9400b43d58b2128e0a1671afa" Left="[float]100" Text="[string]Measure in" Top="[float]32" Width="[float]59" xmlns="http://www.ni.com/PanelCommon" />
-			<ValueClassControl BaseName="[string]Measure" Id="3c7ce549e7274f9e83e8abd784a921a9" IsReadOnly="[bool]True" IsTabStop="[bool]False" Label="[UIModel]9dd4408efe7148428ba555a7ac74db8f" LabelLinked="[bool]True" Left="[float]544" TabIndex="[int]3" Top="[float]52" Value="{DataItemBinding Id=17}" ValueClassControl="[Type]@db2da17826a34458b2e9a63276c23ecf" p4:ControlDefinitionChecksum="EbkDXrEloxCI7cI/Yn5XRzVdz+cTbh7pfKAEtWwl+lo=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/MocCommon">
+			<ValueClassControl BaseName="[string]Measure" Id="3c7ce549e7274f9e83e8abd784a921a9" IsReadOnly="[bool]True" IsTabStop="[bool]False" Label="[UIModel]9dd4408efe7148428ba555a7ac74db8f" LabelLinked="[bool]True" Left="[float]544" TabIndex="[int]3" Top="[float]52" Value="{DataItemBinding Id=17}" ValueClassControl="[Type]@8fa9f2aa523a4de780d31a3cfd1944ca" p4:ControlDefinitionChecksum="EbkDXrEloxCI7cI/Yn5XRzVdz+cTbh7pfKAEtWwl+lo=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/MocCommon">
 				<p4:p.TypeDefinitionTargets>
 					<p4:TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Command::SCPI Acquire::Measure.gtype::ControlDefinition" />
 				</p4:p.TypeDefinitionTargets>
 			</ValueClassControl>
 			<Label Height="[float]16" Id="9dd4408efe7148428ba555a7ac74db8f" LabelOwner="[UIModel]3c7ce549e7274f9e83e8abd784a921a9" Left="[float]544" Text="[string]Measure out" Top="[float]32" Width="[float]67" xmlns="http://www.ni.com/PanelCommon" />
 			<StringControl AcceptsReturn="[bool]False" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="9069cdf97fa04cc8908d9ee3399835ff" Label="[UIModel]5cdf535442e045c8b591fc51bcbf8e3e" Left="[float]100" TabIndex="[int]4" Text="{DataItemBinding Id=b8c13a34a4f41ae97cd78c9f6966cce}" Top="[float]260" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]168" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-				<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Name of the store for the reading if applicable</p.InfoTipDescription>
+				<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Name of the buffer for the reading if applicable</p.InfoTipDescription>
 			</StringControl>
-			<Label Height="[float]16" Id="5cdf535442e045c8b591fc51bcbf8e3e" LabelOwner="[UIModel]9069cdf97fa04cc8908d9ee3399835ff" Left="[float]100" Text="[string]Store Name" Top="[float]240" Width="[float]63" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="5cdf535442e045c8b591fc51bcbf8e3e" LabelOwner="[UIModel]9069cdf97fa04cc8908d9ee3399835ff" Left="[float]100" Text="[string]Buffer Name" Top="[float]240" Width="[float]67" xmlns="http://www.ni.com/PanelCommon" />
 			<EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]24" Id="d97f8a7f3773406ca48478c205b62dbc" IsTypeAheadEnabled="[bool]True" Label="[UIModel]c977922ade994aa2942bea8be4bfc0fd" Left="[float]100" TabIndex="[int]5" Top="[float]149" Value="{DataItemBinding Id=b83bed48e43e4cc59a387fbbffd3bbd3}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]168" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
 				<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">The type of measurement to be measured</p.InfoTipDescription>
 				<EnumSelectorInfo DisplayValue="[string][As Set]" DisplayValueOverride="[string]" IsEnabled="[bool]True" Value="[ushort]0" ValueType="[Type]UInt16" />
@@ -198,21 +199,21 @@
 			</p.TypeDefinitionTargets>
 			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">The &lt;B&gt;error out&lt;/B&gt; cluster passes error or warning information out of a VI to be used by other VIs.&lt;br/&gt;&lt;br/&gt;The pop-up option &lt;B&gt;Explain Error&lt;/B&gt; (or Explain Warning) gives more information about the error displayed.</p.UserDescription>
 		</DataItem>
-		<DataItem CallDirection="Input" CallIndex="1" CallUsage="DynamicDispatch" DataType="@db2da17826a34458b2e9a63276c23ecf" Id="16" Name="Measure in" xmlns="http://www.ni.com/MocCommon">
+		<DataItem CallDirection="Input" CallIndex="1" CallUsage="DynamicDispatch" DataType="@8fa9f2aa523a4de780d31a3cfd1944ca" Id="16" Name="Measure in" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>null</p.DefaultValue>
 			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 				<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Command::SCPI Acquire::Measure.gtype" />
 			</p.TypeDefinitionTargets>
 		</DataItem>
-		<DataItem CallDirection="Output" CallIndex="1" CallUsage="DynamicDispatch" DataType="@db2da17826a34458b2e9a63276c23ecf" Id="17" Name="Measure out" xmlns="http://www.ni.com/MocCommon">
+		<DataItem CallDirection="Output" CallIndex="1" CallUsage="DynamicDispatch" DataType="@8fa9f2aa523a4de780d31a3cfd1944ca" Id="17" Name="Measure out" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>null</p.DefaultValue>
 			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 				<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Command::SCPI Acquire::Measure.gtype" />
 			</p.TypeDefinitionTargets>
 		</DataItem>
-		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="3" DataType="String" Id="b8c13a34a4f41ae97cd78c9f6966cce" Name="Store Name" xmlns="http://www.ni.com/MocCommon">
+		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="3" DataType="String" Id="b8c13a34a4f41ae97cd78c9f6966cce" Name="Buffer Name" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>""</p.DefaultValue>
-			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;The name of the store for the measurement.&amp;nbsp; Useful if an instrument can store readings in user definable buffers.&amp;nbsp; Can be left blank if not needed or the last or default should be used.&lt;/p&gt;</p.UserDescription>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;The name of the buffer for the measurement.&amp;nbsp; Useful if an instrument can store readings in user definable buffers.&amp;nbsp; Can be left blank if not needed or the last or default should be used.&lt;/p&gt;</p.UserDescription>
 		</DataItem>
 		<DataItem CallDirection="Input" CallIndex="0" DataType="@b1d47918603e453cb78f9908f7d6d217" Id="b83bed48e43e4cc59a387fbbffd3bbd3" Name="Function" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>0</p.DefaultValue>
@@ -220,8 +221,8 @@
 		</DataItem>
 	</VirtualInstrument>
 	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
-		<p.TypeReference TypeId="db2da17826a34458b2e9a63276c23ecf">
-			<Attributed AttributedType="@3da1af7a649441d0977b49fbabd4060d">
+		<p.TypeReference TypeId="8fa9f2aa523a4de780d31a3cfd1944ca">
+			<Attributed AttributedType="@3fab5cdeea7a435085b7f7b6e100abab">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Command::SCPI Acquire" />
 				</AttributeValues>
@@ -248,7 +249,7 @@
 				<DataType>UInt16</DataType>
 			</Enumeration>
 		</p.TypeReference>
-		<p.TypeReference TypeId="3da1af7a649441d0977b49fbabd4060d">
+		<p.TypeReference TypeId="3fab5cdeea7a435085b7f7b6e100abab">
 			<Composite Id="1" Name="Measure.gtype">
 				<MemberScopes>
 					<Access Scope="Private" />
@@ -256,26 +257,30 @@
 					<Access Scope="Public" />
 					<Access Scope="Public" />
 					<Access Scope="Protected" />
+					<Access Scope="Public" />
+					<Access Scope="Protected" />
 				</MemberScopes>
 				<GenericTypeDefinition>Void</GenericTypeDefinition>
-				<BaseType>@d01ea3f44e644bc6a0b3349b02039381</BaseType>
+				<BaseType>@b1ed8bd8ed7348a3a6af45fc64860097</BaseType>
 				<Members>
-					<Field FieldAccessPolicy="ReadWrite" Name="Store Name" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Buffer Name" DataType="String" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Function" DataType="UInt16" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Result.gvi" ReturnType="Void" DeclaringType="@db2da17826a34458b2e9a63276c23ecf" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Configure.gvi" ReturnType="Void" DeclaringType="@db2da17826a34458b2e9a63276c23ecf" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Get Base Command.gvi" ReturnType="Void" DeclaringType="@db2da17826a34458b2e9a63276c23ecf" GenericTypeDefinition="Void" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Result.gvi" ReturnType="Void" DeclaringType="@8fa9f2aa523a4de780d31a3cfd1944ca" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Configure.gvi" ReturnType="Void" DeclaringType="@8fa9f2aa523a4de780d31a3cfd1944ca" GenericTypeDefinition="Void" />
+					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Get Base Command.gvi" ReturnType="Void" DeclaringType="@8fa9f2aa523a4de780d31a3cfd1944ca" GenericTypeDefinition="Void" />
+					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Get Buffer.gvi" ReturnType="Void" DeclaringType="@8fa9f2aa523a4de780d31a3cfd1944ca" GenericTypeDefinition="Void" />
+					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Get Function.gvi" ReturnType="Void" DeclaringType="@8fa9f2aa523a4de780d31a3cfd1944ca" GenericTypeDefinition="Void" />
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="d01ea3f44e644bc6a0b3349b02039381">
-			<Attributed AttributedType="@b59f451d10ae4f7390cfa356edef3093">
+		<p.TypeReference TypeId="b1ed8bd8ed7348a3a6af45fc64860097">
+			<Attributed AttributedType="@75350ab233fc4a4fa838e707ca14398f">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Common" />
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="b59f451d10ae4f7390cfa356edef3093">
+		<p.TypeReference TypeId="75350ab233fc4a4fa838e707ca14398f">
 			<Composite Id="1" Name="ReadExecutable.gtype">
 				<MemberScopes>
 					<Access Scope="Private" />
@@ -289,30 +294,30 @@
 					<Access Scope="Public" />
 				</MemberScopes>
 				<GenericTypeDefinition>Void</GenericTypeDefinition>
-				<BaseType>@d67d51ccd0d34cb6b29a46e3583c738e</BaseType>
+				<BaseType>@edd60a35b16a4f018b3f04e1f43df994</BaseType>
 				<Members>
 					<Field FieldAccessPolicy="ReadWrite" Name="Raw Result" DataType="String" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Byte Count" DataType="UInt32" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Result.gvi" ReturnType="Void" DeclaringType="@d01ea3f44e644bc6a0b3349b02039381" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Post Result.gvi" ReturnType="Void" DeclaringType="@d01ea3f44e644bc6a0b3349b02039381" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Process.gvi" ReturnType="Void" DeclaringType="@d01ea3f44e644bc6a0b3349b02039381" GenericTypeDefinition="Void" />
-					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Read Byte Count.gvi" ReturnType="Void" DeclaringType="@d01ea3f44e644bc6a0b3349b02039381" GenericTypeDefinition="Void" />
-					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Read Raw Result.gvi" ReturnType="Void" DeclaringType="@d01ea3f44e644bc6a0b3349b02039381" GenericTypeDefinition="Void" />
-					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Write Byte Count.gvi" ReturnType="Void" DeclaringType="@d01ea3f44e644bc6a0b3349b02039381" GenericTypeDefinition="Void" />
-					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Write Raw Result.gvi" ReturnType="Void" DeclaringType="@d01ea3f44e644bc6a0b3349b02039381" GenericTypeDefinition="Void" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Result.gvi" ReturnType="Void" DeclaringType="@b1ed8bd8ed7348a3a6af45fc64860097" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Post Result.gvi" ReturnType="Void" DeclaringType="@b1ed8bd8ed7348a3a6af45fc64860097" GenericTypeDefinition="Void" />
+					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Process.gvi" ReturnType="Void" DeclaringType="@b1ed8bd8ed7348a3a6af45fc64860097" GenericTypeDefinition="Void" />
+					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Read Byte Count.gvi" ReturnType="Void" DeclaringType="@b1ed8bd8ed7348a3a6af45fc64860097" GenericTypeDefinition="Void" />
+					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Read Raw Result.gvi" ReturnType="Void" DeclaringType="@b1ed8bd8ed7348a3a6af45fc64860097" GenericTypeDefinition="Void" />
+					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Write Byte Count.gvi" ReturnType="Void" DeclaringType="@b1ed8bd8ed7348a3a6af45fc64860097" GenericTypeDefinition="Void" />
+					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Write Raw Result.gvi" ReturnType="Void" DeclaringType="@b1ed8bd8ed7348a3a6af45fc64860097" GenericTypeDefinition="Void" />
 					<Property Name="Raw Result" Getter="Read Raw Result.gvi" Setter="Write Raw Result.gvi" DataType="String" />
 					<Property Name="Byte Count" Getter="Read Byte Count.gvi" Setter="Write Byte Count.gvi" DataType="UInt32" />
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="d67d51ccd0d34cb6b29a46e3583c738e">
-			<Attributed AttributedType="@5cfdcc2f2c4c4436980aa0c8164fbf0f">
+		<p.TypeReference TypeId="edd60a35b16a4f018b3f04e1f43df994">
+			<Attributed AttributedType="@6271069809a944b7b9d3f6e3c6bb8972">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Common" />
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="5cfdcc2f2c4c4436980aa0c8164fbf0f">
+		<p.TypeReference TypeId="6271069809a944b7b9d3f6e3c6bb8972">
 			<Composite Id="1" Name="WriteExecutable.gtype">
 				<MemberScopes>
 					<Access Scope="Private" />
@@ -351,39 +356,39 @@
 				<GenericTypeDefinition>Void</GenericTypeDefinition>
 				<BaseType>@5fb2f86ebacb4d6197091eddec2a4da4</BaseType>
 				<Members>
-					<Field FieldAccessPolicy="ReadWrite" Name="Driver" DataType="@2baf4386c6ce4359b07bb5ba04b86f5f" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Driver" DataType="@62587c5256314ad19a5bae72f8e0a541" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Parameters" DataType="@0dc842caf9774486a8c60a99bfc986e4" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Executable Settings" DataType="@1bcfaa11039b4ea1ac2feb0b86121e22" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Timeout" DataType="UInt32" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Id" DataType="String" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Can Overlap" DataType="Boolean" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Block on Wait" DataType="Boolean" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Command.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Cleanup.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Get Base Command.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Initialise.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Post-Exec Callout.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Pre-Exec Callout.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Process.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="9" IsStatic="False" IsConstructor="False" Name="Read Block on Wait.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="10" IsStatic="False" IsConstructor="False" Name="Read Can Overlap.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="11" IsStatic="False" IsConstructor="False" Name="Read Driver.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="12" IsStatic="False" IsConstructor="False" Name="Read Executable Settings.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="13" IsStatic="False" IsConstructor="False" Name="Read Id.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="14" IsStatic="False" IsConstructor="False" Name="Read Parameters.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="15" IsStatic="False" IsConstructor="False" Name="Read Timeout.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="16" IsStatic="False" IsConstructor="False" Name="Remove Parameters.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="17" IsStatic="False" IsConstructor="False" Name="Remove Settings.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="18" IsStatic="False" IsConstructor="False" Name="Update Executable Settings.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="19" IsStatic="False" IsConstructor="False" Name="Update Parameters.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="20" IsStatic="False" IsConstructor="False" Name="Write Block on Wait.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="21" IsStatic="False" IsConstructor="False" Name="Write Can Overlap.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="22" IsStatic="False" IsConstructor="False" Name="Write Driver.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="23" IsStatic="False" IsConstructor="False" Name="Write Executable Settings.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="24" IsStatic="False" IsConstructor="False" Name="Write Id.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="25" IsStatic="False" IsConstructor="False" Name="Write Parameters.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="26" IsStatic="False" IsConstructor="False" Name="Write Timeout.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Property Name="Driver" Getter="Read Driver.gvi" Setter="Write Driver.gvi" DataType="@2baf4386c6ce4359b07bb5ba04b86f5f" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Command.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Cleanup.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Get Base Command.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Initialise.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Post-Exec Callout.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Pre-Exec Callout.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Process.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="9" IsStatic="False" IsConstructor="False" Name="Read Block on Wait.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="10" IsStatic="False" IsConstructor="False" Name="Read Can Overlap.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="11" IsStatic="False" IsConstructor="False" Name="Read Driver.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="12" IsStatic="False" IsConstructor="False" Name="Read Executable Settings.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="13" IsStatic="False" IsConstructor="False" Name="Read Id.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="14" IsStatic="False" IsConstructor="False" Name="Read Parameters.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="15" IsStatic="False" IsConstructor="False" Name="Read Timeout.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="16" IsStatic="False" IsConstructor="False" Name="Remove Parameters.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="17" IsStatic="False" IsConstructor="False" Name="Remove Settings.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="18" IsStatic="False" IsConstructor="False" Name="Update Executable Settings.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="19" IsStatic="False" IsConstructor="False" Name="Update Parameters.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="20" IsStatic="False" IsConstructor="False" Name="Write Block on Wait.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="21" IsStatic="False" IsConstructor="False" Name="Write Can Overlap.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="22" IsStatic="False" IsConstructor="False" Name="Write Driver.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="23" IsStatic="False" IsConstructor="False" Name="Write Executable Settings.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="24" IsStatic="False" IsConstructor="False" Name="Write Id.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="25" IsStatic="False" IsConstructor="False" Name="Write Parameters.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Function Id="26" IsStatic="False" IsConstructor="False" Name="Write Timeout.gvi" ReturnType="Void" DeclaringType="@edd60a35b16a4f018b3f04e1f43df994" GenericTypeDefinition="Void" />
+					<Property Name="Driver" Getter="Read Driver.gvi" Setter="Write Driver.gvi" DataType="@62587c5256314ad19a5bae72f8e0a541" />
 					<Property Name="Parameters" Getter="Read Parameters.gvi" Setter="Write Parameters.gvi" DataType="@0dc842caf9774486a8c60a99bfc986e4" />
 					<Property Name="Executable Settings" Getter="Read Executable Settings.gvi" Setter="Write Executable Settings.gvi" DataType="@1bcfaa11039b4ea1ac2feb0b86121e22" />
 					<Property Name="Timeout" Getter="Read Timeout.gvi" Setter="Write Timeout.gvi" DataType="UInt32" />
@@ -396,8 +401,8 @@
 		<p.TypeReference TypeId="5fb2f86ebacb4d6197091eddec2a4da4">
 			<Composite Id="1" Name="gObject" GenericTypeDefinition="Void" BaseType="Void" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="2baf4386c6ce4359b07bb5ba04b86f5f">
-			<Attributed AttributedType="@c540995e64634b06ba593cf28ec22cae">
+		<p.TypeReference TypeId="62587c5256314ad19a5bae72f8e0a541">
+			<Attributed AttributedType="@d91b262f879147828911cd82e23356fd">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Common" />
 				</AttributeValues>
@@ -409,7 +414,7 @@
 		<p.TypeReference TypeId="1bcfaa11039b4ea1ac2feb0b86121e22">
 			<VariableArray DereferenceType="@d9f05026409247a287f0a6163622ea63" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="c540995e64634b06ba593cf28ec22cae">
+		<p.TypeReference TypeId="d91b262f879147828911cd82e23356fd">
 			<Composite Id="1" Name="Driver.gtype">
 				<MemberScopes>
 					<Access Scope="Private" />
@@ -422,12 +427,14 @@
 					<Access Scope="Public" />
 					<Access Scope="Public" />
 					<Access Scope="Public" />
+					<Access Scope="Public" />
 					<Access Scope="Protected" />
 					<Access Scope="Public" />
 					<Access Scope="Protected" />
 					<Access Scope="Protected" />
 					<Access Scope="Public" />
 					<Access Scope="Protected" />
+					<Access Scope="Public" />
 					<Access Scope="Public" />
 					<Access Scope="Public" />
 					<Access Scope="Public" />
@@ -444,26 +451,28 @@
 					<Field FieldAccessPolicy="ReadWrite" Name="Driver Setting Mappings" DataType="@2fd278f2b8f442b98a670e59dff9e76b" />
 					<Field FieldAccessPolicy="ReadWrite" Name="VISA Session" DataType=":UDR:TagRefnum|NI::VISA::Visa.udr::Instr" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Been Initialised" DataType="Boolean" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Driver Setting Mappings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Close.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Commit.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Decommit.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Execute Write Query.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Execute Write Read Query.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Get Instrument Alias.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="9" IsStatic="False" IsConstructor="False" Name="Initialise.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="10" IsStatic="False" IsConstructor="False" Name="Initiate Session.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="11" IsStatic="False" IsConstructor="False" Name="Map Executable Setting.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="12" IsStatic="False" IsConstructor="False" Name="Read Been Initialised.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="13" IsStatic="False" IsConstructor="False" Name="Read Driver Setting Mappings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="14" IsStatic="False" IsConstructor="False" Name="Read Driver Settings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="15" IsStatic="False" IsConstructor="False" Name="Read VISA Session.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="16" IsStatic="False" IsConstructor="False" Name="Remove Driver Settings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="17" IsStatic="False" IsConstructor="False" Name="Update Driver Settings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="18" IsStatic="False" IsConstructor="False" Name="Write Been Initialised.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="19" IsStatic="False" IsConstructor="False" Name="Write Driver Setting Mappings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="20" IsStatic="False" IsConstructor="False" Name="Write Driver Settings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="21" IsStatic="False" IsConstructor="False" Name="Write VISA Session.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Driver Setting Mappings.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Close.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Commit.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Decommit.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Execute Write Query.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Execute Write Read Query.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Get Default Buffer.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="9" IsStatic="False" IsConstructor="False" Name="Get Instrument Alias.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="10" IsStatic="False" IsConstructor="False" Name="Initialise.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="11" IsStatic="False" IsConstructor="False" Name="Initiate Session.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="12" IsStatic="False" IsConstructor="False" Name="Map Executable Setting.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="13" IsStatic="False" IsConstructor="False" Name="Read Been Initialised.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="14" IsStatic="False" IsConstructor="False" Name="Read Driver Setting Mappings.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="15" IsStatic="False" IsConstructor="False" Name="Read Driver Settings.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="16" IsStatic="False" IsConstructor="False" Name="Read VISA Session.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="17" IsStatic="False" IsConstructor="False" Name="Remove Driver Settings.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="18" IsStatic="False" IsConstructor="False" Name="Update Driver Settings.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="19" IsStatic="False" IsConstructor="False" Name="Uses Buffer.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="20" IsStatic="False" IsConstructor="False" Name="Write Been Initialised.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="21" IsStatic="False" IsConstructor="False" Name="Write Driver Setting Mappings.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="22" IsStatic="False" IsConstructor="False" Name="Write Driver Settings.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
+					<Function Id="23" IsStatic="False" IsConstructor="False" Name="Write VISA Session.gvi" ReturnType="Void" DeclaringType="@62587c5256314ad19a5bae72f8e0a541" GenericTypeDefinition="Void" />
 					<Property Name="Driver Settings" Getter="Read Driver Settings.gvi" Setter="Write Driver Settings.gvi" DataType="@bd2232353db34e3ebe062acdcac878ce" />
 					<Property Name="Driver Setting Mappings" Getter="Read Driver Setting Mappings.gvi" Setter="Write Driver Setting Mappings.gvi" DataType="@2fd278f2b8f442b98a670e59dff9e76b" />
 					<Property Name="VISA Session" Getter="Read VISA Session.gvi" Setter="Write VISA Session.gvi" DataType=":UDR:TagRefnum|NI::VISA::Visa.udr::Instr" />
@@ -572,6 +581,6 @@
 		</p.TypeReference>
 	</DataTypeReferenceTable>
 	<TypeAppearanceTable xmlns="http://www.ni.com/PlatformFramework">
-		<p.TypeAppearance TypeId="db2da17826a34458b2e9a63276c23ecf" PrimaryColor="#FF0070C0" SecondaryColor="#FF00B0F0" />
+		<p.TypeAppearance TypeId="8fa9f2aa523a4de780d31a3cfd1944ca" PrimaryColor="#FF0070C0" SecondaryColor="#FF00B0F0" />
 	</TypeAppearanceTable>
 </SourceFile>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="BD1E684E429FAF07C5BD56E5B3F8428BA21CEA9E519AD45934C5B912CA3E750640AA785ADB93F544071509985D691AFFEF6B14671A3710803632860CF57FA69B" Timestamp="1D673EC928B14EF" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="0B05399B384A67802BC26409926A4E6A2E59975327002B197D8B3322DD2C788199287A8EDCA3EA9199D1408D8D610EC6CBAFACF599AE1248CDCB2837265C23D6" Timestamp="1D674AFCA75BD56" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
@@ -7,42 +7,28 @@
 		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
 		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
 	</SourceModelFeatureSet>
-	<TypeDefinition DataType="Int32[]" Id="d872b179ca634e19a2f0535cea3834b1" xmlns="http://www.ni.com/MocCommon">
+	<TypeDefinition DataType="String[]" Id="d872b179ca634e19a2f0535cea3834b1" xmlns="http://www.ni.com/MocCommon">
 		<Icon Id="7673a12d6cee41d6aa293aba6ddef3c9" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
 			<IconPanel Height="[float]40" Id="ff1081d60ea24cf4ab32a89dc5dfc824" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
 				<IconTemplate Height="[float]40" Id="cac9aabd400e4343a14dabd9065aedf9" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
 			</IconPanel>
 		</Icon>
-		<DataItem DataType="Int32[]" Id="8bc9cbe624214e88bd9d58403c1059fb" Name="Listbox">
-			<p.DefaultValue>
-				<Array Lengths="1" IsBinary="True" Compression="GZip">
-					<BinaryElements>H4sIAAAAAAAEAGNgZGBg+A8EIBoEBEAMEObg4AWS3ACTOaBbIQAAAA==</BinaryElements>
-				</Array>
-			</p.DefaultValue>
+		<DataItem DataType="String[]" Id="cdd1c6faeb31452ab78e1efc819275ad" Name="Buffer Elements">
+			<p.DefaultValue>null</p.DefaultValue>
 		</DataItem>
 	</TypeDefinition>
 	<EnvoyManagerFile Id="58519c126db84fe68b0dc6938be394e7" xmlns="http://www.ni.com/PlatformFramework">
 		<EnvoyManagerRootEnvoy Id="62b13bf6256c458fa0d4392f4a036a2e" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
-		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="f3599262352b4dcca2be967f9d936be7" Name="Type.gtype" NameTracksFileName="True">
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="f3599262352b4dcca2be967f9d936be7" Name="Buffer Elements.gtype" NameTracksFileName="True">
 			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="7e36772837c349e08241ad3ab47619b4" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
 				<ControlDefinition DefaultDirection="Control" Id="46604393f3b5408d9e9cef5e5fe40248" xmlns="http://www.ni.com/MocCommon">
-					<ListBoxSelector BaseName="[string]Listbox" Height="[float]296" Id="c13ae6d6c6024b0da3eeaf633cecff83" Label="[UIModel]c285aeb7de1d4573b5df2d922b44c03f" Left="[float]54" SelectionMode="[SMListBoxSelectionMode]ZeroOrMore" TabIndex="[int]0" Top="[float]62" Value="{DataItemBinding Id=8bc9cbe624214e88bd9d58403c1059fb}" ValueType="[Type]Int32[]" Width="[float]139" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-						<ListBoxSelectorInfo DisplayValue="[string]CHANNEL" />
-						<ListBoxSelectorInfo DisplayValue="[string]DATE" />
-						<ListBoxSelectorInfo DisplayValue="[string]EXTRA" />
-						<ListBoxSelectorInfo DisplayValue="[string]EXTRAFORMATTED" />
-						<ListBoxSelectorInfo DisplayValue="[string]EXTRAUNIT" />
-						<ListBoxSelectorInfo DisplayValue="[string]FORMATTED" />
-						<ListBoxSelectorInfo DisplayValue="[string]FRACTIONAL" />
-						<ListBoxSelectorInfo DisplayValue="[string]READING" />
-						<ListBoxSelectorInfo DisplayValue="[string]RELATIVE" />
-						<ListBoxSelectorInfo DisplayValue="[string]SECONDS" />
-						<ListBoxSelectorInfo DisplayValue="[string]STATUS" />
-						<ListBoxSelectorInfo DisplayValue="[string]TIME" />
-						<ListBoxSelectorInfo DisplayValue="[string]TSTAMP" />
-						<ListBoxSelectorInfo DisplayValue="[string]UNIT" />
-					</ListBoxSelector>
-					<Label Height="[float]16" Id="c285aeb7de1d4573b5df2d922b44c03f" LabelOwner="[UIModel]c13ae6d6c6024b0da3eeaf633cecff83" Left="[float]54" Text="[string]Listbox" Top="[float]42" Width="[float]38" xmlns="http://www.ni.com/PanelCommon" />
+					<ArrayViewer ArrayElement="[UIModel]f0da3f8a25904700ab7fd851633b7010" BaseName="[string]String Array Input" Columns="[int]1" Dimensions="[int]1" Height="[float]400" Id="f7ede021ea344c2b98eac626185c1c0e" IndexVisibility="[Visibility]Collapsed" Label="[UIModel]b5a1d9056ffd4273bfc9027e5171a7e5" Left="[float]48" Orientation="[SMOrientation]Vertical" Rows="[int]14" TabIndex="[int]0" Top="[float]51" Value="{DataItemBinding Id=cdd1c6faeb31452ab78e1efc819275ad}" VerticalScrollBarVisibility="[ScrollBarVisibility]Visible" Width="[float]149" xmlns="http://www.ni.com/PanelCommon">
+						<p.DefaultElementValue>""</p.DefaultElementValue>
+						<StringControl AcceptsReturn="[bool]True" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="f0da3f8a25904700ab7fd851633b7010" Label="[UIModel]ec673d85e072415fb5f05afb94d8402f" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]117" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<Label Id="ec673d85e072415fb5f05afb94d8402f" IsVisualChild="[bool]False" LabelOwner="[UIModel]f0da3f8a25904700ab7fd851633b7010" Left="[float]6" Text="[string]String" Top="[float]-14" xmlns="http://www.ni.com/PanelCommon" />
+						</StringControl>
+					</ArrayViewer>
+					<Label Height="[float]16" Id="b5a1d9056ffd4273bfc9027e5171a7e5" LabelOwner="[UIModel]f7ede021ea344c2b98eac626185c1c0e" Left="[float]48" Text="[string]Buffer Elements" Top="[float]31" Width="[float]83" xmlns="http://www.ni.com/PanelCommon" />
 				</ControlDefinition>
 			</EmbeddedDefinitionReference>
 		</NameScopingEnvoy>
