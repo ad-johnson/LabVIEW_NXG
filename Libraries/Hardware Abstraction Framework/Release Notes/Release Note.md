@@ -2,9 +2,9 @@
 
 Hardware Abstraction Framework releases
 
-[V1.0.1](#v1.0.1) 24th August 2020
+[V1.0.1](#v1.0.1)    24th August 2020
 
-[V1.1.0](#v1.1.0)
+[V1.1.0](#v1.1.0)    Older
 
 ## V1.1.0
 Extended the functionality of the framework to use Parameters and provided an example to show their use.
