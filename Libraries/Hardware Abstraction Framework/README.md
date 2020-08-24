@@ -180,9 +180,10 @@ The `Pre-Exec Callout` and `Post-Exec Callout` can be implemented in your own Dr
 ![Diagram showing the Processsing for a Read Executable](./images/image09.png)
 
 The lead-in is the same as a Write Executable but the additional steps are:
-* **Exec Write Read Query:** sends the command to the Instrument and reads a result.
+* **Exec Write Read Query:** sends the command to the Instrument and reads a result.  Results are issued for the Executable and the Parameters as applicable.  See the Documentation tab on the member for details on how the result is parsed into constituent elements.
 * **Write Result:** saves the unformatted Instrument response for later processing
-* **Post Result:** adds a `result` message on the `Notification Queue` with the Executable set as message data.  The test application should read this message and arrange for the result to be processed as required.
+* **Write Param Vals:** saves the unformatted Parameter responses for later processing
+* **Post Result:** adds a `result` message on the `Notification Queue` with the Executable set as message data.  The test application should read this message and arrange for the result to be processed as required - not forgetting that results may be stored in the parameters if used.
 
 ## Summary
 Whilst not particularly complicated, it's reasonably difficult to document clearly what happens.  It is highly recommended that you follow through one of the existing examples to see how it works.  These examples also form a template for your own test application so that it deals with events and notifications in a well-controlled and performant manner.
