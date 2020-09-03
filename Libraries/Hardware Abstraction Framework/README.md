@@ -25,7 +25,7 @@ The basic approach to running a test is to follow these steps:
 3. Repeat this for each command you want to run in your test.
 4. Associate these Executables to one or more `Executable Directors`, selected on the basis of how you wish the commands to run.  For example, you may select an `Executable Director` to run once a `Reset` Executable and a `Repeating Director` to run a `Measure` Executable 10 times.
 5. Associate these Executable Directors to an `Executable Processor` and run the test.  The Processor will process each Executable Director until they have finished; results are sent back to the testing application as notifications and the Processor will listen for events such as `Pause`, `Resume`, `Stop` and modify the processing accordingly.
-6. Your test app can listen out for a `Done` event to know when processing has finished; it can also look for `result` messages (notifications) to handle and display those.  How complex you make these is up to you but check out the examples for ideas.
+6. Your test app can listen out for a `Done` event to know when processing has finished; it can also look for `result` messages or `result notifier` notifications to handle and display those.  How complex you make these is up to you but check out the examples for ideas.
 
 Many Executables in the framework can be used as-is in test applications but there may be Executables that are missing for your purpose.  You can create your own by following the pattern established for the existing ones.
 
@@ -36,17 +36,21 @@ Unless you use the same instruments that are wrapped by Drivers in the framework
 The rest of this document describes the framework in more detail and how you can use it.
 ### Interacting with the Framework
 Your test application will interact with the framework through other means than just asking it to process Executables.  The Framework is set up to respond to `Events` your test application can raise:
-* **Pause:** Processing will be paused at the end of the current processing of Executable Director(s) - remember these could be long-running.  It does need to finish any currently running processing so as to ensure instruments are not left in an unknown state.
+* **Pause:** Processing will be paused at the end of the current processing of Executable Director(s) - remember these could be long-running.  It does need to finish any currently running processing so as to ensure instruments are not left in an unknown state.  The Pause will timeout after 60-seconds and all processing will finish with an error being returned indicating the timeout occurred.
 * **Resume:** Processing will be resumed if paused.
 * **Stop:** Processing will stop immediately after the current processing of Executable Director(s) - again, so that instruments are not left in an unknown state.
 
 The Framework will interact with your test application through `Events` as well:
 * **Done:** Raised by the Framework when all processing has completed. You could, perhaps, on hearing this event, unblock the UI, display any messages, quit the test app, write results to a database and so on.
 
-It also interacts with your test application via messages on a Notification Queue:
-* **Result:** When a `Read Executable` runs and receives a result, it stores that and posts itself on to the Notification Queue as message data for the `Result` message.  Your test application should be waiting to receive these messages so you can do something with the result.  The Executable knows how to process a raw result (from the instrument) into something useable and of a specific data type; any results for parameters can also be processed into useable information.  Each Executable has a unique ID and you can tie a result on the Notification queue to a specific Executable instance so your test application knows how to handle the result. 
+It also interacts with your test application via messages on a Notification Queue or via a notifier:
+* **Result:** When a `Read Executable` runs and receives a result, it stores that and posts itself on to the Notification Queue as message data for the `Result` message.  Your test application should be waiting to receive these messages so you can do something with the result.  The Executable knows how to process a raw result (from the instrument) into something useable and of a specific data type; any results for parameters can also be processed into useable information.  Each Executable has a unique ID and you can tie a result on the Notification queue to a specific Executable instance so your test application knows how to handle the result.
 
-Events, Messages and Notification Queues are all established by the Framework and are available for your test application to use.
+* **Result Notifier:** Create a Notifier and pass it into the Framework.  Each result received will be posted through this notifier to the test app (as for Result, the data passed is the Executable itself which stores the result.)
+
+Which to use?  The framework may block the Test App when it is called, until all processing is finished.  Whilst the results will be posted as messages on the Notification queue, your test app won't get a chance to process them until the Framework is `Done`.  This is fine for simple commands but no use for long-running commands.  In the latter case, you will want a parallel thread waiting on a Notifier to appear containing the result - these can be processed as they are generated by the Framework, irrespective of whether the rest of the Test App is blocking.  There are examples that show both approaches.
+
+Events, Messages and Notification Queues are all established by the Framework and are available for your test application to use.  You must create your own Notifier to pass into the Framework if you take this approach for result processing.
 
 Examine the example applications to see how to use Events and Notifications.  These example applications form a great template for building your own applications on.
 
@@ -85,15 +89,15 @@ There are two ways a `Driver` can run an Executable:
 
 An Executable controls this with its `canOverlap` property: if true, the Executable will be run immediately; if false, when able.
 
-A `ReadExecutable` will hold a result returned from the instrument.  It does so in a raw form, `rawResult` - that is, it provides no interpretation of that result until asked to do so by the test application calling `buildResult`.  The test application will be notified of an available result via a `result` message raised on the `Notification` queue.  
+A `ReadExecutable` will hold a result returned from the instrument.  It does so in a raw form, `rawResult` - that is, it provides no interpretation of that result until asked to do so by the test application calling `buildResult`.  The test application will be notified of an available result via a `result` message raised on the `Notification` queue or a raised Notifier.  The result data is the same in both cases: the Executable itself is passed back to the test app and can be used to obtain the results as a raw value (String) or a typed value.
 
-Some Executables can take parameters to send along with the base command.  These are represented by the `Parameter` class.  The framework will automatically add any requested parameters to the command before it is sent to the instrument: you just need to add the ones you want to the Executable when you create an instance of it.  A Parameter will hold a result, if available, and is capable of parsing that into a useable value for the test application.
+Some Executables can take parameters to send along with the base command.  These are represented by the `Parameter` class.  The framework will automatically add any requested parameters to the command before it is sent to the instrument: you just need to add the ones you want to the Executable when you create an instance of it.  A Parameter will hold a result, if available, and is capable of parsing that into a typed value for the test application.
 
 `Executable Settings` are a way of provisioning configuration settings for Drivers, independently of how they may be applied to an instrument.  For example, you might use an Executable Setting called 'Settling Time'; on one DMM it might equate to 'Settle Time' whilst on another it might be 'Settling Duration'.  You won't care - the driver will map these to instrument specific configurations.
 
 You'll see from the class diagram that Executable Settings provides no specific behaviour so is really just a placeholder.  There is more information in the [Settings](#settings) section below, but the functionality for settings hasn't needed any specific behaviour for Executables in the current version.
 
-So what do you need to do?  Basically, just use one of the existing Executables and add it to an Executable Director.  If none of the existing Executables are of any use, then create your own by following the pattern established by an existing one.
+So what do you need to do to use the framework?  Basically, just use one of the existing Executables and add it to an Executable Director.  If none of the existing Executables are of any use, then create your own by following the pattern established by an existing one.
 
 Here's an overview of two Executables:
 ![UML class diagram of concrete Executable classes](./images/image02.png)
@@ -153,6 +157,8 @@ Processing of `Executables` is performed through `Executable Director` instances
     You select the Executable Director(s) you want and add them to the Executable Processor.  Thus you can mix-and-match the testing you want.  For example, you could load a `Reset` Executable into a Executable Director, followed by a `Measure` Executable into a Continous Director.  This would then reset the instrument and continuously perform a measurement.
 
 You should have no need to create an alternative Executable Processor but you may want a different Executable Director.  Create this as a subclass of ExecutableDirector and implement `shouldContinue()` (return true if processing of Executables should occur again) and if necessary `initialise()` if the Executable Director needs any setup (for example, the TimedDirector sets its `startMilliseconds` property in initialise so it can determine when the duration has elapsed.) 
+
+Note that a `Pause` event will be acted upon but it will timeout after 60 seconds regardless of whether a `Resume` event is raised. This is to prevent Instruments just 'sitting there' and the pause event is not intended for long term interrupt of Executable Processing.
 
 ### Processing Loop
 ![Diagram showing the Processsing loop](./images/image07.png)
