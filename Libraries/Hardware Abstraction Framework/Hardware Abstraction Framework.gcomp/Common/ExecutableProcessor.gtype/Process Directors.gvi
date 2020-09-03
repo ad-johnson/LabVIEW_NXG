@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="6BA5A9F2B2EB2D0150B355B6F1DE701A5622004C0DB5E6655F57BCF95C1FCB5941D4750E6F7B3DC8A0870CA7CE35EB1581347568B56D2EC8BD6C52707E418545" Timestamp="1D66FFB1EFF253D" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="225E0EC5EAC479F048D50FE7D94DED0F96D3326170C366F12C6338DCFC5B1FE37508A73D38C4DB29E1CE9B3B75C7B8DB71682A637920D1FA5EF7B738FCF8E329" Timestamp="1D68069BB5C64D0" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Data Communication" Name="http://www.ni.com/LabVIEW.DataComms" OldestCompatibleVersion="5.1.0.0" Version="5.1.0.49152" />
@@ -10,7 +10,7 @@
 		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
 	</SourceModelFeatureSet>
 	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
-		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Tell each Executable Director to process its Executables.&amp;nbsp; If set, wait the necessary amount of time, in milliseconds, between each Director.&amp;nbsp; Do not wait after the last Director has run.&lt;/p&gt;</p.UserDescription>
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Processes all Executable Directors until they complete.&amp;nbsp; This member will respond to events to Pause, Resume, and Stop.&amp;nbsp; Results will be notified on the Notification queue.&lt;/p&gt;</p.UserDescription>
 		<Icon Id="18" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
 			<IconPanel Height="[float]40" Id="20" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
 				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" HorizontalAlignment="[HorizontalAlignment]Stretch" Id="1ff983cad91f43b9b78ea6bfb797105f" Left="[float]0" TemplateName="[string]Banner" Top="[float]0" VerticalAlignment="[VerticalAlignment]Stretch" Width="[float]40">
@@ -30,10 +30,10 @@
 				<Path Data="[PathGeometry]M 6,3.49941659 L 0,7 L 0,0 L 6,3.49941659 Z" EditMode="[ShapeEditMode]FixedPath" Fill="[SMSolidColorBrush]#ffffffff" Height="[float]7" Id="e98e9302ea6e4eada1b856834d949eb0" Left="[float]30" Stroke="[SMSolidColorBrush]#00ffffff" Top="[float]4" Width="[float]6" />
 			</IconPanel>
 		</Icon>
-		<ConnectorPane Height="40" Id="9" ListViewHeight="115" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+		<ConnectorPane Height="40" Id="9" ListViewHeight="130" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
 			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="16" />
 			<ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 95" Parameter="69617728bdeb4493a87a9eb12fd8f27a" />
-			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 110" Parameter="b8bfc7a0ac9e482794c38439b27aaf07" />
 			<ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 50" Parameter="14" />
 			<ConnectorPaneTerminal Hotspot="15 0" />
 			<ConnectorPaneTerminal Hotspot="25 0" />
@@ -593,13 +593,13 @@
 				</MethodCall>
 				<Wire Id="14d65be3a11e47ceb74560d7d01e4e15" Joints="N(5f36c53ce01a4fbe8c66f70bb46b1fe6:i0)|(4,75) N(de6c3e640e78454a9a542dae458a78fa:L0)|(70,75)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="5955a3e8ead14529bdc2ce14a6b02843" Joints="N(fc915727641848abbcc2202b53666792:i0)|(4,105) N(de6c3e640e78454a9a542dae458a78fa:L3)|(70,105)" xmlns="http://www.ni.com/PlatformFramework" />
-				<CaseStructure Bounds="155 40 865 565" DataType="String" Default="65dc6385349c48a1ba965d3762ccdb23" Id="468b9ac86f6f479f8addae3d61f446a8" Selected="19d2a427c2a44e64842754f8c4b3d551" UserSelectorBounds="373 0 119 17">
+				<CaseStructure Bounds="155 40 865 565" DataType="String" Default="65dc6385349c48a1ba965d3762ccdb23" Id="468b9ac86f6f479f8addae3d61f446a8" Selected="65dc6385349c48a1ba965d3762ccdb23" UserSelectorBounds="373 0 119 17">
 					<CaseStructure.Case Bounds="5 5 855 555" Id="65dc6385349c48a1ba965d3762ccdb23" Pattern="Default">
-						<Wire Id="6871942deaef4035a0c1cb41060faae8" Joints="N(f9da628ba94243dc89e0fa9a7b390aac:65dc6385349c48a1ba965d3762ccdb23)|(4,40) h(126) v(105) N(87cfa5ed1eda4adb929399dbb7a772d2:c0t0v)|(260,145)" xmlns="http://www.ni.com/PlatformFramework" />
-						<Comment Bounds="90 160 275 15" Id="fecca340194e4ee1bd6bb3a736940b0a" xmlns="http://www.ni.com/MocCommon">
+						<Wire Id="6871942deaef4035a0c1cb41060faae8" Joints="N(f9da628ba94243dc89e0fa9a7b390aac:65dc6385349c48a1ba965d3762ccdb23)|(4,40) h(251) v(115) N(87cfa5ed1eda4adb929399dbb7a772d2:c0t0v)|(285,155)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Comment Bounds="250 210 275 15" Id="fecca340194e4ee1bd6bb3a736940b0a" xmlns="http://www.ni.com/MocCommon">
 							<p.Text>An unknown message was added to the queue</p.Text>
 						</Comment>
-						<MethodCall Bounds="355 55 40 40" Id="6fd7e34af20949f9b578c28b0ce1fc73" ResolveFailedHint="Build Error Cluster.gvi, Package: (LabVIEW NXG G Standard Library Files, Version: 5.0.0)" Signature="@982744714fc84caaa646d80213596007" Target="NI::G Core::Error::Build Error Cluster.gvi" xmlns="http://www.ni.com/MocCommon">
+						<MethodCall Bounds="560 55 40 40" Id="6fd7e34af20949f9b578c28b0ce1fc73" ResolveFailedHint="Build Error Cluster.gvi, Package: (LabVIEW NXG G Standard Library Files, Version: 5.0.0)" Signature="@982744714fc84caaa646d80213596007" Target="NI::G Core::Error::Build Error Cluster.gvi" xmlns="http://www.ni.com/MocCommon">
 							<p.MethodDeclaration>
 								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 									<Parameter Id="L0" Desc="error in" />
@@ -617,39 +617,50 @@
 							<Terminal DataType="Boolean" Direction="Input" Hotspot="25 0" Id="T1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
 							<Terminal DataType="Error" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 						</MethodCall>
-						<Literal Bounds="295 65 40 15" DataType="Int32" Id="100cf157fd894336870668043b4fbf4b" Label="c1d99b62aabe479fbf363b45233c0fcc" xmlns="http://www.ni.com/MocCommon">
+						<Literal Bounds="470 65 40 15" DataType="Int32" Id="100cf157fd894336870668043b4fbf4b" Label="c1d99b62aabe479fbf363b45233c0fcc" xmlns="http://www.ni.com/MocCommon">
 							<p.Data>203</p.Data>
 							<NumericBehavior Interpretation="Exact" RadixVisibility="Hidden" ValueFormatter="LV:0" />
 						</Literal>
-						<Wire Id="32a6e6b009774f099b3c2bd72c641382" Joints="N(100cf157fd894336870668043b4fbf4b:Out)|(335,70) N(6fd7e34af20949f9b578c28b0ce1fc73:L1)|(355,70)" xmlns="http://www.ni.com/PlatformFramework" />
-						<Literal Bounds="150 35 120 65" DataType="String" Id="9aeca247bb5348d68d2fe543bb34d540" Label="ac4934041d4049b0955743c41d18a7c6" xmlns="http://www.ni.com/MocCommon">
-							<p.Data>An unknown message - %s -was added to the notification queue</p.Data>
+						<Wire Id="32a6e6b009774f099b3c2bd72c641382" Joints="N(100cf157fd894336870668043b4fbf4b:Out)|(510,70) N(6fd7e34af20949f9b578c28b0ce1fc73:L1)|(560,70)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Literal Bounds="25 130 120 90" DataType="String" Id="9aeca247bb5348d68d2fe543bb34d540" Label="ac4934041d4049b0955743c41d18a7c6" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>An unknown message - %s -was added to the internal queue used by the framework.</p.Data>
 							<StringBehavior SizeToContent="False" TextDisplayMode="Default" />
 						</Literal>
-						<FormatIntoString Bounds="260 110 40 40" Id="87cfa5ed1eda4adb929399dbb7a772d2" Terminals="formatString=18f94d0389a942bb9811f1b9b66a8bd2, outString=4b7617ca1a074dc7a40da3296db7bf62, c0t0v=6871942deaef4035a0c1cb41060faae8" />
-						<Wire Id="4b7617ca1a074dc7a40da3296db7bf62" Joints="N(87cfa5ed1eda4adb929399dbb7a772d2:outString)|(300,115) h(50) v(-35) N(6fd7e34af20949f9b578c28b0ce1fc73:L2)|(355,80)" xmlns="http://www.ni.com/PlatformFramework" />
-						<Wire Id="18f94d0389a942bb9811f1b9b66a8bd2" Joints="N(9aeca247bb5348d68d2fe543bb34d540:Out)|(270,40) h(15) N(87cfa5ed1eda4adb929399dbb7a772d2:formatString)|(285,110)" xmlns="http://www.ni.com/PlatformFramework" />
-						<Wire Id="3343108c13d4ae399922e847e2ef9ff" Joints="N(6fd7e34af20949f9b578c28b0ce1fc73:R0)|(395,60) N(1779e84ceda749f791f7c8de87947aa4:65dc6385349c48a1ba965d3762ccdb23)|(851,60)" xmlns="http://www.ni.com/PlatformFramework" />
-						<NodeLabel AttachedTo="100cf157fd894336870668043b4fbf4b" Bounds="295 47 30 15" Id="c1d99b62aabe479fbf363b45233c0fcc" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<FormatIntoString Bounds="285 120 40 40" Id="87cfa5ed1eda4adb929399dbb7a772d2" Terminals="initString=a866084bc8a14060926d89b2c1ab98a3, outString=4b7617ca1a074dc7a40da3296db7bf62, c0t0v=6871942deaef4035a0c1cb41060faae8" />
+						<Wire Id="4b7617ca1a074dc7a40da3296db7bf62" Joints="N(87cfa5ed1eda4adb929399dbb7a772d2:outString)|(325,125) h(215) v(-45) N(6fd7e34af20949f9b578c28b0ce1fc73:L2)|(560,80)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="3343108c13d4ae399922e847e2ef9ff" Joints="N(6fd7e34af20949f9b578c28b0ce1fc73:R0)|(600,60) N(1779e84ceda749f791f7c8de87947aa4:65dc6385349c48a1ba965d3762ccdb23)|(851,60)" xmlns="http://www.ni.com/PlatformFramework" />
+						<NodeLabel AttachedTo="100cf157fd894336870668043b4fbf4b" Bounds="470 47 30 15" Id="c1d99b62aabe479fbf363b45233c0fcc" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 							<p.Text>code</p.Text>
 						</NodeLabel>
-						<NodeLabel AttachedTo="9aeca247bb5348d68d2fe543bb34d540" Bounds="150 17 30 15" Id="ac4934041d4049b0955743c41d18a7c6" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<NodeLabel AttachedTo="9aeca247bb5348d68d2fe543bb34d540" Bounds="25 112 30 15" Id="ac4934041d4049b0955743c41d18a7c6" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 							<p.Text>description</p.Text>
 						</NodeLabel>
 						<Wire Id="4e2814fa0414b45b1bac70668e4412e" Joints="N(7b3f676a3d7344c5b012990c53033869:65dc6385349c48a1ba965d3762ccdb23)|(4,240) h(776) v(240) N(1c1b940b7c95491897f87de4301d9d7e:65dc6385349c48a1ba965d3762ccdb23)|(851,480)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Select Bounds="185 105 40 40" Id="f8f975b7b98341c589c0a400768b5351" />
+						<Wire Id="f93c3e463b504679bda3ffda317366c5" Joints="N(361ccd991d484326b51bd30d1fb1c0ae:65dc6385349c48a1ba965d3762ccdb23)|(4,100) h(5) v(25) N(f8f975b7b98341c589c0a400768b5351:s)|(185,125)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="2d41170971d648fcade407a557a69b22" Joints="N(9aeca247bb5348d68d2fe543bb34d540:Out)|(145,135) h(30) v(5) N(f8f975b7b98341c589c0a400768b5351:f)|(185,140)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Literal Bounds="20 55 130 55" DataType="String" Id="b1ac0661c2834749b937b8128231197f" Label="b89f959045e5415ebf66bf6d67fc80dd" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>Framework timed-out waiting for an action to be initiated. %s</p.Data>
+							<StringBehavior SizeToContent="False" TextDisplayMode="Default" />
+						</Literal>
+						<NodeLabel AttachedTo="b1ac0661c2834749b937b8128231197f" Bounds="20 37 30 15" Id="b89f959045e5415ebf66bf6d67fc80dd" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>true value</p.Text>
+						</NodeLabel>
+						<Wire Id="717b71659c924c0dbd437cef7706621f" Joints="N(b1ac0661c2834749b937b8128231197f:Out)|(150,60) h(29) v(50) N(f8f975b7b98341c589c0a400768b5351:t)|(185,110)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="a866084bc8a14060926d89b2c1ab98a3" Joints="N(f8f975b7b98341c589c0a400768b5351:s? t:f)|(225,125) N(87cfa5ed1eda4adb929399dbb7a772d2:initString)|(285,125)" xmlns="http://www.ni.com/PlatformFramework" />
 					</CaseStructure.Case>
 					<CaseStructure.Case Bounds="5 5 855 555" Id="93a06215e70140eb8f1fdeb974814f9e" Pattern="&quot;Initialise&quot;">
-						<PropertyNode Bounds="90 180 84 35" HasErrorTerminals="False" Id="c50189d3a02b4292a0295fb8a6bea0c9" InstanceDataType="@76197d78a8264a04966ae322fe621cd5" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
+						<PropertyNode Bounds="90 180 84 35" HasErrorTerminals="False" Id="c50189d3a02b4292a0295fb8a6bea0c9" InstanceDataType="@cd835da405b641ac85a4a82ce7551e4b" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
 							<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 								<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableProcessor.gtype" />
 								<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableDirector.gtype" />
 							</p.TypeDefinitionTargets>
-							<PropertyItemTerminal DataType="@fe20d8e5a7ef4a77930af81523765f59" Hotspot="84 15" Id="c0t0v" Path="Directors" PathElementMemberKinds="Field" Usage="Optional" />
+							<PropertyItemTerminal DataType="@8499284964944df8803de0e166238317" Hotspot="84 15" Id="c0t0v" Path="Directors" PathElementMemberKinds="Field" Usage="Optional" />
 						</PropertyNode>
 						<Wire Id="8d54c523183645ab94fdf8647c3eecc5" Joints="N(7b3f676a3d7344c5b012990c53033869:93a06215e70140eb8f1fdeb974814f9e)|(4,240) h(11) B(1) h(24) v(-55) N(c50189d3a02b4292a0295fb8a6bea0c9:instance in)|(90,185) B(1) v(240) N(1c1b940b7c95491897f87de4301d9d7e:93a06215e70140eb8f1fdeb974814f9e)|(851,480)" xmlns="http://www.ni.com/PlatformFramework" />
 						<ForLoop Bounds="218 93 146 141" DiagramId="9ce79fd7ee16433c8eaba7187b55ca14" Id="f931ba9c764e4760a6f4cb5f45419741">
 							<LoopIteration Bounds="5 110 15 15" Id="8ee687d37fac45a1a74c21464b167d2c" />
-							<MethodCall Bounds="60 35 40 40" Id="2ee7dd6982e4c43ac5f2f48b1986a07" ResolveFailedHint="&quot;C:\\Users\\Andrew\\Documents\\LabVIEW_NXG\\Libraries\\Hardware Abstraction Framework\\Hardware Abstraction Framework.gcomp\\Common\\ExecutableDirector.gtype\\Initialise.gvi&quot;" Signature="@461df61fedb24a6b8f1751407d732209" Target="Hardware Abstraction Framework::Common::ExecutableDirector.gtype::Initialise.gvi" xmlns="http://www.ni.com/MocCommon">
+							<MethodCall Bounds="60 35 40 40" Id="2ee7dd6982e4c43ac5f2f48b1986a07" ResolveFailedHint="&quot;C:\\Users\\Andrew\\Documents\\LabVIEW_NXG\\Libraries\\Hardware Abstraction Framework\\Hardware Abstraction Framework.gcomp\\Common\\ExecutableDirector.gtype\\Initialise.gvi&quot;" Signature="@e7cc53f85d774b67a0e77238f2caad71" Target="Hardware Abstraction Framework::Common::ExecutableDirector.gtype::Initialise.gvi" xmlns="http://www.ni.com/MocCommon">
 								<p.MethodDeclaration>
 									<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 										<Parameter Id="L0" Desc="ExecutableDirector in" />
@@ -658,9 +669,9 @@
 										<Parameter Id="R3" Desc="Error out" />
 									</MethodDeclaration>
 								</p.MethodDeclaration>
-								<Terminal DataType="@6363ad9d8e674d399f5d7d2656aa529e" Direction="Input" Id="L0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="@2978213054ab4065a6e95a5c02687935" Direction="Input" Id="L0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
 								<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
-								<Terminal DataType="@6363ad9d8e674d399f5d7d2656aa529e" Direction="Output" Hotspot="40 5" Id="R0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="@2978213054ab4065a6e95a5c02687935" Direction="Output" Hotspot="40 5" Id="R0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
 								<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
 							</MethodCall>
 							<Wire Id="ce235792095a45c781bc67cbe3d8ca49" Joints="N(d3be7ca1e9d24977a701fb09c5dd33b6:i0)|(6,100) h(24) v(-60) N(2ee7dd6982e4c43ac5f2f48b1986a07:L0)|(60,40)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -812,17 +823,17 @@
 						</MethodCall>
 						<Wire Id="4a323acea49e48429f50fd154c44edc4" Joints="N(20cf655364864651a7b93b2c230eddc2:c0t0v)|(354,80) h(86) v(-40) N(f4826ff051d14cc4b27e34a3d13680bb:L1)|(450,40)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="3465d6243caa49ec8b43a1efa35b635f" Joints="N(d7f4a7074a5d4f0da45cff75504fd15b:6611bf15a204ac98ccdcfe9a015c3f2)|(4,30) N(f4826ff051d14cc4b27e34a3d13680bb:L0)|(450,30)" xmlns="http://www.ni.com/PlatformFramework" />
-						<PropertyNode Bounds="20 235 84 35" HasErrorTerminals="False" Id="7ca594077176419e99203b0e9a3d79e1" InstanceDataType="@76197d78a8264a04966ae322fe621cd5" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
+						<PropertyNode Bounds="20 235 84 35" HasErrorTerminals="False" Id="7ca594077176419e99203b0e9a3d79e1" InstanceDataType="@cd835da405b641ac85a4a82ce7551e4b" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
 							<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 								<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableProcessor.gtype" />
 								<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableDirector.gtype" />
 							</p.TypeDefinitionTargets>
-							<PropertyItemTerminal DataType="@fe20d8e5a7ef4a77930af81523765f59" Hotspot="84 15" Id="c0t0v" Path="Directors" PathElementMemberKinds="Field" Usage="Optional" />
+							<PropertyItemTerminal DataType="@8499284964944df8803de0e166238317" Hotspot="84 15" Id="c0t0v" Path="Directors" PathElementMemberKinds="Field" Usage="Optional" />
 						</PropertyNode>
 						<Wire Id="503bb63c58431cbda46bc16a8e8d35" Joints="N(7b3f676a3d7344c5b012990c53033869:6611bf15a204ac98ccdcfe9a015c3f2)|(4,240) h(6) B(1) N(7ca594077176419e99203b0e9a3d79e1:instance in)|(20,240) B(1) v(240) N(21df4df7455b4676afe303b9c28b7944:instance in)|(750,480)" xmlns="http://www.ni.com/PlatformFramework" />
 						<ForLoop Bounds="143 113 636 316" DiagramId="6a4182e943ef427f9cb59707dfb2cc96" Id="9db19e101e6243ecb8ffafc0863dfb88">
 							<LoopIteration Bounds="15 175 15 15" Id="bcdfaa365ce403f8e2ccd49ee5938de" />
-							<MethodCall Bounds="35 45 40 40" Id="802cbd543f584eacb1e96e63e5e0cb08" ResolveFailedHint="&quot;C:\\Users\\Andrew\\Documents\\LabVIEW_NXG\\Libraries\\Hardware Abstraction Framework\\Hardware Abstraction Framework.gcomp\\Common\\ExecutableDirector.gtype\\Should Continue.gvi&quot;" Signature="@f3f3c8b4cb58429988dc4739db656728" Target="Hardware Abstraction Framework::Common::ExecutableDirector.gtype::Should Continue.gvi" xmlns="http://www.ni.com/MocCommon">
+							<MethodCall Bounds="35 45 40 40" Id="802cbd543f584eacb1e96e63e5e0cb08" ResolveFailedHint="&quot;C:\\Users\\Andrew\\Documents\\LabVIEW_NXG\\Libraries\\Hardware Abstraction Framework\\Hardware Abstraction Framework.gcomp\\Common\\ExecutableDirector.gtype\\Should Continue.gvi&quot;" Signature="@d0bf3d434de14388a1d21af4a989d7d1" Target="Hardware Abstraction Framework::Common::ExecutableDirector.gtype::Should Continue.gvi" xmlns="http://www.ni.com/MocCommon">
 								<p.MethodDeclaration>
 									<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 										<Parameter Id="L0" Desc="ExecutableDirector in" />
@@ -832,9 +843,9 @@
 										<Parameter Id="R3" Desc="Error out" />
 									</MethodDeclaration>
 								</p.MethodDeclaration>
-								<Terminal DataType="@6363ad9d8e674d399f5d7d2656aa529e" Direction="Input" Id="L0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="@2978213054ab4065a6e95a5c02687935" Direction="Input" Id="L0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
 								<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
-								<Terminal DataType="@6363ad9d8e674d399f5d7d2656aa529e" Direction="Output" Hotspot="40 5" Id="R0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="@2978213054ab4065a6e95a5c02687935" Direction="Output" Hotspot="40 5" Id="R0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
 								<Terminal DataType="Boolean" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
 								<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
 							</MethodCall>
@@ -871,27 +882,36 @@
 										<CaseStructure.Selector Bounds="-4 45 13 10" Docking="Left" Id="a70d6422341d4671a9ad8fd7ba3d941a" Terminals="46723cf7de714d31ba2a72b1466b2fdc=dd6610774afe4639a7a2018e20ac388e, a6cb004574648509f7355ce660af222, 58b673bba59b4d7bb4997d2e95e1baba" />
 									</CaseStructure>
 									<Wire Id="dd6610774afe4639a7a2018e20ac388e" Joints="N(abe8bbc5811a43838c2b25bed37ce43f:x = y?)|(145,130) N(a70d6422341d4671a9ad8fd7ba3d941a:46723cf7de714d31ba2a72b1466b2fdc)|(155,130)" xmlns="http://www.ni.com/PlatformFramework" />
-									<MethodCall Bounds="90 25 40 40" Id="f5044bb4907a42859d4384a0092dc8b0" ResolveFailedHint="&quot;C:\\Users\\Andrew\\Documents\\LabVIEW_NXG\\Libraries\\Hardware Abstraction Framework\\Hardware Abstraction Framework.gcomp\\Common\\ExecutableDirector.gtype\\Process Executables.gvi&quot;" Signature="@015d0333f327414ea4305b534f2e9d4e" Target="Hardware Abstraction Framework::Common::ExecutableDirector.gtype::Process Executables.gvi" xmlns="http://www.ni.com/MocCommon">
+									<MethodCall Bounds="180 25 40 40" Id="f5044bb4907a42859d4384a0092dc8b0" ResolveFailedHint="&quot;C:\\Users\\Andrew\\Documents\\LabVIEW_NXG\\Libraries\\Hardware Abstraction Framework\\Hardware Abstraction Framework.gcomp\\Common\\ExecutableDirector.gtype\\Process Executables.gvi&quot;" Signature="@70892b559269422f9e84b36193818872" Target="Hardware Abstraction Framework::Common::ExecutableDirector.gtype::Process Executables.gvi" xmlns="http://www.ni.com/MocCommon">
 										<p.MethodDeclaration>
 											<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 												<Parameter Id="L0" Desc="ExecutableDirector in" />
+												<Parameter Id="L1" Desc="Results Notifier" />
 												<Parameter Id="L3" Desc="Error in" />
 												<Parameter Id="R0" Desc="ExecutableDirector out" />
 												<Parameter Id="R3" Desc="Error out" />
 											</MethodDeclaration>
 										</p.MethodDeclaration>
-										<Terminal DataType="@6363ad9d8e674d399f5d7d2656aa529e" Direction="Input" Id="L0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
+										<Terminal DataType="@2978213054ab4065a6e95a5c02687935" Direction="Input" Id="L0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
+										<Terminal DataType="@c476b0e9d08d4afb9133f89e998aa9a3" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
 										<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
-										<Terminal DataType="@6363ad9d8e674d399f5d7d2656aa529e" Direction="Output" Hotspot="40 5" Id="R0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
+										<Terminal DataType="@2978213054ab4065a6e95a5c02687935" Direction="Output" Hotspot="40 5" Id="R0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
 										<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
 									</MethodCall>
-									<Wire Id="9538a86418d1459cbf8740665de3887d" Joints="N(b98413934c2e404db562b800881f74df:a264f821468a4b518b1fa95e149ef093)|(4,60) N(f5044bb4907a42859d4384a0092dc8b0:L3)|(90,60)" xmlns="http://www.ni.com/PlatformFramework" />
-									<Wire Id="281c85c3a5234dff861496ddca04671e" Joints="N(11b581d6fc4f9fbbbc93c84fbd23d7:a264f821468a4b518b1fa95e149ef093)|(4,30) N(f5044bb4907a42859d4384a0092dc8b0:L0)|(90,30)" xmlns="http://www.ni.com/PlatformFramework" />
-									<Wire Id="ebbdbc50899a426a973f50f2456d0194" Joints="N(f5044bb4907a42859d4384a0092dc8b0:R3)|(130,60) N(e44c11997864933adcb482f130e2668:a264f821468a4b518b1fa95e149ef093)|(421,60)" xmlns="http://www.ni.com/PlatformFramework" />
+									<Wire Id="9538a86418d1459cbf8740665de3887d" Joints="N(b98413934c2e404db562b800881f74df:a264f821468a4b518b1fa95e149ef093)|(4,60) N(f5044bb4907a42859d4384a0092dc8b0:L3)|(180,60)" xmlns="http://www.ni.com/PlatformFramework" />
+									<Wire Id="281c85c3a5234dff861496ddca04671e" Joints="N(11b581d6fc4f9fbbbc93c84fbd23d7:a264f821468a4b518b1fa95e149ef093)|(4,30) N(f5044bb4907a42859d4384a0092dc8b0:L0)|(180,30)" xmlns="http://www.ni.com/PlatformFramework" />
+									<Wire Id="ebbdbc50899a426a973f50f2456d0194" Joints="N(f5044bb4907a42859d4384a0092dc8b0:R3)|(220,60) N(e44c11997864933adcb482f130e2668:a264f821468a4b518b1fa95e149ef093)|(421,60)" xmlns="http://www.ni.com/PlatformFramework" />
 									<Comment Bounds="55 175 335 35" Id="57c3c66a32514216987701de1ac3d6e7" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
 										<p.Text>Process each Executable Director in turn, once.  If it isn't the last, wait as requested before running the next one.</p.Text>
 									</Comment>
-									<Wire Id="eeebbc23cd2947528bd4930b30c5a646" Joints="N(f5044bb4907a42859d4384a0092dc8b0:R0)|(130,30) N(22378ba70464e5a98f739c6d2f10046:a264f821468a4b518b1fa95e149ef093)|(421,30)" xmlns="http://www.ni.com/PlatformFramework" />
+									<Wire Id="eeebbc23cd2947528bd4930b30c5a646" Joints="N(f5044bb4907a42859d4384a0092dc8b0:R0)|(220,30) N(22378ba70464e5a98f739c6d2f10046:a264f821468a4b518b1fa95e149ef093)|(421,30)" xmlns="http://www.ni.com/PlatformFramework" />
+									<DataAccessor Bounds="110 35 40 15" DataItem="b8bfc7a0ac9e482794c38439b27aaf07" Id="a7f7b7efd1f041e19c22df5d572aa03c" Label="8f4b1a4822b44c93857827ecfdb4fa12" xmlns="http://www.ni.com/MocCommon">
+										<Terminal DataType="@c476b0e9d08d4afb9133f89e998aa9a3" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+									</DataAccessor>
+									<NodeLabel AttachedTo="a7f7b7efd1f041e19c22df5d572aa03c" Bounds="21 35 84 14" Id="8f4b1a4822b44c93857827ecfdb4fa12" xmlns="http://www.ni.com/PlatformFramework">
+										<p.Text>Results Notifier</p.Text>
+									</NodeLabel>
+									<Wire Id="f7cb29e8f5d748e499b8e30b8867fd41" Joints="N(a7f7b7efd1f041e19c22df5d572aa03c:Value)|(150,40) N(f5044bb4907a42859d4384a0092dc8b0:L1)|(180,40)" xmlns="http://www.ni.com/PlatformFramework" />
 								</CaseStructure.Case>
 								<CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="acd91b62385a4c1884fcfeb038dae561" Terminals="8ff3cb5994464fa08674808181114f1f=e82f7dba3fbf44d5846bb131c16ea43e, 2499d86b15314d70b92f47823c1a119f, a264f821468a4b518b1fa95e149ef093" />
 								<CaseStructure.Tunnel Bounds="-4 60 13 10" Docking="Left" Id="b98413934c2e404db562b800881f74df" Terminals="8ff3cb5994464fa08674808181114f1f=2d979fd80635444a98e4b346a11a1161, 2499d86b15314d70b92f47823c1a119f=22e0b7a6f93249258021d40a7bf40c66, a264f821468a4b518b1fa95e149ef093=9538a86418d1459cbf8740665de3887d" />
@@ -935,12 +955,12 @@
 							<PropertyItemTerminal DataType="String" Hotspot="84 15" Id="c0t0v" Path="Continue" PathElementMemberKinds="Field" Usage="Optional" />
 						</PropertyNode>
 						<Wire Facade="WireInvisibleFacade" Id="d9f77dddfffe419cb581f82c414a3431" Joints="N(fa0cf1684264bb195ac862d3204a2ea:Out)|(270,71) v(9) h(-54) v(-10) N(20cf655364864651a7b93b2c230eddc2:instance in)|(270,70)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
-						<PropertyNode Bounds="750 475 91 35" HasErrorTerminals="False" Id="21df4df7455b4676afe303b9c28b7944" InstanceDataType="@76197d78a8264a04966ae322fe621cd5" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
+						<PropertyNode Bounds="750 475 91 35" HasErrorTerminals="False" Id="21df4df7455b4676afe303b9c28b7944" InstanceDataType="@cd835da405b641ac85a4a82ce7551e4b" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
 							<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 								<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableProcessor.gtype" />
 								<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableDirector.gtype" />
 							</p.TypeDefinitionTargets>
-							<PropertyItemTerminal Action="Write" DataType="@fe20d8e5a7ef4a77930af81523765f59" Hotspot="0 15" Id="c0t0v" Path="Directors" PathElementMemberKinds="Field" Usage="Required" />
+							<PropertyItemTerminal Action="Write" DataType="@8499284964944df8803de0e166238317" Hotspot="0 15" Id="c0t0v" Path="Directors" PathElementMemberKinds="Field" Usage="Required" />
 						</PropertyNode>
 						<Wire Id="def55032c44cee8d6de95a68cd73f4" Joints="N(21df4df7455b4676afe303b9c28b7944:instance out)|(841,480) N(1c1b940b7c95491897f87de4301d9d7e:6611bf15a204ac98ccdcfe9a015c3f2)|(851,480)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="6d39f470de074dab9fd3c33dc6924fae" Joints="N(ae87ff087d7b4b3e8b3a00d3de1d85f2:9db19e101e6243ecb8ffafc0863dfb88)|(782,340) h(5) v(115) h(-43) v(35) N(21df4df7455b4676afe303b9c28b7944:c0t0v)|(750,490)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -1031,19 +1051,19 @@
 						<Comment Bounds="45 260 520 85" Id="57ed2fe862bc47f1bc79cdf9ba2d8fcb" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
 							<p.Text>"Ask all Exectuable Directors if they should continue; when all respond false then we're done.  Any that are done will not get processed just because one or more are not yet finished.\r\nAn incoming stop message that occurs during processing will prevent this state executing as it will be 'higher' in the queue.  So a Stop message is only handled once all ED Executables have processed."</p.Text>
 						</Comment>
-						<PropertyNode Bounds="50 195 84 35" HasErrorTerminals="False" Id="a9c2e8294763491fa00e3af2aed60001" InstanceDataType="@76197d78a8264a04966ae322fe621cd5" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
+						<PropertyNode Bounds="50 195 84 35" HasErrorTerminals="False" Id="a9c2e8294763491fa00e3af2aed60001" InstanceDataType="@cd835da405b641ac85a4a82ce7551e4b" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
 							<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 								<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableProcessor.gtype" />
 								<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableDirector.gtype" />
 							</p.TypeDefinitionTargets>
-							<PropertyItemTerminal DataType="@fe20d8e5a7ef4a77930af81523765f59" Hotspot="84 15" Id="c0t0v" Path="Directors" PathElementMemberKinds="Field" Usage="Optional" />
+							<PropertyItemTerminal DataType="@8499284964944df8803de0e166238317" Hotspot="84 15" Id="c0t0v" Path="Directors" PathElementMemberKinds="Field" Usage="Optional" />
 						</PropertyNode>
 						<ForLoop Bounds="153 88 146 156" DiagramId="c9dfc98525174bec8c9812310ac1f949" Id="92bf0aedff2d4321a7caa30756ac4cd0">
 							<LoopIteration Bounds="35 125 15 15" Id="405656fc2f3d4b66bcdebcb8e7655f03" />
 							<Wire Id="d47362e9191b40a699718060f1600aaa" Joints="N(46b80c791f64280a79f0b1b49c33517:i0)|(6,120) h(9) v(-45) N(82d64645a22a410a91add3f9cf3a33da:L0)|(35,75)" xmlns="http://www.ni.com/PlatformFramework" />
 							<Wire Id="b1c32ae114344e4a91dd70e725b77d40" Joints="N(b5604ca1658d4c9f9a758db27a7bee90:i0)|(6,90) h(19) v(15) N(82d64645a22a410a91add3f9cf3a33da:L3)|(35,105)" xmlns="http://www.ni.com/PlatformFramework" />
 							<Wire Id="46e9431a01f24d2a8a4fe3298ce42ef4" Joints="N(82d64645a22a410a91add3f9cf3a33da:R3)|(75,105) h(45) v(-35) N(48ad285a85bb4d8b8e6b36a135e499f0:i0)|(134,70)" xmlns="http://www.ni.com/PlatformFramework" />
-							<MethodCall Bounds="35 70 40 40" Id="82d64645a22a410a91add3f9cf3a33da" ResolveFailedHint="&quot;C:\\Users\\Andrew\\Documents\\LabVIEW_NXG\\Libraries\\Hardware Abstraction Framework\\Hardware Abstraction Framework.gcomp\\Common\\ExecutableDirector.gtype\\Should Continue.gvi&quot;" Signature="@f3f3c8b4cb58429988dc4739db656728" Target="Hardware Abstraction Framework::Common::ExecutableDirector.gtype::Should Continue.gvi" xmlns="http://www.ni.com/MocCommon">
+							<MethodCall Bounds="35 70 40 40" Id="82d64645a22a410a91add3f9cf3a33da" ResolveFailedHint="&quot;C:\\Users\\Andrew\\Documents\\LabVIEW_NXG\\Libraries\\Hardware Abstraction Framework\\Hardware Abstraction Framework.gcomp\\Common\\ExecutableDirector.gtype\\Should Continue.gvi&quot;" Signature="@d0bf3d434de14388a1d21af4a989d7d1" Target="Hardware Abstraction Framework::Common::ExecutableDirector.gtype::Should Continue.gvi" xmlns="http://www.ni.com/MocCommon">
 								<p.MethodDeclaration>
 									<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 										<Parameter Id="L0" Desc="ExecutableDirector in" />
@@ -1053,9 +1073,9 @@
 										<Parameter Id="R3" Desc="Error out" />
 									</MethodDeclaration>
 								</p.MethodDeclaration>
-								<Terminal DataType="@6363ad9d8e674d399f5d7d2656aa529e" Direction="Input" Id="L0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="@2978213054ab4065a6e95a5c02687935" Direction="Input" Id="L0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
 								<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
-								<Terminal DataType="@6363ad9d8e674d399f5d7d2656aa529e" Direction="Output" Hotspot="40 5" Id="R0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="@2978213054ab4065a6e95a5c02687935" Direction="Output" Hotspot="40 5" Id="R0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
 								<Terminal DataType="Boolean" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
 								<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
 							</MethodCall>
@@ -1350,11 +1370,11 @@
 							<p.Text>Priority?</p.Text>
 						</NodeLabel>
 						<Wire Id="4ac292f17d00472a963f07f96e624d81" Joints="N(7200bc70bec64de788eb9bb84d5fa79a:R3)|(205,200) h(150) v(-120) N(15158f986f3c4b42bd8f4fb825fb664b:L3)|(380,80)" xmlns="http://www.ni.com/PlatformFramework" />
-						<Literal Bounds="120 65 155 15" DataType="String" Id="ecfdfb465cd84cb99a98654ad79ec98a" Label="ab9f6161fbcb4ad1a14486b7a944dfd2" xmlns="http://www.ni.com/MocCommon">
-							<p.Data>Instrument Identification</p.Data>
+						<Literal Bounds="195 65 115 15" DataType="String" Id="ecfdfb465cd84cb99a98654ad79ec98a" Label="ab9f6161fbcb4ad1a14486b7a944dfd2" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>Process Directors</p.Data>
 							<StringBehavior TextDisplayMode="Default" />
 						</Literal>
-						<NodeLabel AttachedTo="ecfdfb465cd84cb99a98654ad79ec98a" Bounds="120 47 30 15" Id="ab9f6161fbcb4ad1a14486b7a944dfd2" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<NodeLabel AttachedTo="ecfdfb465cd84cb99a98654ad79ec98a" Bounds="195 47 30 15" Id="ab9f6161fbcb4ad1a14486b7a944dfd2" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 							<p.Text>Raiser Name</p.Text>
 						</NodeLabel>
 						<Wire Id="6191ed3c475a465bb5dfc5283f3e7051" Joints="N(15158f986f3c4b42bd8f4fb825fb664b:R3)|(420,80) h(99) v(-20) N(3da82e973cc04518951c98ba0b9137d6:L3)|(530,60)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -1384,7 +1404,7 @@
 							<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
 							<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
 						</MethodCall>
-						<Wire Id="ef733774c611453ca58713318ce29859" Joints="N(ecfdfb465cd84cb99a98654ad79ec98a:Out)|(275,70) h(100) v(-10) N(15158f986f3c4b42bd8f4fb825fb664b:L1)|(380,60)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="ef733774c611453ca58713318ce29859" Joints="N(ecfdfb465cd84cb99a98654ad79ec98a:Out)|(310,70) h(60) v(-10) N(15158f986f3c4b42bd8f4fb825fb664b:L1)|(380,60)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Literal Bounds="325 45 25 15" DataType="Boolean" Id="fb4d8502b91b490194ab0564b211f4b4" Label="ed477f49a6b94444823d63b78e8b1479" xmlns="http://www.ni.com/MocCommon">
 							<p.Data>True</p.Data>
 							<BooleanBehavior />
@@ -1532,24 +1552,11 @@
 						<Comment Bounds="145 95 460 90" Id="70cedde4b33b48ffa2cb6e2263a3784e" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
 							<p.Text>"Clear the internal queue and wait for a Resume message to appear.  The queue is reset as Pause messages are raised at the front of the queue (high priority) and we don't want to process any messages that were in the queue originally.\r\n\r\nNote that the processing only pauses after the current run through of Executable Directors completes."</p.Text>
 						</Comment>
-						<MethodCall Bounds="165 25 40 40" Id="24b9bde1fd004b05b6b592083995ae86" ResolveFailedHint="&quot;C:\\Users\\Andrew\\Documents\\LabVIEW_NXG\\Libraries\\Hardware Abstraction Framework\\Hardware Abstraction Framework.gcomp\\Support\\Messages\\Reset Message Queue.gvi&quot;" Signature="@8b66dcf5fdc44e5f97dd081813020cb8" Target="Hardware Abstraction Framework::Support::Messages::Reset Message Queue.gvi" xmlns="http://www.ni.com/MocCommon">
-							<p.MethodDeclaration>
-								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
-									<Parameter Id="L0" Desc="Message Queue In" />
-									<Parameter Id="L3" Desc="Error In" />
-									<Parameter Id="R0" Desc="Message Queue Out" />
-									<Parameter Id="R3" Desc="Error Out" />
-								</MethodDeclaration>
-							</p.MethodDeclaration>
-							<Terminal DataType="@ad09babbe7f34c88aba7942b330b1d19" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
-							<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
-							<Terminal DataType="@ad09babbe7f34c88aba7942b330b1d19" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
-							<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
-						</MethodCall>
-						<Wire Id="7520adce63c648089e5671c73b964ec9" Joints="N(d7f4a7074a5d4f0da45cff75504fd15b:565e0a163a674ecf8f126fcba406d58b)|(4,30) N(24b9bde1fd004b05b6b592083995ae86:L0)|(165,30)" xmlns="http://www.ni.com/PlatformFramework" />
-						<Wire Id="554f6e13f4ec4a998d6f5beb95a565de" Joints="N(95960b4fee1646589d18f2bf90b4a10d:565e0a163a674ecf8f126fcba406d58b)|(4,60) N(24b9bde1fd004b05b6b592083995ae86:L3)|(165,60)" xmlns="http://www.ni.com/PlatformFramework" />
-						<Wire Id="4ca2c2efbbb9441fbd78347d3c7849ed" Joints="N(24b9bde1fd004b05b6b592083995ae86:R3)|(205,60) N(1779e84ceda749f791f7c8de87947aa4:565e0a163a674ecf8f126fcba406d58b)|(851,60)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="7520adce63c648089e5671c73b964ec9" Joints="N(d7f4a7074a5d4f0da45cff75504fd15b:565e0a163a674ecf8f126fcba406d58b)|(4,30) N(6839581ed1c490cb8f6641218d26e8f:queue)|(160,30)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="554f6e13f4ec4a998d6f5beb95a565de" Joints="N(95960b4fee1646589d18f2bf90b4a10d:565e0a163a674ecf8f126fcba406d58b)|(4,60) N(6839581ed1c490cb8f6641218d26e8f:error in)|(160,60)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="4ca2c2efbbb9441fbd78347d3c7849ed" Joints="N(6839581ed1c490cb8f6641218d26e8f:error out)|(200,60) N(1779e84ceda749f791f7c8de87947aa4:565e0a163a674ecf8f126fcba406d58b)|(851,60)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="4581d1d6049747e8958fd8ae44ed9342" Joints="N(7b3f676a3d7344c5b012990c53033869:565e0a163a674ecf8f126fcba406d58b)|(4,240) h(716) v(240) N(1c1b940b7c95491897f87de4301d9d7e:565e0a163a674ecf8f126fcba406d58b)|(851,480)" xmlns="http://www.ni.com/PlatformFramework" />
+						<FlushQueue Bounds="160 25 40 40" Id="6839581ed1c490cb8f6641218d26e8f" />
 					</CaseStructure.Case>
 					<CaseStructure.Case Bounds="5 5 855 555" Id="c561c32aaa5b451db953968c9fd137a5" Pattern="&quot;Resume&quot;">
 						<Wire Id="e29ead83e0e4428bb245e5c77b49e1bd" Joints="N(3dfa4a077bfd4e4b934c0250d41a896c:c0t0v)|(289,95) h(61) v(-55) N(cd347472ba1f44508de19d70ab60b4b6:L1)|(370,40)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -1800,16 +1807,16 @@
 						<Comment Bounds="75 245 340 45" Id="b52090a744b54a6cac279b0ad2f786ec" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
 							<p.Text>Processing will exit.  Ensure a clean shutdown.  All Executables are asked to cleanup which performs a controlled shutdown of Drivers.</p.Text>
 						</Comment>
-						<PropertyNode Bounds="80 180 84 35" HasErrorTerminals="False" Id="b0ce906dd7db488281f2c34cef305d68" InstanceDataType="@76197d78a8264a04966ae322fe621cd5" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
+						<PropertyNode Bounds="80 180 84 35" HasErrorTerminals="False" Id="b0ce906dd7db488281f2c34cef305d68" InstanceDataType="@cd835da405b641ac85a4a82ce7551e4b" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
 							<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 								<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableProcessor.gtype" />
 								<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableDirector.gtype" />
 							</p.TypeDefinitionTargets>
-							<PropertyItemTerminal DataType="@fe20d8e5a7ef4a77930af81523765f59" Hotspot="84 15" Id="c0t0v" Path="Directors" PathElementMemberKinds="Field" Usage="Optional" />
+							<PropertyItemTerminal DataType="@8499284964944df8803de0e166238317" Hotspot="84 15" Id="c0t0v" Path="Directors" PathElementMemberKinds="Field" Usage="Optional" />
 						</PropertyNode>
 						<ForLoop Bounds="188 38 281 201" DiagramId="9ab9aca3443e436fafb88f93319ad7cb" Id="cae22a90f8524cf5917ff94d8c6ac3e9">
 							<LoopIteration Bounds="5 170 15 15" Id="5b910e165ef04978821a94076870ce9c" />
-							<MethodCall Bounds="40 50 40 40" Id="60754cb008af4784a4b96e79a04754b4" ResolveFailedHint="&quot;C:\\Users\\Andrew\\Documents\\LabVIEW_NXG\\Libraries\\Hardware Abstraction Framework\\Hardware Abstraction Framework.gcomp\\Common\\ExecutableDirector.gtype\\Read Executables.gvi&quot;" Signature="@fed7e4a6e2cd432dbe393bec3490516c" Target="Hardware Abstraction Framework::Common::ExecutableDirector.gtype::Read Executables.gvi" xmlns="http://www.ni.com/MocCommon">
+							<MethodCall Bounds="40 50 40 40" Id="60754cb008af4784a4b96e79a04754b4" ResolveFailedHint="&quot;C:\\Users\\Andrew\\Documents\\LabVIEW_NXG\\Libraries\\Hardware Abstraction Framework\\Hardware Abstraction Framework.gcomp\\Common\\ExecutableDirector.gtype\\Read Executables.gvi&quot;" Signature="@2b5a28820e8f4da583c63bb21d498d7b" Target="Hardware Abstraction Framework::Common::ExecutableDirector.gtype::Read Executables.gvi" xmlns="http://www.ni.com/MocCommon">
 								<p.MethodDeclaration>
 									<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 										<Parameter Id="L0" Desc="ExecutableDirector in" />
@@ -1819,17 +1826,17 @@
 										<Parameter Id="R3" Desc="Error out" />
 									</MethodDeclaration>
 								</p.MethodDeclaration>
-								<Terminal DataType="@6363ad9d8e674d399f5d7d2656aa529e" Direction="Input" Id="L0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="@2978213054ab4065a6e95a5c02687935" Direction="Input" Id="L0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
 								<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
-								<Terminal DataType="@6363ad9d8e674d399f5d7d2656aa529e" Direction="Output" Hotspot="40 5" Id="R0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
-								<Terminal DataType="@727d950d0d58494cab36ebe587e6e13a" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="@2978213054ab4065a6e95a5c02687935" Direction="Output" Hotspot="40 5" Id="R0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="@fbb52959b01040ecb2bf19da99f309a2" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
 								<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
 							</MethodCall>
 							<Wire Id="54b73e4da49347f79de8e7e86700749d" Joints="N(c00c459860424b26a1a59a3f630f8190:i0)|(6,100) h(24) v(-45) N(60754cb008af4784a4b96e79a04754b4:L0)|(40,55)" xmlns="http://www.ni.com/PlatformFramework" />
 							<Wire Id="d40b542155334461921eecc4f0e32537" Joints="N(e18b40819211463f9b9dcb82b33d39cb:i0)|(6,70) h(5) v(15) N(60754cb008af4784a4b96e79a04754b4:L3)|(40,85)" xmlns="http://www.ni.com/PlatformFramework" />
 							<ForLoop Bounds="103 28 151 136" DiagramId="98a7d77730e34ecf97b7759c233047be" Id="d04aeb9f898a4414829d258b476afd34">
 								<LoopIteration Bounds="5 105 15 15" Id="1a194f8043804c16b3e1fd99954035b6" />
-								<MethodCall Bounds="45 30 40 40" Id="d5d114ad870f4dd5a0c7e3e8d37ace74" ResolveFailedHint="&quot;C:\\Users\\Andrew\\Documents\\LabVIEW_NXG\\Libraries\\Hardware Abstraction Framework\\Hardware Abstraction Framework.gcomp\\Common\\WriteExecutable.gtype\\Cleanup.gvi&quot;" Signature="@92a5e0975512497bb0cb0997e2d54d25" Target="Hardware Abstraction Framework::Common::WriteExecutable.gtype::Cleanup.gvi" xmlns="http://www.ni.com/MocCommon">
+								<MethodCall Bounds="45 30 40 40" Id="d5d114ad870f4dd5a0c7e3e8d37ace74" ResolveFailedHint="&quot;C:\\Users\\Andrew\\Documents\\LabVIEW_NXG\\Libraries\\Hardware Abstraction Framework\\Hardware Abstraction Framework.gcomp\\Common\\WriteExecutable.gtype\\Cleanup.gvi&quot;" Signature="@1ec71d4ecdc1493e8f49e164e8f44864" Target="Hardware Abstraction Framework::Common::WriteExecutable.gtype::Cleanup.gvi" xmlns="http://www.ni.com/MocCommon">
 									<p.MethodDeclaration>
 										<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 											<Parameter Id="L0" Desc="WriteExecutable in" />
@@ -1838,9 +1845,9 @@
 											<Parameter Id="R3" Desc="Error out" />
 										</MethodDeclaration>
 									</p.MethodDeclaration>
-									<Terminal DataType="@d67d51ccd0d34cb6b29a46e3583c738e" Direction="Input" Id="L0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="@81389cedc6e54a32abfa4a7793f4bc5a" Direction="Input" Id="L0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
 									<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
-									<Terminal DataType="@d67d51ccd0d34cb6b29a46e3583c738e" Direction="Output" Hotspot="40 5" Id="R0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="@81389cedc6e54a32abfa4a7793f4bc5a" Direction="Output" Hotspot="40 5" Id="R0" Usage="DynamicDispatch" xmlns="http://www.ni.com/PlatformFramework" />
 									<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
 								</MethodCall>
 								<Wire Id="59a9424f2aa249ed9e75b4842fc113fb" Joints="N(fa6d0e9f7164587b9820dbf9e0be91f:i0)|(6,35) N(d5d114ad870f4dd5a0c7e3e8d37ace74:L0)|(45,35)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -1873,6 +1880,7 @@
 					<CaseStructure.Tunnel Bounds="-4 240 13 10" Docking="Left" Id="7b3f676a3d7344c5b012990c53033869" Terminals="468b9ac86f6f479f8addae3d61f446a8=d349015c5e1f4056b18456a1a0edde00, 65dc6385349c48a1ba965d3762ccdb23=4e2814fa0414b45b1bac70668e4412e, 93a06215e70140eb8f1fdeb974814f9e=8d54c523183645ab94fdf8647c3eecc5, 6611bf15a204ac98ccdcfe9a015c3f2=503bb63c58431cbda46bc16a8e8d35, 64580e41f6004a51bfa3b087b495cefd=84c2d4f392724752b31cf47bbc1daba5, 19d2a427c2a44e64842754f8c4b3d551=8fe28422ef13447c9e8a1829b524c625, 565e0a163a674ecf8f126fcba406d58b=4581d1d6049747e8958fd8ae44ed9342, c561c32aaa5b451db953968c9fd137a5=2510244dc08347539e87b978e6cc3d8a, e5519db5ab2a45fa9baf89bb17cba7ab=3e7306fc328a449f80b804cbca62d1d2, deeb093848da44e2970510d75e646442=e89b4f1ede9249da9f71a066d6ad015a" />
 					<CaseStructure.Tunnel Bounds="-4 170 13 10" Docking="Left" Id="9c9ffbaa5ac6473ba8e7d5696312e24c" Terminals="468b9ac86f6f479f8addae3d61f446a8=d3e399c0bc254850b8de60f0824f11c6, 65dc6385349c48a1ba965d3762ccdb23, 93a06215e70140eb8f1fdeb974814f9e, 6611bf15a204ac98ccdcfe9a015c3f2, 64580e41f6004a51bfa3b087b495cefd, 19d2a427c2a44e64842754f8c4b3d551=ad7bb7095dcb4671bf722883f13de983, 565e0a163a674ecf8f126fcba406d58b, c561c32aaa5b451db953968c9fd137a5, e5519db5ab2a45fa9baf89bb17cba7ab, deeb093848da44e2970510d75e646442" />
 					<CaseStructure.Tunnel Bounds="856 480 13 10" Docking="Right" Id="1c1b940b7c95491897f87de4301d9d7e" Terminals="468b9ac86f6f479f8addae3d61f446a8=73257254b360463faf89436c0ff3f2ac, 65dc6385349c48a1ba965d3762ccdb23=4e2814fa0414b45b1bac70668e4412e, 93a06215e70140eb8f1fdeb974814f9e=8d54c523183645ab94fdf8647c3eecc5, 6611bf15a204ac98ccdcfe9a015c3f2=def55032c44cee8d6de95a68cd73f4, 64580e41f6004a51bfa3b087b495cefd=84c2d4f392724752b31cf47bbc1daba5, 19d2a427c2a44e64842754f8c4b3d551=8fe28422ef13447c9e8a1829b524c625, 565e0a163a674ecf8f126fcba406d58b=4581d1d6049747e8958fd8ae44ed9342, c561c32aaa5b451db953968c9fd137a5=2510244dc08347539e87b978e6cc3d8a, e5519db5ab2a45fa9baf89bb17cba7ab=3e7306fc328a449f80b804cbca62d1d2, deeb093848da44e2970510d75e646442=e89b4f1ede9249da9f71a066d6ad015a" />
+					<CaseStructure.Tunnel Bounds="-4 100 13 10" Docking="Left" Id="361ccd991d484326b51bd30d1fb1c0ae" Terminals="468b9ac86f6f479f8addae3d61f446a8=3415832077a24d319d3e7e2d1ba5fe00, 65dc6385349c48a1ba965d3762ccdb23=f93c3e463b504679bda3ffda317366c5, 93a06215e70140eb8f1fdeb974814f9e, 6611bf15a204ac98ccdcfe9a015c3f2, 64580e41f6004a51bfa3b087b495cefd, 19d2a427c2a44e64842754f8c4b3d551, 565e0a163a674ecf8f126fcba406d58b, c561c32aaa5b451db953968c9fd137a5, e5519db5ab2a45fa9baf89bb17cba7ab, deeb093848da44e2970510d75e646442" />
 				</CaseStructure>
 				<Wire Id="616e81a71f2b4f80acea0dcfc75ac471" Joints="N(de6c3e640e78454a9a542dae458a78fa:R1)|(110,85) N(f9da628ba94243dc89e0fa9a7b390aac:468b9ac86f6f479f8addae3d61f446a8)|(151,85)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Comment Bounds="245 15 385 15" Id="b669c9bf2e98433ebc3d671cfc4673b1" xmlns="http://www.ni.com/MocCommon">
@@ -1881,7 +1889,7 @@
 				<Wire Id="a964a89c70be416b8fc23db9d466b7c1" Joints="N(de6c3e640e78454a9a542dae458a78fa:R0)|(110,75) N(d7f4a7074a5d4f0da45cff75504fd15b:468b9ac86f6f479f8addae3d61f446a8)|(151,75)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="c07d83b7cbc844b18b0ba2c3be69dd79" Joints="N(de6c3e640e78454a9a542dae458a78fa:R2)|(110,95) N(65d0d4a4ef5e4b50be183aae62726bae:468b9ac86f6f479f8addae3d61f446a8)|(151,95)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="1047001831b3476083b673f1b340afc0" Joints="N(de6c3e640e78454a9a542dae458a78fa:R3)|(110,105) N(95960b4fee1646589d18f2bf90b4a10d:468b9ac86f6f479f8addae3d61f446a8)|(151,105)" xmlns="http://www.ni.com/PlatformFramework" />
-				<Comment Bounds="15 120 130 65" Id="7b2678be666747609f2a8ff84dbd479f" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+				<Comment Bounds="10 295 130 65" Id="7b2678be666747609f2a8ff84dbd479f" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
 					<p.Text>Waits for next message. Queue is reset with Initialise message.</p.Text>
 				</Comment>
 				<Wire Id="1d9b601582804fdab73e5bbecd439ef1" Joints="N(ef51483060fd4609aea4d0fcde126437:468b9ac86f6f479f8addae3d61f446a8)|(1024,305) N(83b8970c39ad452c845fd212938d7554:Input)|(1085,305)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -1911,6 +1919,7 @@
 				<Wire Id="d349015c5e1f4056b18456a1a0edde00" Joints="N(4b92fdefe1164d7e8aaec414073a7495:i0)|(4,285) N(7b3f676a3d7344c5b012990c53033869:468b9ac86f6f479f8addae3d61f446a8)|(151,285)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="d3e399c0bc254850b8de60f0824f11c6" Joints="N(8f9e63ae8f36474f8f447734537d7377:i0)|(4,215) N(9c9ffbaa5ac6473ba8e7d5696312e24c:468b9ac86f6f479f8addae3d61f446a8)|(151,215)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="73257254b360463faf89436c0ff3f2ac" Joints="N(1c1b940b7c95491897f87de4301d9d7e:468b9ac86f6f479f8addae3d61f446a8)|(1024,525) h(106) v(-240) N(f9078708170b4d68abaf1d69e8bc7031:d5607c2c17c04eb2aa172095f9c01a7a)|(1151,285)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="3415832077a24d319d3e7e2d1ba5fe00" Joints="N(de6c3e640e78454a9a542dae458a78fa:B1)|(95,110) v(35) N(361ccd991d484326b51bd30d1fb1c0ae:468b9ac86f6f479f8addae3d61f446a8)|(151,145)" xmlns="http://www.ni.com/PlatformFramework" />
 				<LoopTunnel Bounds="-4 75 13 10" Docking="Left" Id="5f36c53ce01a4fbe8c66f70bb46b1fe6" Terminals="o0=29b9ebda19a04ba2a3b0515e722c66eb, i0=14d65be3a11e47ceb74560d7d01e4e15" />
 				<LoopTunnel Bounds="-4 215 13 10" Docking="Left" Id="8f9e63ae8f36474f8f447734537d7377" Terminals="o0=2c5b1453fae44904b29ced5634a73e7e, i0=d3e399c0bc254850b8de60f0824f11c6" />
 				<LoopTunnel Bounds="-4 105 13 10" Docking="Left" Id="fc915727641848abbcc2202b53666792" Terminals="o0=a38a6a72eb3e442bbe83e7214689351a, i0=5955a3e8ead14529bdc2ce14a6b02843" />
@@ -1949,7 +1958,7 @@
 			</NodeLabel>
 			<Wire Id="a38a6a72eb3e442bbe83e7214689351a" Joints="N(25:Value)|(380,530) N(fc915727641848abbcc2202b53666792:o0)|(401,530)" xmlns="http://www.ni.com/PlatformFramework" />
 			<DataAccessor Bounds="220 705 40 15" DataItem="16" Id="29" Label="30" xmlns="http://www.ni.com/MocCommon">
-				<Terminal DataType="@76197d78a8264a04966ae322fe621cd5" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@cd835da405b641ac85a4a82ce7551e4b" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
 			<NodeLabel AttachedTo="29" Bounds="88 705 127 14" Id="30" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>ExecutableProcessor in</p.Text>
@@ -1979,7 +1988,7 @@
 			<Wire Id="934e6903f80a4d6bba85de766b4be10d" Joints="N(d49f788852284c81b8b1e1f3fb7f607b:c3t0v)|(183,155) N(42d0c5ad92984d409424e9ef55acc448:c3t0v)|(235,155)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="77634448b8714005b1b9737ecad16e25" Joints="N(29:Value)|(260,710) N(4b92fdefe1164d7e8aaec414073a7495:o0)|(401,710)" xmlns="http://www.ni.com/PlatformFramework" />
 			<DataAccessor Bounds="1625 705 40 15" DataItem="17" Id="31" Label="32" xmlns="http://www.ni.com/MocCommon">
-				<Terminal DataType="@76197d78a8264a04966ae322fe621cd5" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@cd835da405b641ac85a4a82ce7551e4b" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
 			<NodeLabel AttachedTo="31" Bounds="1670 705 135 14" Id="32" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>ExecutableProcessor out</p.Text>
@@ -2012,12 +2021,12 @@
 			</Cluster>
 			<Label Foreground="[SMColor]#ff2b3033" Height="[float]16" Id="108" LabelOwner="[UIModel]101" Left="[float]544" Text="[string]Error out" Top="[float]352" Width="[float]47" xmlns="http://www.ni.com/PanelCommon" />
 			<PanelExecutionWindow Id="109" />
-			<ValueClassControl BaseName="[string]ExecutableProcessor" Enabled="[bool]True" Id="de887fec860d4546a4ad43776797743e" IsTabStop="[bool]False" Label="[UIModel]f18a9f6caca94d51a29424384267b2ca" LabelLinked="[bool]True" Left="[float]100" TabIndex="[int]2" Top="[float]52" Value="{DataItemBinding Id=16}" ValueClassControl="[Type]@76197d78a8264a04966ae322fe621cd5" p4:ControlDefinitionChecksum="e8Fmj1vYEKMCrP7p+2Ww6LDToakBlRVWObR39upg7FY=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/MocCommon">
+			<ValueClassControl BaseName="[string]ExecutableProcessor" Enabled="[bool]True" Id="de887fec860d4546a4ad43776797743e" IsTabStop="[bool]False" Label="[UIModel]f18a9f6caca94d51a29424384267b2ca" LabelLinked="[bool]True" Left="[float]100" TabIndex="[int]2" Top="[float]52" Value="{DataItemBinding Id=16}" ValueClassControl="[Type]@cd835da405b641ac85a4a82ce7551e4b" p4:ControlDefinitionChecksum="e8Fmj1vYEKMCrP7p+2Ww6LDToakBlRVWObR39upg7FY=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/MocCommon">
 				<p4:p.TypeDefinitionTargets>
 					<p4:TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableProcessor.gtype::ControlDefinition" />
 				</p4:p.TypeDefinitionTargets>
 			</ValueClassControl>
-			<ValueClassControl BaseName="[string]ExecutableProcessor" Enabled="[bool]True" Id="89845c0616542469fb3dd63a7699cbe" IsReadOnly="[bool]True" IsTabStop="[bool]False" Label="[UIModel]d0bd68008b44fd0a696fd64fe84d015" LabelLinked="[bool]True" Left="[float]544" TabIndex="[int]3" Top="[float]52" Value="{DataItemBinding Id=17}" ValueClassControl="[Type]@76197d78a8264a04966ae322fe621cd5" p4:ControlDefinitionChecksum="e8Fmj1vYEKMCrP7p+2Ww6LDToakBlRVWObR39upg7FY=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/MocCommon">
+			<ValueClassControl BaseName="[string]ExecutableProcessor" Enabled="[bool]True" Id="89845c0616542469fb3dd63a7699cbe" IsReadOnly="[bool]True" IsTabStop="[bool]False" Label="[UIModel]d0bd68008b44fd0a696fd64fe84d015" LabelLinked="[bool]True" Left="[float]544" TabIndex="[int]3" Top="[float]52" Value="{DataItemBinding Id=17}" ValueClassControl="[Type]@cd835da405b641ac85a4a82ce7551e4b" p4:ControlDefinitionChecksum="e8Fmj1vYEKMCrP7p+2Ww6LDToakBlRVWObR39upg7FY=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/MocCommon">
 				<p4:p.TypeDefinitionTargets>
 					<p4:TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableProcessor.gtype::ControlDefinition" />
 				</p4:p.TypeDefinitionTargets>
@@ -2026,8 +2035,12 @@
 				<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">The wait time, in milliseconds, between each Executable Director</p.InfoTipDescription>
 			</NumericText>
 			<Label Foreground="[SMColor]#ff2b3033" Height="[float]16" Id="25004d7557b54d6e9885a1491dd6d990" LabelOwner="[UIModel]f166335c71da49f99e6bb06bcd9f8330" Left="[float]100" Text="[string]Wait Time" Top="[float]112" Width="[float]53" xmlns="http://www.ni.com/PanelCommon" />
-			<Label Height="[float]16" Id="d0bd68008b44fd0a696fd64fe84d015" LabelOwner="[UIModel]89845c0616542469fb3dd63a7699cbe" Left="[float]544" Text="[string]ExecutableProcessor out" Top="[float]32" Width="[float]129" xmlns="http://www.ni.com/PanelCommon" />
-			<Label Height="[float]16" Id="f18a9f6caca94d51a29424384267b2ca" LabelOwner="[UIModel]de887fec860d4546a4ad43776797743e" Left="[float]100" Text="[string]ExecutableProcessor in" Top="[float]32" Width="[float]121" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Foreground="[SMColor]#ff2b3033" Height="[float]16" Id="d0bd68008b44fd0a696fd64fe84d015" LabelOwner="[UIModel]89845c0616542469fb3dd63a7699cbe" Left="[float]544" Text="[string]ExecutableProcessor out" Top="[float]32" Width="[float]129" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Foreground="[SMColor]#ff2b3033" Height="[float]16" Id="f18a9f6caca94d51a29424384267b2ca" LabelOwner="[UIModel]de887fec860d4546a4ad43776797743e" Left="[float]100" Text="[string]ExecutableProcessor in" Top="[float]32" Width="[float]121" xmlns="http://www.ni.com/PanelCommon" />
+			<OpaqueRefnum BaseName="[string]OpaqueRefnum" Enabled="[bool]True" Height="[float]24" Id="6de091626d0b41a5ba486c16367e01da" Label="[UIModel]a44b3183a98f4378bd3e46cf75ceae67" Left="[float]100" RefnumType="[Type]@c476b0e9d08d4afb9133f89e998aa9a3" TabIndex="[int]5" Top="[float]196" Value="{DataItemBinding Id=b8bfc7a0ac9e482794c38439b27aaf07}" Width="[float]24" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">Notifier for returning results to the Test Application.</p.InfoTipDescription>
+			</OpaqueRefnum>
+			<Label Foreground="[SMColor]#ff2b3033" Height="[float]16" Id="a44b3183a98f4378bd3e46cf75ceae67" LabelOwner="[UIModel]6de091626d0b41a5ba486c16367e01da" Left="[float]100" Text="[string]Results Notifier" Top="[float]176" Width="[float]81" xmlns="http://www.ni.com/PanelCommon" />
 		</NativeFrontPanel>
 		<DataItem CallDirection="Input" CallIndex="2" DataType="Error" Id="14" Name="Error in" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>
@@ -2055,13 +2068,13 @@
 			</p.TypeDefinitionTargets>
 			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">The &lt;B&gt;error out&lt;/B&gt; cluster passes error or warning information out of a VI to be used by other VIs.&lt;br/&gt;&lt;br/&gt;The pop-up option &lt;B&gt;Explain Error&lt;/B&gt; (or Explain Warning) gives more information about the error displayed.</p.UserDescription>
 		</DataItem>
-		<DataItem CallDirection="Input" CallIndex="1" CallUsage="DynamicDispatch" DataType="@76197d78a8264a04966ae322fe621cd5" Id="16" Name="ExecutableProcessor in" xmlns="http://www.ni.com/MocCommon">
+		<DataItem CallDirection="Input" CallIndex="1" CallUsage="Required" DataType="@cd835da405b641ac85a4a82ce7551e4b" Id="16" Name="ExecutableProcessor in" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>null</p.DefaultValue>
 			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 				<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableProcessor.gtype" />
 			</p.TypeDefinitionTargets>
 		</DataItem>
-		<DataItem CallDirection="Output" CallIndex="1" CallUsage="DynamicDispatch" DataType="@76197d78a8264a04966ae322fe621cd5" Id="17" Name="ExecutableProcessor out" xmlns="http://www.ni.com/MocCommon">
+		<DataItem CallDirection="Output" CallIndex="1" DataType="@cd835da405b641ac85a4a82ce7551e4b" Id="17" Name="ExecutableProcessor out" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>null</p.DefaultValue>
 			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 				<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ExecutableProcessor.gtype" />
@@ -2070,6 +2083,13 @@
 		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="0" DataType="UInt32" Id="69617728bdeb4493a87a9eb12fd8f27a" Name="Wait Time" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>0</p.DefaultValue>
 			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;The wait time, in milliseconds, between each Executable Director.&amp;nbsp; Default is not to wait at all.&lt;/p&gt;</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="3" DataType="@c476b0e9d08d4afb9133f89e998aa9a3" Id="b8bfc7a0ac9e482794c38439b27aaf07" Name="Results Notifier" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="Hardware Abstraction Framework::Common::ReadExecutable.gtype" />
+			</p.TypeDefinitionTargets>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Notifier for returning results to the Test Application.&lt;/p&gt;</p.UserDescription>
 		</DataItem>
 	</VirtualInstrument>
 	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
@@ -2239,18 +2259,18 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="76197d78a8264a04966ae322fe621cd5">
-			<Attributed AttributedType="@f1c9948931504536ade0684f34a0ae3b">
+		<p.TypeReference TypeId="cd835da405b641ac85a4a82ce7551e4b">
+			<Attributed AttributedType="@dc5a4b300e974483a101851c5a654017">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Common" />
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="fe20d8e5a7ef4a77930af81523765f59">
-			<VariableArray DereferenceType="@6363ad9d8e674d399f5d7d2656aa529e" />
+		<p.TypeReference TypeId="8499284964944df8803de0e166238317">
+			<VariableArray DereferenceType="@2978213054ab4065a6e95a5c02687935" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="461df61fedb24a6b8f1751407d732209">
-			<Attributed AttributedType="@0da61d4d227f411c9cf6d23d3d4334e2">
+		<p.TypeReference TypeId="e7cc53f85d774b67a0e77238f2caad71">
+			<Attributed AttributedType="@d01b3b3d07f04299aa0ea458afab4d19">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
 					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
@@ -2258,15 +2278,15 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="6363ad9d8e674d399f5d7d2656aa529e">
-			<Attributed AttributedType="@a010f849c6bd424bba609bb553e2a065">
+		<p.TypeReference TypeId="2978213054ab4065a6e95a5c02687935">
+			<Attributed AttributedType="@8e5119466cb44f6da378b1770697c34f">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Common" />
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="f3f3c8b4cb58429988dc4739db656728">
-			<Attributed AttributedType="@8ec6a966c4f44891815bad831c019fcd">
+		<p.TypeReference TypeId="d0bf3d434de14388a1d21af4a989d7d1">
+			<Attributed AttributedType="@e28ea397cbfd4ac4a511af0d27945926">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
 					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
@@ -2274,12 +2294,19 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="015d0333f327414ea4305b534f2e9d4e">
-			<Attributed AttributedType="@465c97ff9e2e4ac3a0e21093402673bd">
+		<p.TypeReference TypeId="70892b559269422f9e84b36193818872">
+			<Attributed AttributedType="@dae536c403394091b99937c397775e1c">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
 					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
 					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="c476b0e9d08d4afb9133f89e998aa9a3">
+			<Attributed AttributedType="@e9b051e82aea4d319cb3c32159419948">
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]Refnum" />
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
@@ -2307,39 +2334,39 @@
 				<DataType>UInt32</DataType>
 			</Enumeration>
 		</p.TypeReference>
+		<p.TypeReference TypeId="2b5a28820e8f4da583c63bb21d498d7b">
+			<Attributed AttributedType="@63de500f81944e7fa109289be6b10e43">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="fbb52959b01040ecb2bf19da99f309a2">
+			<VariableArray DereferenceType="@81389cedc6e54a32abfa4a7793f4bc5a" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="1ec71d4ecdc1493e8f49e164e8f44864">
+			<Attributed AttributedType="@210c228b2f7f4b00b2c778ac3b92603d">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="81389cedc6e54a32abfa4a7793f4bc5a">
+			<Attributed AttributedType="@9f2da2614d8b4507a15f4329e8c4e0d9">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Common" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
 		<p.TypeReference TypeId="8b66dcf5fdc44e5f97dd081813020cb8">
 			<Attributed AttributedType="@e777f6dcc5ee407b85d8fbe09e5a3906">
 				<AttributeValues>
 					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
 					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
-				</AttributeValues>
-			</Attributed>
-		</p.TypeReference>
-		<p.TypeReference TypeId="fed7e4a6e2cd432dbe393bec3490516c">
-			<Attributed AttributedType="@381e4c2d4b574655b6c7188a0810a338">
-				<AttributeValues>
-					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
-					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
-					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
-				</AttributeValues>
-			</Attributed>
-		</p.TypeReference>
-		<p.TypeReference TypeId="727d950d0d58494cab36ebe587e6e13a">
-			<VariableArray DereferenceType="@d67d51ccd0d34cb6b29a46e3583c738e" />
-		</p.TypeReference>
-		<p.TypeReference TypeId="92a5e0975512497bb0cb0997e2d54d25">
-			<Attributed AttributedType="@8abe275c8f234e75b824374086beb633">
-				<AttributeValues>
-					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
-					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
-					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
-				</AttributeValues>
-			</Attributed>
-		</p.TypeReference>
-		<p.TypeReference TypeId="d67d51ccd0d34cb6b29a46e3583c738e">
-			<Attributed AttributedType="@5cfdcc2f2c4c4436980aa0c8164fbf0f">
-				<AttributeValues>
-					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Common" />
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
@@ -2585,10 +2612,11 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="f1c9948931504536ade0684f34a0ae3b">
+		<p.TypeReference TypeId="dc5a4b300e974483a101851c5a654017">
 			<Composite Id="1" Name="ExecutableProcessor.gtype">
 				<MemberScopes>
 					<Access Scope="Private" />
+					<Access Scope="Public" />
 					<Access Scope="Public" />
 					<Access Scope="Public" />
 					<Access Scope="Public" />
@@ -2598,20 +2626,21 @@
 				<GenericTypeDefinition>Void</GenericTypeDefinition>
 				<BaseType>@5fb2f86ebacb4d6197091eddec2a4da4</BaseType>
 				<Members>
-					<Field FieldAccessPolicy="ReadWrite" Name="Directors" DataType="@fe20d8e5a7ef4a77930af81523765f59" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Add Director.gvi" ReturnType="Void" DeclaringType="@76197d78a8264a04966ae322fe621cd5" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Process Directors.gvi" ReturnType="Void" DeclaringType="@76197d78a8264a04966ae322fe621cd5" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Read Directors.gvi" ReturnType="Void" DeclaringType="@76197d78a8264a04966ae322fe621cd5" GenericTypeDefinition="Void" />
-					<Function Id="5" IsStatic="False" IsConstructor="False" Name="RemoveDirector.gvi" ReturnType="Void" DeclaringType="@76197d78a8264a04966ae322fe621cd5" GenericTypeDefinition="Void" />
-					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Write Directors.gvi" ReturnType="Void" DeclaringType="@76197d78a8264a04966ae322fe621cd5" GenericTypeDefinition="Void" />
-					<Property Name="Directors" Getter="Read Directors.gvi" Setter="Write Directors.gvi" DataType="@fe20d8e5a7ef4a77930af81523765f59" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Directors" DataType="@8499284964944df8803de0e166238317" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Add Director.gvi" ReturnType="Void" DeclaringType="@cd835da405b641ac85a4a82ce7551e4b" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Background Process Directors.gvi" ReturnType="Void" DeclaringType="@cd835da405b641ac85a4a82ce7551e4b" GenericTypeDefinition="Void" />
+					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Process Directors.gvi" ReturnType="Void" DeclaringType="@cd835da405b641ac85a4a82ce7551e4b" GenericTypeDefinition="Void" />
+					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Read Directors.gvi" ReturnType="Void" DeclaringType="@cd835da405b641ac85a4a82ce7551e4b" GenericTypeDefinition="Void" />
+					<Function Id="6" IsStatic="False" IsConstructor="False" Name="RemoveDirector.gvi" ReturnType="Void" DeclaringType="@cd835da405b641ac85a4a82ce7551e4b" GenericTypeDefinition="Void" />
+					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Write Directors.gvi" ReturnType="Void" DeclaringType="@cd835da405b641ac85a4a82ce7551e4b" GenericTypeDefinition="Void" />
+					<Property Name="Directors" Getter="Read Directors.gvi" Setter="Write Directors.gvi" DataType="@8499284964944df8803de0e166238317" />
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="0da61d4d227f411c9cf6d23d3d4334e2">
-			<Function Id="1" IsStatic="False" IsConstructor="False" Name="Initialise.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void">
+		<p.TypeReference TypeId="d01b3b3d07f04299aa0ea458afab4d19">
+			<Function Id="1" IsStatic="False" IsConstructor="False" Name="Initialise.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void">
 				<Parameters>
-					<Attributed AttributedType="@4039e182e8564aaa93646666352cdca5">
+					<Attributed AttributedType="@51129179e2cf48679d329b7946701779">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]ExecutableDirector in" />
 						</AttributeValues>
@@ -2621,7 +2650,7 @@
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error in" />
 						</AttributeValues>
 					</Attributed>
-					<Attributed AttributedType="@fffa02ba3e23454f9c080a7704d3cca1">
+					<Attributed AttributedType="@7ec1973640c145aa843b28a0ba88bd0e">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]ExecutableDirector out" />
 						</AttributeValues>
@@ -2634,7 +2663,7 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="a010f849c6bd424bba609bb553e2a065">
+		<p.TypeReference TypeId="8e5119466cb44f6da378b1770697c34f">
 			<Composite Id="1" Name="ExecutableDirector.gtype">
 				<MemberScopes>
 					<Access Scope="Private" />
@@ -2659,34 +2688,34 @@
 				<GenericTypeDefinition>Void</GenericTypeDefinition>
 				<BaseType>@5fb2f86ebacb4d6197091eddec2a4da4</BaseType>
 				<Members>
-					<Field FieldAccessPolicy="ReadWrite" Name="Executables" DataType="@727d950d0d58494cab36ebe587e6e13a" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Executables" DataType="@fbb52959b01040ecb2bf19da99f309a2" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Wait Time" DataType="UInt32" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Id" DataType="String" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Run Count" DataType="UInt32" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Add Executable.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Has Run Once.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Increment Run Count.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Initialise.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Process Executables.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Read Executables.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Read Id.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Function Id="9" IsStatic="False" IsConstructor="False" Name="Read Wait Time.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Function Id="10" IsStatic="False" IsConstructor="False" Name="Remove Executable.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Function Id="11" IsStatic="False" IsConstructor="False" Name="Reset Run Count.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Function Id="12" IsStatic="False" IsConstructor="False" Name="Should Continue.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Function Id="13" IsStatic="False" IsConstructor="False" Name="Write Executables.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Function Id="14" IsStatic="False" IsConstructor="False" Name="Write Id.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Function Id="15" IsStatic="False" IsConstructor="False" Name="Write Wait Time.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void" />
-					<Property Name="Executables" Getter="Read Executables.gvi" Setter="Write Executables.gvi" DataType="@727d950d0d58494cab36ebe587e6e13a" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Add Executable.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Has Run Once.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Increment Run Count.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Initialise.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Process Executables.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Read Executables.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Read Id.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Function Id="9" IsStatic="False" IsConstructor="False" Name="Read Wait Time.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Function Id="10" IsStatic="False" IsConstructor="False" Name="Remove Executable.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Function Id="11" IsStatic="False" IsConstructor="False" Name="Reset Run Count.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Function Id="12" IsStatic="False" IsConstructor="False" Name="Should Continue.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Function Id="13" IsStatic="False" IsConstructor="False" Name="Write Executables.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Function Id="14" IsStatic="False" IsConstructor="False" Name="Write Id.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Function Id="15" IsStatic="False" IsConstructor="False" Name="Write Wait Time.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void" />
+					<Property Name="Executables" Getter="Read Executables.gvi" Setter="Write Executables.gvi" DataType="@fbb52959b01040ecb2bf19da99f309a2" />
 					<Property Name="Wait Time" Getter="Read Wait Time.gvi" Setter="Write Wait Time.gvi" DataType="UInt32" />
 					<Property Name="Id" Getter="Read Id.gvi" Setter="Write Id.gvi" DataType="String" />
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="8ec6a966c4f44891815bad831c019fcd">
-			<Function Id="1" IsStatic="False" IsConstructor="False" Name="Should Continue.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void">
+		<p.TypeReference TypeId="e28ea397cbfd4ac4a511af0d27945926">
+			<Function Id="1" IsStatic="False" IsConstructor="False" Name="Should Continue.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void">
 				<Parameters>
-					<Attributed AttributedType="@4039e182e8564aaa93646666352cdca5">
+					<Attributed AttributedType="@51129179e2cf48679d329b7946701779">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]ExecutableDirector in" />
 						</AttributeValues>
@@ -2696,7 +2725,7 @@
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error in" />
 						</AttributeValues>
 					</Attributed>
-					<Attributed AttributedType="@fffa02ba3e23454f9c080a7704d3cca1">
+					<Attributed AttributedType="@7ec1973640c145aa843b28a0ba88bd0e">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]ExecutableDirector out" />
 						</AttributeValues>
@@ -2714,12 +2743,17 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="465c97ff9e2e4ac3a0e21093402673bd">
-			<Function Id="1" IsStatic="False" IsConstructor="False" Name="Process Executables.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void">
+		<p.TypeReference TypeId="dae536c403394091b99937c397775e1c">
+			<Function Id="1" IsStatic="False" IsConstructor="False" Name="Process Executables.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void">
 				<Parameters>
-					<Attributed AttributedType="@4039e182e8564aaa93646666352cdca5">
+					<Attributed AttributedType="@51129179e2cf48679d329b7946701779">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]ExecutableDirector in" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@8fca92da03bd4f939e5ea2f3f62268c1">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Results Notifier" />
 						</AttributeValues>
 					</Attributed>
 					<Attributed AttributedType="@ce7e97556aac4927afcd12d4781337c3">
@@ -2727,7 +2761,7 @@
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error in" />
 						</AttributeValues>
 					</Attributed>
-					<Attributed AttributedType="@fffa02ba3e23454f9c080a7704d3cca1">
+					<Attributed AttributedType="@7ec1973640c145aa843b28a0ba88bd0e">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]ExecutableDirector out" />
 						</AttributeValues>
@@ -2739,6 +2773,13 @@
 					</Attributed>
 				</Parameters>
 			</Function>
+		</p.TypeReference>
+		<p.TypeReference TypeId="e9b051e82aea4d319cb3c32159419948">
+			<Composite Id="1" Name="NationalInstruments.SourceModel.DataTypes.Notifier" ReferenceClass="" Sealed="" GenericTypeDefinition="@d08816366f554c52aaaf28453f8eabca">
+				<ClosedGenericParameters>
+					<TypeRef>@d160adb5ff2b42158341f2c49705849f</TypeRef>
+				</ClosedGenericParameters>
+			</Composite>
 		</p.TypeReference>
 		<p.TypeReference TypeId="09f232a0fc5f4866a15764e21e87487c">
 			<Typedef TypedefName="All Notification Message Ids.gtype" UnderlyingType="@68066c06aad7435481b79f7ae2e590f2" />
@@ -2779,36 +2820,10 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="e777f6dcc5ee407b85d8fbe09e5a3906">
-			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Reset Message Queue.gvi" ReturnType="Void" GenericTypeDefinition="Void">
+		<p.TypeReference TypeId="63de500f81944e7fa109289be6b10e43">
+			<Function Id="1" IsStatic="False" IsConstructor="False" Name="Read Executables.gvi" ReturnType="Void" DeclaringType="@2978213054ab4065a6e95a5c02687935" GenericTypeDefinition="Void">
 				<Parameters>
-					<Attributed AttributedType="@0708dacafa4f4e6a96cf05c2166abe62">
-						<AttributeValues>
-							<AttributeValue Name="NI.UserDefinedName" Value="[string]Message Queue In" />
-						</AttributeValues>
-					</Attributed>
-					<Attributed AttributedType="@ce7e97556aac4927afcd12d4781337c3">
-						<AttributeValues>
-							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error In" />
-						</AttributeValues>
-					</Attributed>
-					<Attributed AttributedType="@cfdfc38ca8df42d592d1dce610604a75">
-						<AttributeValues>
-							<AttributeValue Name="NI.UserDefinedName" Value="[string]Message Queue Out" />
-						</AttributeValues>
-					</Attributed>
-					<Attributed AttributedType="@c21b93e7a2c14fc797d1066d8a64a4fd">
-						<AttributeValues>
-							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error Out" />
-						</AttributeValues>
-					</Attributed>
-				</Parameters>
-			</Function>
-		</p.TypeReference>
-		<p.TypeReference TypeId="381e4c2d4b574655b6c7188a0810a338">
-			<Function Id="1" IsStatic="False" IsConstructor="False" Name="Read Executables.gvi" ReturnType="Void" DeclaringType="@6363ad9d8e674d399f5d7d2656aa529e" GenericTypeDefinition="Void">
-				<Parameters>
-					<Attributed AttributedType="@4039e182e8564aaa93646666352cdca5">
+					<Attributed AttributedType="@51129179e2cf48679d329b7946701779">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]ExecutableDirector in" />
 						</AttributeValues>
@@ -2818,12 +2833,12 @@
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error in" />
 						</AttributeValues>
 					</Attributed>
-					<Attributed AttributedType="@fffa02ba3e23454f9c080a7704d3cca1">
+					<Attributed AttributedType="@7ec1973640c145aa843b28a0ba88bd0e">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]ExecutableDirector out" />
 						</AttributeValues>
 					</Attributed>
-					<Attributed AttributedType="@a15585bd2c6443b08f2595a98122f52f">
+					<Attributed AttributedType="@33a6f30a66904cda97159a2b36a39581">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Executables" />
 						</AttributeValues>
@@ -2836,10 +2851,10 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="8abe275c8f234e75b824374086beb633">
-			<Function Id="1" IsStatic="False" IsConstructor="False" Name="Cleanup.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void">
+		<p.TypeReference TypeId="210c228b2f7f4b00b2c778ac3b92603d">
+			<Function Id="1" IsStatic="False" IsConstructor="False" Name="Cleanup.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void">
 				<Parameters>
-					<Attributed AttributedType="@428945d2b85a496a97513db08de1f5bc">
+					<Attributed AttributedType="@2947e16e455a408385e0309387bc14a9">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]WriteExecutable in" />
 						</AttributeValues>
@@ -2849,7 +2864,7 @@
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error in" />
 						</AttributeValues>
 					</Attributed>
-					<Attributed AttributedType="@73b1603d5a2f4ecdb2e179fb8d314095">
+					<Attributed AttributedType="@b9e8467cc2fe4ea5b76d1353df808e5b">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]WriteExecutable out" />
 						</AttributeValues>
@@ -2862,7 +2877,7 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="5cfdcc2f2c4c4436980aa0c8164fbf0f">
+		<p.TypeReference TypeId="9f2da2614d8b4507a15f4329e8c4e0d9">
 			<Composite Id="1" Name="WriteExecutable.gtype">
 				<MemberScopes>
 					<Access Scope="Private" />
@@ -2897,44 +2912,46 @@
 					<Access Scope="Protected" />
 					<Access Scope="Public" />
 					<Access Scope="Public" />
+					<Access Scope="Public" />
 				</MemberScopes>
 				<GenericTypeDefinition>Void</GenericTypeDefinition>
 				<BaseType>@5fb2f86ebacb4d6197091eddec2a4da4</BaseType>
 				<Members>
-					<Field FieldAccessPolicy="ReadWrite" Name="Driver" DataType="@2baf4386c6ce4359b07bb5ba04b86f5f" />
-					<Field FieldAccessPolicy="ReadWrite" Name="Parameters" DataType="@0dc842caf9774486a8c60a99bfc986e4" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Driver" DataType="@53b7e1e6e0714780adff129e6ea8a8e4" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Parameters" DataType="@a49b429d94224117853fabb3f2b481b6" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Executable Settings" DataType="@1bcfaa11039b4ea1ac2feb0b86121e22" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Timeout" DataType="UInt32" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Id" DataType="String" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Can Overlap" DataType="Boolean" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Block on Wait" DataType="Boolean" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Command.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Cleanup.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Get Base Command.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Initialise.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Post-Exec Callout.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Pre-Exec Callout.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Process.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="9" IsStatic="False" IsConstructor="False" Name="Read Block on Wait.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="10" IsStatic="False" IsConstructor="False" Name="Read Can Overlap.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="11" IsStatic="False" IsConstructor="False" Name="Read Driver.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="12" IsStatic="False" IsConstructor="False" Name="Read Executable Settings.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="13" IsStatic="False" IsConstructor="False" Name="Read Id.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="14" IsStatic="False" IsConstructor="False" Name="Read Parameters.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="15" IsStatic="False" IsConstructor="False" Name="Read Timeout.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="16" IsStatic="False" IsConstructor="False" Name="Remove Parameters.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="17" IsStatic="False" IsConstructor="False" Name="Remove Settings.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="18" IsStatic="False" IsConstructor="False" Name="Update Executable Settings.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="19" IsStatic="False" IsConstructor="False" Name="Update Parameters.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="20" IsStatic="False" IsConstructor="False" Name="Write Block on Wait.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="21" IsStatic="False" IsConstructor="False" Name="Write Can Overlap.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="22" IsStatic="False" IsConstructor="False" Name="Write Driver.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="23" IsStatic="False" IsConstructor="False" Name="Write Executable Settings.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="24" IsStatic="False" IsConstructor="False" Name="Write Id.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="25" IsStatic="False" IsConstructor="False" Name="Write Parameters.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Function Id="26" IsStatic="False" IsConstructor="False" Name="Write Timeout.gvi" ReturnType="Void" DeclaringType="@d67d51ccd0d34cb6b29a46e3583c738e" GenericTypeDefinition="Void" />
-					<Property Name="Driver" Getter="Read Driver.gvi" Setter="Write Driver.gvi" DataType="@2baf4386c6ce4359b07bb5ba04b86f5f" />
-					<Property Name="Parameters" Getter="Read Parameters.gvi" Setter="Write Parameters.gvi" DataType="@0dc842caf9774486a8c60a99bfc986e4" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Command.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Cleanup.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Get Base Command.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Initialise.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Post-Exec Callout.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Pre-Exec Callout.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Process.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="9" IsStatic="False" IsConstructor="False" Name="Read Block on Wait.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="10" IsStatic="False" IsConstructor="False" Name="Read Can Overlap.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="11" IsStatic="False" IsConstructor="False" Name="Read Driver.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="12" IsStatic="False" IsConstructor="False" Name="Read Executable Settings.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="13" IsStatic="False" IsConstructor="False" Name="Read Id.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="14" IsStatic="False" IsConstructor="False" Name="Read Parameters.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="15" IsStatic="False" IsConstructor="False" Name="Read Timeout.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="16" IsStatic="False" IsConstructor="False" Name="Remove Parameters.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="17" IsStatic="False" IsConstructor="False" Name="Remove Settings.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="18" IsStatic="False" IsConstructor="False" Name="Update Executable Settings.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="19" IsStatic="False" IsConstructor="False" Name="Update Parameters.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="20" IsStatic="False" IsConstructor="False" Name="Write Block on Wait.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="21" IsStatic="False" IsConstructor="False" Name="Write Can Overlap.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="22" IsStatic="False" IsConstructor="False" Name="Write Driver.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="23" IsStatic="False" IsConstructor="False" Name="Write Executable Settings.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="24" IsStatic="False" IsConstructor="False" Name="Write Id.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="25" IsStatic="False" IsConstructor="False" Name="Write Parameter Values.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="26" IsStatic="False" IsConstructor="False" Name="Write Parameters.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Function Id="27" IsStatic="False" IsConstructor="False" Name="Write Timeout.gvi" ReturnType="Void" DeclaringType="@81389cedc6e54a32abfa4a7793f4bc5a" GenericTypeDefinition="Void" />
+					<Property Name="Driver" Getter="Read Driver.gvi" Setter="Write Driver.gvi" DataType="@53b7e1e6e0714780adff129e6ea8a8e4" />
+					<Property Name="Parameters" Getter="Read Parameters.gvi" Setter="Write Parameters.gvi" DataType="@a49b429d94224117853fabb3f2b481b6" />
 					<Property Name="Executable Settings" Getter="Read Executable Settings.gvi" Setter="Write Executable Settings.gvi" DataType="@1bcfaa11039b4ea1ac2feb0b86121e22" />
 					<Property Name="Timeout" Getter="Read Timeout.gvi" Setter="Write Timeout.gvi" DataType="UInt32" />
 					<Property Name="Id" Getter="Read Id.gvi" Setter="Write Id.gvi" DataType="String" />
@@ -2942,6 +2959,32 @@
 					<Property Name="Block on Wait" Getter="Read Block on Wait.gvi" Setter="Write Block on Wait.gvi" DataType="Boolean" />
 				</Members>
 			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="e777f6dcc5ee407b85d8fbe09e5a3906">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Reset Message Queue.gvi" ReturnType="Void" GenericTypeDefinition="Void">
+				<Parameters>
+					<Attributed AttributedType="@0708dacafa4f4e6a96cf05c2166abe62">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Message Queue In" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@ce7e97556aac4927afcd12d4781337c3">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error In" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@cfdfc38ca8df42d592d1dce610604a75">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Message Queue Out" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@c21b93e7a2c14fc797d1066d8a64a4fd">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error Out" />
+						</AttributeValues>
+					</Attributed>
+				</Parameters>
+			</Function>
 		</p.TypeReference>
 		<p.TypeReference TypeId="f7277c72a17c44b2b242e3daa5d7e326">
 			<Attributed AttributedType="@e148e3115f5641798aad243b8a4554cf">
@@ -3104,14 +3147,31 @@
 		<p.TypeReference TypeId="5fb2f86ebacb4d6197091eddec2a4da4">
 			<Composite Id="1" Name="gObject" GenericTypeDefinition="Void" BaseType="Void" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="4039e182e8564aaa93646666352cdca5">
-			<Parameter InputParameterPassingRule="DynamicDispatch" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="@6363ad9d8e674d399f5d7d2656aa529e" />
+		<p.TypeReference TypeId="51129179e2cf48679d329b7946701779">
+			<Parameter InputParameterPassingRule="DynamicDispatch" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="@2978213054ab4065a6e95a5c02687935" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="fffa02ba3e23454f9c080a7704d3cca1">
-			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="DynamicDispatch" Name="R0" DataType="@6363ad9d8e674d399f5d7d2656aa529e" />
+		<p.TypeReference TypeId="7ec1973640c145aa843b28a0ba88bd0e">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="DynamicDispatch" Name="R0" DataType="@2978213054ab4065a6e95a5c02687935" />
 		</p.TypeReference>
 		<p.TypeReference TypeId="5fe4e1bd5c5f438dbe4908fc511c0535">
 			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R1" DataType="Boolean" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="8fca92da03bd4f939e5ea2f3f62268c1">
+			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="L1" DataType="@c476b0e9d08d4afb9133f89e998aa9a3" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="d08816366f554c52aaaf28453f8eabca">
+			<Attributed AttributedType="@ebb28867edf1414dacbe085ee964462e">
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]Refnum" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="d160adb5ff2b42158341f2c49705849f">
+			<Attributed AttributedType="@ba05f33b918847ee948755e434d1b2d0">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Common" />
+				</AttributeValues>
+			</Attributed>
 		</p.TypeReference>
 		<p.TypeReference TypeId="68066c06aad7435481b79f7ae2e590f2">
 			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
@@ -3133,24 +3193,24 @@
 		<p.TypeReference TypeId="1e13abbff9d1432192a8d90059adc540">
 			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="L2" DataType="String" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="a15585bd2c6443b08f2595a98122f52f">
-			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R1" DataType="@727d950d0d58494cab36ebe587e6e13a" />
+		<p.TypeReference TypeId="33a6f30a66904cda97159a2b36a39581">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R1" DataType="@fbb52959b01040ecb2bf19da99f309a2" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="428945d2b85a496a97513db08de1f5bc">
-			<Parameter InputParameterPassingRule="DynamicDispatch" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="@d67d51ccd0d34cb6b29a46e3583c738e" />
+		<p.TypeReference TypeId="2947e16e455a408385e0309387bc14a9">
+			<Parameter InputParameterPassingRule="DynamicDispatch" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="@81389cedc6e54a32abfa4a7793f4bc5a" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="73b1603d5a2f4ecdb2e179fb8d314095">
-			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="DynamicDispatch" Name="R0" DataType="@d67d51ccd0d34cb6b29a46e3583c738e" />
+		<p.TypeReference TypeId="b9e8467cc2fe4ea5b76d1353df808e5b">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="DynamicDispatch" Name="R0" DataType="@81389cedc6e54a32abfa4a7793f4bc5a" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="2baf4386c6ce4359b07bb5ba04b86f5f">
-			<Attributed AttributedType="@c540995e64634b06ba593cf28ec22cae">
+		<p.TypeReference TypeId="53b7e1e6e0714780adff129e6ea8a8e4">
+			<Attributed AttributedType="@8312ec7403ae49fea2e922bdf90fd31b">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Common" />
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="0dc842caf9774486a8c60a99bfc986e4">
-			<VariableArray DereferenceType="@e2ba7e36126644adbef8e44d2bdf62c2" />
+		<p.TypeReference TypeId="a49b429d94224117853fabb3f2b481b6">
+			<VariableArray DereferenceType="@cd30987266394d2e8357151d6ff8bb35" />
 		</p.TypeReference>
 		<p.TypeReference TypeId="1bcfaa11039b4ea1ac2feb0b86121e22">
 			<VariableArray DereferenceType="@d9f05026409247a287f0a6163622ea63" />
@@ -3182,7 +3242,45 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="c540995e64634b06ba593cf28ec22cae">
+		<p.TypeReference TypeId="ebb28867edf1414dacbe085ee964462e">
+			<Composite Id="1" Name="NationalInstruments.SourceModel.DataTypes.Notifier" ReferenceClass="" Sealed="" GenericTypeDefinition="@d08816366f554c52aaaf28453f8eabca">
+				<GenericParameters>
+					<Generic GenericName="DataType" />
+				</GenericParameters>
+				<BaseType>Void</BaseType>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="ba05f33b918847ee948755e434d1b2d0">
+			<Composite Id="1" Name="ReadExecutable.gtype">
+				<MemberScopes>
+					<Access Scope="Private" />
+					<Access Scope="Private" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+				</MemberScopes>
+				<GenericTypeDefinition>Void</GenericTypeDefinition>
+				<BaseType>@81389cedc6e54a32abfa4a7793f4bc5a</BaseType>
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Raw Result" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Byte Count" DataType="UInt32" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Result.gvi" ReturnType="Void" DeclaringType="@d160adb5ff2b42158341f2c49705849f" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Post Result.gvi" ReturnType="Void" DeclaringType="@d160adb5ff2b42158341f2c49705849f" GenericTypeDefinition="Void" />
+					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Process.gvi" ReturnType="Void" DeclaringType="@d160adb5ff2b42158341f2c49705849f" GenericTypeDefinition="Void" />
+					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Read Byte Count.gvi" ReturnType="Void" DeclaringType="@d160adb5ff2b42158341f2c49705849f" GenericTypeDefinition="Void" />
+					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Read Raw Result.gvi" ReturnType="Void" DeclaringType="@d160adb5ff2b42158341f2c49705849f" GenericTypeDefinition="Void" />
+					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Write Byte Count.gvi" ReturnType="Void" DeclaringType="@d160adb5ff2b42158341f2c49705849f" GenericTypeDefinition="Void" />
+					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Write Raw Result.gvi" ReturnType="Void" DeclaringType="@d160adb5ff2b42158341f2c49705849f" GenericTypeDefinition="Void" />
+					<Property Name="Raw Result" Getter="Read Raw Result.gvi" Setter="Write Raw Result.gvi" DataType="String" />
+					<Property Name="Byte Count" Getter="Read Byte Count.gvi" Setter="Write Byte Count.gvi" DataType="UInt32" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="8312ec7403ae49fea2e922bdf90fd31b">
 			<Composite Id="1" Name="Driver.gtype">
 				<MemberScopes>
 					<Access Scope="Private" />
@@ -3195,12 +3293,15 @@
 					<Access Scope="Public" />
 					<Access Scope="Public" />
 					<Access Scope="Public" />
+					<Access Scope="Public" />
 					<Access Scope="Protected" />
 					<Access Scope="Public" />
 					<Access Scope="Protected" />
 					<Access Scope="Protected" />
 					<Access Scope="Public" />
+					<Access Scope="Public" />
 					<Access Scope="Protected" />
+					<Access Scope="Public" />
 					<Access Scope="Public" />
 					<Access Scope="Public" />
 					<Access Scope="Public" />
@@ -3217,26 +3318,29 @@
 					<Field FieldAccessPolicy="ReadWrite" Name="Driver Setting Mappings" DataType="@2fd278f2b8f442b98a670e59dff9e76b" />
 					<Field FieldAccessPolicy="ReadWrite" Name="VISA Session" DataType=":UDR:TagRefnum|NI::VISA::Visa.udr::Instr" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Been Initialised" DataType="Boolean" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Driver Setting Mappings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Close.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Commit.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Decommit.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Execute Write Query.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Execute Write Read Query.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Get Instrument Alias.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="9" IsStatic="False" IsConstructor="False" Name="Initialise.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="10" IsStatic="False" IsConstructor="False" Name="Initiate Session.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="11" IsStatic="False" IsConstructor="False" Name="Map Executable Setting.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="12" IsStatic="False" IsConstructor="False" Name="Read Been Initialised.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="13" IsStatic="False" IsConstructor="False" Name="Read Driver Setting Mappings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="14" IsStatic="False" IsConstructor="False" Name="Read Driver Settings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="15" IsStatic="False" IsConstructor="False" Name="Read VISA Session.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="16" IsStatic="False" IsConstructor="False" Name="Remove Driver Settings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="17" IsStatic="False" IsConstructor="False" Name="Update Driver Settings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="18" IsStatic="False" IsConstructor="False" Name="Write Been Initialised.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="19" IsStatic="False" IsConstructor="False" Name="Write Driver Setting Mappings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="20" IsStatic="False" IsConstructor="False" Name="Write Driver Settings.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
-					<Function Id="21" IsStatic="False" IsConstructor="False" Name="Write VISA Session.gvi" ReturnType="Void" DeclaringType="@2baf4386c6ce4359b07bb5ba04b86f5f" GenericTypeDefinition="Void" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Driver Setting Mappings.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Close.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Commit.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Decommit.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Execute Write Query.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Execute Write Read Query.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Get Default Buffer.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="9" IsStatic="False" IsConstructor="False" Name="Get Instrument Alias.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="10" IsStatic="False" IsConstructor="False" Name="Initialise.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="11" IsStatic="False" IsConstructor="False" Name="Initiate Session.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="12" IsStatic="False" IsConstructor="False" Name="Map Executable Setting.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="13" IsStatic="False" IsConstructor="False" Name="Parse Result.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="14" IsStatic="False" IsConstructor="False" Name="Read Been Initialised.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="15" IsStatic="False" IsConstructor="False" Name="Read Driver Setting Mappings.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="16" IsStatic="False" IsConstructor="False" Name="Read Driver Settings.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="17" IsStatic="False" IsConstructor="False" Name="Read VISA Session.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="18" IsStatic="False" IsConstructor="False" Name="Remove Driver Settings.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="19" IsStatic="False" IsConstructor="False" Name="Update Driver Settings.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="20" IsStatic="False" IsConstructor="False" Name="Uses Buffer.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="21" IsStatic="False" IsConstructor="False" Name="Write Been Initialised.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="22" IsStatic="False" IsConstructor="False" Name="Write Driver Setting Mappings.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="23" IsStatic="False" IsConstructor="False" Name="Write Driver Settings.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
+					<Function Id="24" IsStatic="False" IsConstructor="False" Name="Write VISA Session.gvi" ReturnType="Void" DeclaringType="@53b7e1e6e0714780adff129e6ea8a8e4" GenericTypeDefinition="Void" />
 					<Property Name="Driver Settings" Getter="Read Driver Settings.gvi" Setter="Write Driver Settings.gvi" DataType="@bd2232353db34e3ebe062acdcac878ce" />
 					<Property Name="Driver Setting Mappings" Getter="Read Driver Setting Mappings.gvi" Setter="Write Driver Setting Mappings.gvi" DataType="@2fd278f2b8f442b98a670e59dff9e76b" />
 					<Property Name="VISA Session" Getter="Read VISA Session.gvi" Setter="Write VISA Session.gvi" DataType=":UDR:TagRefnum|NI::VISA::Visa.udr::Instr" />
@@ -3244,8 +3348,8 @@
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="e2ba7e36126644adbef8e44d2bdf62c2">
-			<Attributed AttributedType="@d0c7e972c2bc4f5999b8606d3c9172ab">
+		<p.TypeReference TypeId="cd30987266394d2e8357151d6ff8bb35">
+			<Attributed AttributedType="@bacb08d63e804d4ba83d4ac3ccc53c55">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Common" />
 				</AttributeValues>
@@ -3286,11 +3390,17 @@
 		<p.TypeReference TypeId="2fd278f2b8f442b98a670e59dff9e76b">
 			<VariableArray DereferenceType="@4207f474abb14d198e99365d2a494b65" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="d0c7e972c2bc4f5999b8606d3c9172ab">
+		<p.TypeReference TypeId="bacb08d63e804d4ba83d4ac3ccc53c55">
 			<Composite Id="1" Name="Parameter.gtype">
 				<MemberScopes>
 					<Access Scope="Private" />
 					<Access Scope="Private" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
 					<Access Scope="Public" />
 					<Access Scope="Public" />
 					<Access Scope="Public" />
@@ -3302,11 +3412,17 @@
 				<Members>
 					<Field FieldAccessPolicy="ReadWrite" Name="Name" DataType="String" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Raw Result" DataType="String" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Result.gvi" ReturnType="Void" DeclaringType="@e2ba7e36126644adbef8e44d2bdf62c2" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Read Name.gvi" ReturnType="Void" DeclaringType="@e2ba7e36126644adbef8e44d2bdf62c2" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Read Raw Result.gvi" ReturnType="Void" DeclaringType="@e2ba7e36126644adbef8e44d2bdf62c2" GenericTypeDefinition="Void" />
-					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Write Name.gvi" ReturnType="Void" DeclaringType="@e2ba7e36126644adbef8e44d2bdf62c2" GenericTypeDefinition="Void" />
-					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Write Raw Result.gvi" ReturnType="Void" DeclaringType="@e2ba7e36126644adbef8e44d2bdf62c2" GenericTypeDefinition="Void" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Build Result.gvi" ReturnType="Void" DeclaringType="@cd30987266394d2e8357151d6ff8bb35" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Get Result as Date.gvi" ReturnType="Void" DeclaringType="@cd30987266394d2e8357151d6ff8bb35" GenericTypeDefinition="Void" />
+					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Get Result as Double.gvi" ReturnType="Void" DeclaringType="@cd30987266394d2e8357151d6ff8bb35" GenericTypeDefinition="Void" />
+					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Get Result as I32.gvi" ReturnType="Void" DeclaringType="@cd30987266394d2e8357151d6ff8bb35" GenericTypeDefinition="Void" />
+					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Get Result as I64.gvi" ReturnType="Void" DeclaringType="@cd30987266394d2e8357151d6ff8bb35" GenericTypeDefinition="Void" />
+					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Get Result as Time.gvi" ReturnType="Void" DeclaringType="@cd30987266394d2e8357151d6ff8bb35" GenericTypeDefinition="Void" />
+					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Get Result as Timestamp.gvi" ReturnType="Void" DeclaringType="@cd30987266394d2e8357151d6ff8bb35" GenericTypeDefinition="Void" />
+					<Function Id="9" IsStatic="False" IsConstructor="False" Name="Read Name.gvi" ReturnType="Void" DeclaringType="@cd30987266394d2e8357151d6ff8bb35" GenericTypeDefinition="Void" />
+					<Function Id="10" IsStatic="False" IsConstructor="False" Name="Read Raw Result.gvi" ReturnType="Void" DeclaringType="@cd30987266394d2e8357151d6ff8bb35" GenericTypeDefinition="Void" />
+					<Function Id="11" IsStatic="False" IsConstructor="False" Name="Write Name.gvi" ReturnType="Void" DeclaringType="@cd30987266394d2e8357151d6ff8bb35" GenericTypeDefinition="Void" />
+					<Function Id="12" IsStatic="False" IsConstructor="False" Name="Write Raw Result.gvi" ReturnType="Void" DeclaringType="@cd30987266394d2e8357151d6ff8bb35" GenericTypeDefinition="Void" />
 					<Property Name="Name" Getter="Read Name.gvi" Setter="Write Name.gvi" DataType="String" />
 					<Property Name="Raw Result" Getter="Read Raw Result.gvi" Setter="Write Raw Result.gvi" DataType="String" />
 				</Members>
@@ -3644,39 +3760,6 @@
 				</MergeItem>
 			</MergeScript>
 		</p.IconModel>
-		<p.IconModel Target="Hardware Abstraction Framework::Support::Messages::Reset Message Queue.gvi">
-			<MergeScript>
-				<MergeItem Path="." IsPrimary="True">
-					<Icon ListViewIconCrop="0 0 40 40">
-						<IconPanel Height="[float]40" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
-							<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" HorizontalAlignment="[HorizontalAlignment]Stretch" Left="[float]0" TemplateName="[string]Banner" Top="[float]0" VerticalAlignment="[VerticalAlignment]Stretch" Width="[float]40">
-								<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
-								<Rectangle Fill="[SMSolidColorBrush]#ffffffff" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#ffffffff" Top="[float]0" />
-								<Path Data="[PathGeometry]M 0,11 L 0,2 C 0,0.899999976 0.899999976,0 2,0 L 2,11 L 0,11 Z" Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]11" HorizontalAlignment="[HorizontalAlignment]Left" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]2,2,2,2" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top" Width="[float]2" />
-								<Rectangle Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]11" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]4,2,4,2" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top" Width="[float]NaN" />
-								<Path Data="[PathGeometry]M 2,11 L 2,2 C 2,0.899999976 1.10000002,0 0,0 L 0,11 L 2,11 Z" Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]11" HorizontalAlignment="[HorizontalAlignment]Right" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]2,2,2,2" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top" Width="[float]2" />
-							</IconTemplate>
-							<Text Height="[float]11" Left="[float]8" Text="[string]Queue" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]28" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]24">
-								<FontSetting FontFamily="Segoe UI" FontSize="6" />
-							</Text>
-							<Text Height="[float]11" Left="[float]10" Text="[string]Reset" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]20" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]20">
-								<FontSetting FontFamily="Segoe UI" FontSize="6" />
-							</Text>
-							<Path Data="[PathGeometry]M 9.61838818,1.0483377 L 11.2906113,3.74668622 L 11.8066673,3.36108613 L 10.1344442,0.662310302 L 9.61838818,1.0483377 Z M 4.88288879,0.248953521 L 4.86461115,0.278418005 L 5.47166634,0.494490862 L 6.39177799,0.821589351 L 6.41861057,0.833118916 L 5.88855553,1.03851616 L 5.84616661,1.03638113 L 4.65655565,0.614056885 L 3.47861099,2.51515627 L 3.47861099,2.70005679 C 3.48483372,2.79357433 3.51866698,2.87556267 3.5653336,2.95157242 L 3.67499971,3.11896467 L 3.43933344,3.41104746 C 3.33511114,3.27867079 3.24333334,3.14245105 3.18461132,2.98915029 L 2.84355545,3.53915405 L 2.0253334,2.92765927 L 1.75155568,3.36919928 L 0,2.05995154 L 0,0 L 3.83949995,0 L 2.20888877,2.63173342 L 2.72455573,3.01733375 L 4.39677811,0.318558007 L 3.97055578,0 L 4.55038929,0 L 4.88288879,0.248953521 Z M 5.85200024,6.40190554 L 6.08222246,6.12647724 L 6.11566639,6.16106606 L 6.4123888,6.48688316 C 6.59555531,6.68374014 6.91133308,6.6316433 7.03461123,6.38140917 L 7.005445,6.34724712 L 6.26616669,5.5350523 C 6.21950006,5.48380995 6.20899963,5.41634035 6.23544502,5.35442209 C 6.26033306,5.29634714 6.31711102,5.25535345 6.37466717,5.26859093 L 6.47577763,5.32666588 L 7.42233372,6.36688995 C 7.51372147,6.46852112 7.61950016,6.49414253 7.73811197,6.46937513 C 7.88977766,6.43734884 7.99555492,6.33785295 8.0581665,6.18241644 C 8.07255554,6.14697456 8.06905556,6.12519598 8.04377842,6.09743977 L 6.68344498,4.60628033 C 6.64105511,4.55888128 6.61344433,4.50849247 6.62861156,4.43888855 C 6.65194416,4.3312788 6.76433277,4.28345203 6.84755516,4.34665155 L 6.89266682,4.39148903 L 8.29422188,5.93175507 L 8.38055611,5.96591663 C 8.57422256,5.9492631 8.73055649,5.80151367 8.77488899,5.59355402 C 8.78188896,5.5576849 8.77644539,5.53377104 8.75233364,5.50772285 L 7.18238926,3.78511834 C 7.14933348,3.74882174 7.12522221,3.7095356 7.12677765,3.65658498 C 7.12833309,3.5903964 7.15633392,3.54171586 7.21077728,3.51609492 C 7.26483345,3.49047327 7.31811142,3.49730587 7.36244392,3.54256988 L 7.483778,3.67494702 L 8.59794426,4.89836359 L 8.94677734,5.28054762 L 9.01172256,5.30147123 C 9.26994419,5.25236416 9.42822266,4.94149208 9.33022308,4.67588472 L 9.31855488,4.64343119 L 9.69927788,4.68015528 C 9.72105503,4.77837038 9.72222233,4.88000154 9.70394421,4.98163271 C 9.64133263,5.32751989 9.45505524,5.55426836 9.15172195,5.66828299 L 9.11633301,5.70756912 C 9.02066612,6.07865047 8.75233364,6.32290697 8.4034996,6.35706854 L 8.36500072,6.38482475 C 8.20244408,6.71235037 7.95394468,6.8776083 7.61211109,6.86565065 C 7.49505568,6.86138105 7.38499975,6.82337618 7.28505564,6.75547981 C 7.2535553,6.73455572 7.23644495,6.73327446 7.2076664,6.76401997 C 6.93816662,7.05354023 6.5041666,7.08257818 6.22144461,6.81825209 L 5.85200024,6.40190554 Z M 5.08083296,4.35988903 C 5.27644444,4.32615423 5.43861103,4.39148903 5.54400015,4.57767057 C 5.65911102,4.78178644 5.63149977,4.97736216 5.48177767,5.14987898 L 5.65055513,5.15970039 C 5.91305542,5.20966196 6.07016706,5.52907372 5.96088886,5.78784895 L 5.89711094,5.8907609 L 5.54088926,6.31991768 C 5.39349985,6.49328852 5.13488913,6.50524521 4.98400021,6.33614492 C 4.66355562,5.97830057 4.37966681,5.58629465 4.10122204,5.19001913 L 3.57194471,4.43077517 C 3.49300003,4.31718683 3.42727757,4.19634008 3.41911125,4.04816341 C 3.4132781,3.94695973 3.43933344,3.85771227 3.50466681,3.78298354 L 3.79283333,3.44947934 C 3.9814446,3.23511481 4.32483387,3.29916787 4.46133327,3.57331586 L 4.50566673,3.68263316 C 4.70555592,3.57630491 4.88638878,3.6057694 5.04077816,3.77956724 C 5.17766666,3.93286753 5.18661118,4.11221647 5.08083296,4.35988903 M 9.71522236,4.36714888 L 9.48422241,4.35049438 L 9.40488911,4.31633329 L 7.25549984,2.19617152 C 7.22866678,2.16926908 7.20611095,2.16329074 7.16994476,2.17353916 L 6.40188885,2.38705015 C 6.13394403,2.44726014 5.87222242,2.41267133 5.63266706,2.25381923 C 5.49266672,2.16072845 5.39155579,2.02877903 5.31883335,1.8694998 C 5.25816631,1.73626935 5.31766701,1.57955241 5.44949961,1.53727722 C 5.90683317,1.39166296 6.34899998,1.19907629 6.79388905,1.01588404 C 6.93661118,0.957382143 7.08438873,0.926636636 7.23644495,0.936031044 L 7.40755606,0.986846745 L 8.72238922,1.52105057 L 8.79977798,1.52532065 L 9.36522293,1.3545121 L 9.13266659,0.978306174 L 9.95088863,0.366811454 L 9.80233288,0.127679408 L 10.1111107,0 L 14,0 L 14,2.63130641 L 12.2639999,4.098979 L 11.9902229,3.65701175 L 11.1712217,4.26936054 L 10.9254446,3.871804 C 10.710001,4.10794687 10.4463329,4.2509985 10.147666,4.3154788 L 9.717556,4.37611628 L 9.71522236,4.36714888 Z" EditMode="[ShapeEditMode]FixedPath" Fill="[SMSolidColorBrush]#ffffffff" Height="[float]7" Left="[float]21" Stroke="[SMSolidColorBrush]#00ffffff" Top="[float]4" Width="[float]14" />
-							<Path Data="[PathGeometry]M 5,4.05999994 C 5,5.68372011 3.6941669,7 2.08333349,7 C 2.03638887,7 1.9908334,6.99524021 1.94444454,6.99300003 L 1.94444454,6.43300009 C 1.99055564,6.4355197 2.03638887,6.44000006 2.08333349,6.44000006 C 3.38527799,6.44000006 4.44444466,5.37236023 4.44444466,4.05999994 C 4.44444466,2.74763989 3.38527799,1.68000007 2.08333349,1.68000007 C 2.07222223,1.68000007 2.06166673,1.68112004 2.05055571,1.68167996 L 2.77805591,2.79999995 L 0,1.39103997 L 2.77805591,0 L 2.04916668,1.11943996 L 2.05250001,1.1214 C 2.062778,1.1211201 2.07305551,1.12 2.08333349,1.12 C 3.6941669,1.12 5,2.43628001 5,4.05999994 Z" EditMode="[ShapeEditMode]FixedPath" Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]7" Left="[float]17" Stroke="[SMSolidColorBrush]#00ffffff" Top="[float]14" Width="[float]5" />
-							<IconTemplate Height="[float]40" HorizontalAlignment="[HorizontalAlignment]Stretch" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Comp]Hardware Abstraction Framework.gcomp" Top="[float]0" VerticalAlignment="[VerticalAlignment]Stretch" Width="[float]40">
-								<Rectangle EditMode="[ShapeEditMode]EditablePath" Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]9" HorizontalAlignment="[HorizontalAlignment]Left" IsHitTestVisible="[bool]False" Left="[float]2" RadiusX="[float]2" RadiusY="[float]2" Stroke="[SMSolidColorBrush]#ff0070c0" StrokeThickness="[float]1" Top="[float]2" VerticalAlignment="[VerticalAlignment]Top" Width="[float]12" />
-								<Rectangle EditMode="[ShapeEditMode]EditablePath" Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]5" HorizontalAlignment="[HorizontalAlignment]Left" IsHitTestVisible="[bool]False" Left="[float]2" RadiusX="[float]0" RadiusY="[float]0" Stroke="[SMSolidColorBrush]#ff0070c0" StrokeThickness="[float]1" Top="[float]8" VerticalAlignment="[VerticalAlignment]Top" Width="[float]12" />
-								<Rectangle EditMode="[ShapeEditMode]EditablePath" Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]8" HorizontalAlignment="[HorizontalAlignment]Left" IsHitTestVisible="[bool]False" Left="[float]8" RadiusX="[float]0" RadiusY="[float]0" Stroke="[SMSolidColorBrush]#ff0070c0" StrokeThickness="[float]1" Top="[float]2" VerticalAlignment="[VerticalAlignment]Top" Width="[float]6" />
-								<Text Foreground="[SMColor]#ffffffff" Height="[float]11" HorizontalAlignment="[HorizontalAlignment]Left" IsHitTestVisible="[bool]False" Left="[float]3" SizeMode="[TextModelSizeMode]Fixed" Text="[string]HAF" TextAlignment="[TextAlignment]Left" TextWrapping="[TextWrapping]Wrap" Top="[float]4" VerticalAlignment="[VerticalAlignment]Top" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]11">
-									<FontSetting FontFamily="Segoe UI" FontSize="4" FontStyle="BoldItalic" />
-								</Text>
-							</IconTemplate>
-						</IconPanel>
-					</Icon>
-				</MergeItem>
-			</MergeScript>
-		</p.IconModel>
 		<p.IconModel Target="Hardware Abstraction Framework::Common::ExecutableDirector.gtype::Read Executables.gvi">
 			<MergeScript>
 				<MergeItem Path="." IsPrimary="True">
@@ -3748,10 +3831,43 @@
 				</MergeItem>
 			</MergeScript>
 		</p.IconModel>
+		<p.IconModel Target="Hardware Abstraction Framework::Support::Messages::Reset Message Queue.gvi">
+			<MergeScript>
+				<MergeItem Path="." IsPrimary="True">
+					<Icon ListViewIconCrop="0 0 40 40">
+						<IconPanel Height="[float]40" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+							<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" HorizontalAlignment="[HorizontalAlignment]Stretch" Left="[float]0" TemplateName="[string]Banner" Top="[float]0" VerticalAlignment="[VerticalAlignment]Stretch" Width="[float]40">
+								<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+								<Rectangle Fill="[SMSolidColorBrush]#ffffffff" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#ffffffff" Top="[float]0" />
+								<Path Data="[PathGeometry]M 0,11 L 0,2 C 0,0.899999976 0.899999976,0 2,0 L 2,11 L 0,11 Z" Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]11" HorizontalAlignment="[HorizontalAlignment]Left" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]2,2,2,2" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top" Width="[float]2" />
+								<Rectangle Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]11" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]4,2,4,2" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top" Width="[float]NaN" />
+								<Path Data="[PathGeometry]M 2,11 L 2,2 C 2,0.899999976 1.10000002,0 0,0 L 0,11 L 2,11 Z" Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]11" HorizontalAlignment="[HorizontalAlignment]Right" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]2,2,2,2" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top" Width="[float]2" />
+							</IconTemplate>
+							<Text Height="[float]11" Left="[float]8" Text="[string]Queue" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]28" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]24">
+								<FontSetting FontFamily="Segoe UI" FontSize="6" />
+							</Text>
+							<Text Height="[float]11" Left="[float]2" Text="[string]Reset Msg" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]20" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]37">
+								<FontSetting FontFamily="Segoe UI" FontSize="6" />
+							</Text>
+							<Path Data="[PathGeometry]M 9.61838818,1.0483377 L 11.2906113,3.74668622 L 11.8066673,3.36108613 L 10.1344442,0.662310302 L 9.61838818,1.0483377 Z M 4.88288879,0.248953521 L 4.86461115,0.278418005 L 5.47166634,0.494490862 L 6.39177799,0.821589351 L 6.41861057,0.833118916 L 5.88855553,1.03851616 L 5.84616661,1.03638113 L 4.65655565,0.614056885 L 3.47861099,2.51515627 L 3.47861099,2.70005679 C 3.48483372,2.79357433 3.51866698,2.87556267 3.5653336,2.95157242 L 3.67499971,3.11896467 L 3.43933344,3.41104746 C 3.33511114,3.27867079 3.24333334,3.14245105 3.18461132,2.98915029 L 2.84355545,3.53915405 L 2.0253334,2.92765927 L 1.75155568,3.36919928 L 0,2.05995154 L 0,0 L 3.83949995,0 L 2.20888877,2.63173342 L 2.72455573,3.01733375 L 4.39677811,0.318558007 L 3.97055578,0 L 4.55038929,0 L 4.88288879,0.248953521 Z M 5.85200024,6.40190554 L 6.08222246,6.12647724 L 6.11566639,6.16106606 L 6.4123888,6.48688316 C 6.59555531,6.68374014 6.91133308,6.6316433 7.03461123,6.38140917 L 7.005445,6.34724712 L 6.26616669,5.5350523 C 6.21950006,5.48380995 6.20899963,5.41634035 6.23544502,5.35442209 C 6.26033306,5.29634714 6.31711102,5.25535345 6.37466717,5.26859093 L 6.47577763,5.32666588 L 7.42233372,6.36688995 C 7.51372147,6.46852112 7.61950016,6.49414253 7.73811197,6.46937513 C 7.88977766,6.43734884 7.99555492,6.33785295 8.0581665,6.18241644 C 8.07255554,6.14697456 8.06905556,6.12519598 8.04377842,6.09743977 L 6.68344498,4.60628033 C 6.64105511,4.55888128 6.61344433,4.50849247 6.62861156,4.43888855 C 6.65194416,4.3312788 6.76433277,4.28345203 6.84755516,4.34665155 L 6.89266682,4.39148903 L 8.29422188,5.93175507 L 8.38055611,5.96591663 C 8.57422256,5.9492631 8.73055649,5.80151367 8.77488899,5.59355402 C 8.78188896,5.5576849 8.77644539,5.53377104 8.75233364,5.50772285 L 7.18238926,3.78511834 C 7.14933348,3.74882174 7.12522221,3.7095356 7.12677765,3.65658498 C 7.12833309,3.5903964 7.15633392,3.54171586 7.21077728,3.51609492 C 7.26483345,3.49047327 7.31811142,3.49730587 7.36244392,3.54256988 L 7.483778,3.67494702 L 8.59794426,4.89836359 L 8.94677734,5.28054762 L 9.01172256,5.30147123 C 9.26994419,5.25236416 9.42822266,4.94149208 9.33022308,4.67588472 L 9.31855488,4.64343119 L 9.69927788,4.68015528 C 9.72105503,4.77837038 9.72222233,4.88000154 9.70394421,4.98163271 C 9.64133263,5.32751989 9.45505524,5.55426836 9.15172195,5.66828299 L 9.11633301,5.70756912 C 9.02066612,6.07865047 8.75233364,6.32290697 8.4034996,6.35706854 L 8.36500072,6.38482475 C 8.20244408,6.71235037 7.95394468,6.8776083 7.61211109,6.86565065 C 7.49505568,6.86138105 7.38499975,6.82337618 7.28505564,6.75547981 C 7.2535553,6.73455572 7.23644495,6.73327446 7.2076664,6.76401997 C 6.93816662,7.05354023 6.5041666,7.08257818 6.22144461,6.81825209 L 5.85200024,6.40190554 Z M 5.08083296,4.35988903 C 5.27644444,4.32615423 5.43861103,4.39148903 5.54400015,4.57767057 C 5.65911102,4.78178644 5.63149977,4.97736216 5.48177767,5.14987898 L 5.65055513,5.15970039 C 5.91305542,5.20966196 6.07016706,5.52907372 5.96088886,5.78784895 L 5.89711094,5.8907609 L 5.54088926,6.31991768 C 5.39349985,6.49328852 5.13488913,6.50524521 4.98400021,6.33614492 C 4.66355562,5.97830057 4.37966681,5.58629465 4.10122204,5.19001913 L 3.57194471,4.43077517 C 3.49300003,4.31718683 3.42727757,4.19634008 3.41911125,4.04816341 C 3.4132781,3.94695973 3.43933344,3.85771227 3.50466681,3.78298354 L 3.79283333,3.44947934 C 3.9814446,3.23511481 4.32483387,3.29916787 4.46133327,3.57331586 L 4.50566673,3.68263316 C 4.70555592,3.57630491 4.88638878,3.6057694 5.04077816,3.77956724 C 5.17766666,3.93286753 5.18661118,4.11221647 5.08083296,4.35988903 M 9.71522236,4.36714888 L 9.48422241,4.35049438 L 9.40488911,4.31633329 L 7.25549984,2.19617152 C 7.22866678,2.16926908 7.20611095,2.16329074 7.16994476,2.17353916 L 6.40188885,2.38705015 C 6.13394403,2.44726014 5.87222242,2.41267133 5.63266706,2.25381923 C 5.49266672,2.16072845 5.39155579,2.02877903 5.31883335,1.8694998 C 5.25816631,1.73626935 5.31766701,1.57955241 5.44949961,1.53727722 C 5.90683317,1.39166296 6.34899998,1.19907629 6.79388905,1.01588404 C 6.93661118,0.957382143 7.08438873,0.926636636 7.23644495,0.936031044 L 7.40755606,0.986846745 L 8.72238922,1.52105057 L 8.79977798,1.52532065 L 9.36522293,1.3545121 L 9.13266659,0.978306174 L 9.95088863,0.366811454 L 9.80233288,0.127679408 L 10.1111107,0 L 14,0 L 14,2.63130641 L 12.2639999,4.098979 L 11.9902229,3.65701175 L 11.1712217,4.26936054 L 10.9254446,3.871804 C 10.710001,4.10794687 10.4463329,4.2509985 10.147666,4.3154788 L 9.717556,4.37611628 L 9.71522236,4.36714888 Z" EditMode="[ShapeEditMode]FixedPath" Fill="[SMSolidColorBrush]#ffffffff" Height="[float]7" Left="[float]21" Stroke="[SMSolidColorBrush]#00ffffff" Top="[float]4" Width="[float]14" />
+							<Path Data="[PathGeometry]M 5,4.05999994 C 5,5.68372011 3.6941669,7 2.08333349,7 C 2.03638887,7 1.9908334,6.99524021 1.94444454,6.99300003 L 1.94444454,6.43300009 C 1.99055564,6.4355197 2.03638887,6.44000006 2.08333349,6.44000006 C 3.38527799,6.44000006 4.44444466,5.37236023 4.44444466,4.05999994 C 4.44444466,2.74763989 3.38527799,1.68000007 2.08333349,1.68000007 C 2.07222223,1.68000007 2.06166673,1.68112004 2.05055571,1.68167996 L 2.77805591,2.79999995 L 0,1.39103997 L 2.77805591,0 L 2.04916668,1.11943996 L 2.05250001,1.1214 C 2.062778,1.1211201 2.07305551,1.12 2.08333349,1.12 C 3.6941669,1.12 5,2.43628001 5,4.05999994 Z" EditMode="[ShapeEditMode]FixedPath" Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]7" Left="[float]17" Stroke="[SMSolidColorBrush]#00ffffff" Top="[float]14" Width="[float]5" />
+							<IconTemplate Height="[float]40" HorizontalAlignment="[HorizontalAlignment]Stretch" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Comp]Hardware Abstraction Framework.gcomp" Top="[float]0" VerticalAlignment="[VerticalAlignment]Stretch" Width="[float]40">
+								<Rectangle EditMode="[ShapeEditMode]EditablePath" Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]9" HorizontalAlignment="[HorizontalAlignment]Left" IsHitTestVisible="[bool]False" Left="[float]2" RadiusX="[float]2" RadiusY="[float]2" Stroke="[SMSolidColorBrush]#ff0070c0" StrokeThickness="[float]1" Top="[float]2" VerticalAlignment="[VerticalAlignment]Top" Width="[float]12" />
+								<Rectangle EditMode="[ShapeEditMode]EditablePath" Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]5" HorizontalAlignment="[HorizontalAlignment]Left" IsHitTestVisible="[bool]False" Left="[float]2" RadiusX="[float]0" RadiusY="[float]0" Stroke="[SMSolidColorBrush]#ff0070c0" StrokeThickness="[float]1" Top="[float]8" VerticalAlignment="[VerticalAlignment]Top" Width="[float]12" />
+								<Rectangle EditMode="[ShapeEditMode]EditablePath" Fill="[SMSolidColorBrush]#ff0070c0" Height="[float]8" HorizontalAlignment="[HorizontalAlignment]Left" IsHitTestVisible="[bool]False" Left="[float]8" RadiusX="[float]0" RadiusY="[float]0" Stroke="[SMSolidColorBrush]#ff0070c0" StrokeThickness="[float]1" Top="[float]2" VerticalAlignment="[VerticalAlignment]Top" Width="[float]6" />
+								<Text Foreground="[SMColor]#ffffffff" Height="[float]11" HorizontalAlignment="[HorizontalAlignment]Left" IsHitTestVisible="[bool]False" Left="[float]3" SizeMode="[TextModelSizeMode]Fixed" Text="[string]HAF" TextAlignment="[TextAlignment]Left" TextWrapping="[TextWrapping]Wrap" Top="[float]4" VerticalAlignment="[VerticalAlignment]Top" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]11">
+									<FontSetting FontFamily="Segoe UI" FontSize="4" FontStyle="BoldItalic" />
+								</Text>
+							</IconTemplate>
+						</IconPanel>
+					</Icon>
+				</MergeItem>
+			</MergeScript>
+		</p.IconModel>
 	</IconTable>
 	<TypeAppearanceTable xmlns="http://www.ni.com/PlatformFramework">
-		<p.TypeAppearance TypeId="6363ad9d8e674d399f5d7d2656aa529e" PrimaryColor="#FF0070C0" SecondaryColor="#FF00B0F0" />
-		<p.TypeAppearance TypeId="76197d78a8264a04966ae322fe621cd5" PrimaryColor="#FF0070C0" SecondaryColor="#FF00B0F0" />
-		<p.TypeAppearance TypeId="d67d51ccd0d34cb6b29a46e3583c738e" PrimaryColor="#FF0070C0" SecondaryColor="#FF00B0F0" />
+		<p.TypeAppearance TypeId="2978213054ab4065a6e95a5c02687935" PrimaryColor="#FF0070C0" SecondaryColor="#FF00B0F0" />
+		<p.TypeAppearance TypeId="cd835da405b641ac85a4a82ce7551e4b" PrimaryColor="#FF0070C0" SecondaryColor="#FF00B0F0" />
+		<p.TypeAppearance TypeId="81389cedc6e54a32abfa4a7793f4bc5a" PrimaryColor="#FF0070C0" SecondaryColor="#FF00B0F0" />
 	</TypeAppearanceTable>
 </SourceFile>

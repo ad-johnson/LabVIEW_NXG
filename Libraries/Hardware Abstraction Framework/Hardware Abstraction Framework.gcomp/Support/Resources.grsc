@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="ECF400176DBFAE8349D62CBF52318540558CF3873F9DFA8993CC733AF98CD1038729B119E1112A6850F1FADD115E2CC5FD0EDA52D5644EBC46891691DC1D6C23" Timestamp="1D6604B062D62B9" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="3C34010F034C7648E3483656FF0E8EA7FF5556DF0C4A3998A06D7E462B5161596BE6E3F8F54653744F088AD45AFCC852ED1B633926195441B083C378B0023F88" Timestamp="1D67E0DAF259DA3" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Data Comms SystemDesigner plugin" Name="http://www.ni.com/DataComms/SystemDesigner/SystemModel" OldestCompatibleVersion="4.8.0.0" Version="4.8.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
@@ -30,8 +30,8 @@
 					</Symbols>
 				</Instance>
 				<Instance Id="628b5719554945c1aa08c1afe6b382f3" Source="{http://www.ni.com/DataComms/SystemDesigner/SystemModel}Tag">
-					<Symbols p6:Path="[{http://www.ni.com/DataComms/SystemDesigner/SystemModel}Tag]Tag" p7:Process.AliasName="Events" p7:Process.DataType="@c5f08be92a944a3b84afdc1a08416e4f" xmlns:p7="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy">
-						<p7:p.Process.InitialValue>0_0_0_</p7:p.Process.InitialValue>
+					<Symbols p6:Path="[{http://www.ni.com/DataComms/SystemDesigner/SystemModel}Tag]Tag" p7:Process.AliasName="Events" p7:Process.DataType="@d6f57defac9444aab9503a0518172d64" xmlns:p7="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy">
+						<p7:p.Process.InitialValue>0_0_0_0_</p7:p.Process.InitialValue>
 					</Symbols>
 				</Instance>
 				<Superimposition Id="399c4a99ec7745a28b1cdad08ff6a3e4" Name="Root Superimposition">
@@ -79,8 +79,8 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="c5f08be92a944a3b84afdc1a08416e4f">
-			<Attributed AttributedType="@0d066ffcab6f4446b2c1d1350e0773ed">
+		<p.TypeReference TypeId="d6f57defac9444aab9503a0518172d64">
+			<Attributed AttributedType="@17a1b2e5c9e547e7a0bdb81bd8b7039e">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Support::Events" />
 				</AttributeValues>
@@ -92,8 +92,8 @@
 		<p.TypeReference TypeId="3064b6e7c20042de8e34b5e6f93494aa">
 			<Typedef TypedefName="All Message Queues.gtype" UnderlyingType="@6ebbb0223674488285572b68b4383402" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="0d066ffcab6f4446b2c1d1350e0773ed">
-			<Typedef TypedefName="All Events.gtype" UnderlyingType="@1ae9e87f1d9247cf85e6a30243cd0e94" />
+		<p.TypeReference TypeId="17a1b2e5c9e547e7a0bdb81bd8b7039e">
+			<Typedef TypedefName="All Events.gtype" UnderlyingType="@d317b400852247779b038b1ee7dfeafd" />
 		</p.TypeReference>
 		<p.TypeReference TypeId="bd2232353db34e3ebe062acdcac878ce">
 			<Composite Id="1" Name="Variant" Sealed="" GenericTypeDefinition="Void" BaseType="Void" />
@@ -106,12 +106,13 @@
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="1ae9e87f1d9247cf85e6a30243cd0e94">
+		<p.TypeReference TypeId="d317b400852247779b038b1ee7dfeafd">
 			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
 				<Members>
 					<Field FieldAccessPolicy="ReadWrite" Name="Stop Event" DataType="@30d87e64c9394038bed76206e1041c8d" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Pause Event" DataType="@7bd2cc49ea324b99ae3e996e0d02b523" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Resume Event" DataType="@ce689055e41d4cf492eace51b218f14c" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Done Event" DataType="@5ee2db33061a4d5cb9e3c63fc5f2a717" />
 				</Members>
 			</Composite>
 		</p.TypeReference>
@@ -143,6 +144,13 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
+		<p.TypeReference TypeId="5ee2db33061a4d5cb9e3c63fc5f2a717">
+			<Attributed AttributedType="@cb8eb33f125d4f76a6f4ef496c76fae8">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Hardware Abstraction Framework::Support::Events" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
 		<p.TypeReference TypeId="b1e424db4b8e4a4884f364fd6daced06">
 			<Composite Id="1" Name="NationalInstruments.SourceModel.DataTypes.Queue" ReferenceClass="" Sealed="" GenericTypeDefinition="@8df4ac86da134e4083db34816410b812">
 				<ClosedGenericParameters>
@@ -158,6 +166,9 @@
 		</p.TypeReference>
 		<p.TypeReference TypeId="59ed870e5a3d4b34bc591dfd7329ec4d">
 			<Typedef TypedefName="Resume Event.gtype" UnderlyingType="@143d49e0913842229ec0fb5607f9991b" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="cb8eb33f125d4f76a6f4ef496c76fae8">
+			<Typedef TypedefName="Done Event.gtype" UnderlyingType="@722b6719cec34ab39eb8b8f3b32586b8" />
 		</p.TypeReference>
 		<p.TypeReference TypeId="8df4ac86da134e4083db34816410b812">
 			<Attributed AttributedType="@ab8c912dc884453b9cf3e7cedfe558c8">
@@ -194,6 +205,13 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
+		<p.TypeReference TypeId="722b6719cec34ab39eb8b8f3b32586b8">
+			<Attributed AttributedType="@64e7c03cc3184d358220757ca8d02c44">
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]Refnum" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
 		<p.TypeReference TypeId="ab8c912dc884453b9cf3e7cedfe558c8">
 			<Composite Id="1" Name="NationalInstruments.SourceModel.DataTypes.Queue" ReferenceClass="" Sealed="" GenericTypeDefinition="@8df4ac86da134e4083db34816410b812">
 				<GenericParameters>
@@ -221,6 +239,13 @@
 		</p.TypeReference>
 		<p.TypeReference TypeId="79d4f588186a44d5a55f68393ddfb596">
 			<Event Id="1" Name="Resume" GenericTypeDefinition="Void">
+				<Parameters>
+					<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="Optional" Name="event data" DataType="@be5d8b6eada047f49a320d92926669a1" />
+				</Parameters>
+			</Event>
+		</p.TypeReference>
+		<p.TypeReference TypeId="64e7c03cc3184d358220757ca8d02c44">
+			<Event Id="1" Name="Done" GenericTypeDefinition="Void">
 				<Parameters>
 					<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="Optional" Name="event data" DataType="@be5d8b6eada047f49a320d92926669a1" />
 				</Parameters>
