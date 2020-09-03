@@ -2,10 +2,24 @@
 
 Hardware Abstraction Framework releases
 
-[V1.0.1](#v1.0.1)    24th August 2020
+[V1.2.0](#v1.2.0)    3rd September 2020
 
-[V1.1.0](#v1.1.0)    Older
+[V1.1.0](#v1.1.0)    24th August 2020
 
+[V1.0.1](#v1.0.1)    Older
+
+## V1.2.0
+Extended the functionality of the framework to provide a Voltage generate executable.  This also required the provision of an Instrument exectuable and an Output executable which are used to control generation output channels and channel on/off switching.
+
+* Added members to Parameter so that they can return a typed response.
+* Added a member to the Measure Executable so that it can return a typed response (Double.)
+* "Reset Framework" VI changed to "Setup Framework" and "Teardown Framework" to properly configure the framework.
+* Created a Notification approach to posting results to a Test App.  If a Notifier is passed to the framework, it will use that instead of sending a Notification Message.  When the Test App calls the framework to process Executables, then the app is effectively blocked until processing completes, and then results can be processed.  This is fine for simple commands that being processed, but for long-running commands, e.g. via a Continuous Executable Director, then notifications will allow results to be processed as they are returned from the Instrument.  Examples show the use of both approaches.
+* Created a Waveform Measurement example which uses a Continous Director to generate a result which can be displayed on a chart.  This uses the Notification method of result processing.  It also demonstrates the use of Pause/Resume events to interrupt and resume the generation of the waveform.
+* Changed existing examples to use Setup Framework and Teardown Framework.
+* Created Executables to generate a Voltage.
+* Created a Generate and Measure example which allows an instrument to output a voltage and an instrument to measure it for verification.
+ 
 ## V1.1.0
 Extended the functionality of the framework to use Parameters and provided an example to show their use.
 
