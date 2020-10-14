@@ -31,7 +31,7 @@ Many Executables in the framework can be used as-is in test applications but the
 
 Similarly, the Executable Directors are likely to be sufficient for most test applications but again, you can create your own by following the pattern established for the existing ones.
 
-Unless you use the same instruments that are wrapped by Drivers in the framework, it is most likely that you will have create your own for your instruments.  Again you can follow the pattern established for the existing ones; you may want to consider uploading these to the repository for inclusion in a future release.
+Unless you use the same instruments that are wrapped by Drivers in the framework, it is most likely that you will have to create your own for your instruments.  Again you can follow the pattern established for the existing ones; you may want to consider uploading these to the repository for inclusion in a future release.
 
 The rest of this document describes the framework in more detail and how you can use it.
 ### Interacting with the Framework
@@ -39,6 +39,10 @@ Your test application will interact with the framework through other means than 
 * **Pause:** Processing will be paused at the end of the current processing of Executable Director(s) - remember these could be long-running.  It does need to finish any currently running processing so as to ensure instruments are not left in an unknown state.  The Pause will timeout after 60-seconds and all processing will finish with an error being returned indicating the timeout occurred.
 * **Resume:** Processing will be resumed if paused.
 * **Stop:** Processing will stop immediately after the current processing of Executable Director(s) - again, so that instruments are not left in an unknown state.
+
+***
+There is no concept of *Abort Immediately* - the framework will always attempt to properly close an instrument down so that it is not left in an unknown state.
+***
 
 The Framework will interact with your test application through `Events` as well:
 * **Done:** Raised by the Framework when all processing has completed. You could, perhaps, on hearing this event, unblock the UI, display any messages, quit the test app, write results to a database and so on.
@@ -59,7 +63,7 @@ The framework has been mostly written using LabVIEW NXG's object oriented featur
 
 As the source is provided, you are encouraged to use one of the examples and single-step through it observing how the framework is called and how interactions play back-and-forth.
 
-In terms of processing, the framework follows a Queued Message Handler pattern which is standardised within LabVIEW NXG.  The example, although simple in itself, also uses this approach to provide a basic pattern for you to follow in your own test applications.
+In terms of processing, the framework follows a Queued Message Handler pattern which is standardised within LabVIEW NXG.  The examples, although simple in themselves, also use this approach to provide a basic pattern for you to follow in your own test applications.
 
 ***
 **A note on LabVIEW NXG's approach to object oriented programming**
@@ -69,6 +73,7 @@ NI decided that a by-value approach to objects will be used, rather than by-refe
 There is very little in the way of reflection available in the language so some actions are not as independent of implementation as they could be otherwise.
 ***
 ### Core Classes
+Note: The diagrams below are intended to show main classes and methods and are not a complete picture of the framework.
 
 ![UML class diagram of framework core classes](./images/image00.png)
 
@@ -79,7 +84,7 @@ An Executable represents a command that can be sent to an Driver for running on 
 
 There are two types of Executable:
 * **WriteExecutable:** represents a command that can be sent to an instrument but which requires no response.
-* **ReadExecutable:** represents a command that can be sent to an instrument and for which a response or result will be returned.  You will note it inherits some of its functionality from `WriteExecutable`: you don't need to run a Write Executable and a Read Executable as the latter incorporates the functionality for you.
+* **ReadExecutable:** represents a command that can be sent to an instrument and for which a response or result will be returned.  You will note it inherits some of its functionality from `WriteExecutable`: you don't need to run a Write Executable *and* a Read Executable as the latter incorporates the functionality for you.
 
 An Executable is associated with a `Driver` whose responsibility it is to undertake any instrument specific translation of a command.  The framework will arrange for the Driver to run the command at the appropriate moment.
 
@@ -89,7 +94,7 @@ There are two ways a `Driver` can run an Executable:
 
 An Executable controls this with its `canOverlap` property: if true, the Executable will be run immediately; if false, when able.
 
-A `ReadExecutable` will hold a result returned from the instrument.  It does so in a raw form, `rawResult` - that is, it provides no interpretation of that result until asked to do so by the test application calling `buildResult`.  The test application will be notified of an available result via a `result` message raised on the `Notification` queue or a raised Notifier.  The result data is the same in both cases: the Executable itself is passed back to the test app and can be used to obtain the results as a raw value (String) or a typed value.
+A `ReadExecutable` will hold a result returned from the instrument.  It does so in a raw form, `rawResult` - that is, it provides no interpretation of that result until asked to do so by the test application calling `buildResult`.  The test application will be notified of an available result via a `result` message raised on the `Notification` queue or a raised `Notifier`.  The result data is the same in both cases: the Executable itself is passed back to the test app and can be used to obtain the results as a raw value (String) or a typed value.
 
 Some Executables can take parameters to send along with the base command.  These are represented by the `Parameter` class.  The framework will automatically add any requested parameters to the command before it is sent to the instrument: you just need to add the ones you want to the Executable when you create an instance of it.  A Parameter will hold a result, if available, and is capable of parsing that into a typed value for the test application.
 
@@ -109,6 +114,8 @@ You can see that all is needed is a concrete implementation of `getBaseCommand` 
 
 `Driver` is responsible for interfacing with actual test instruments providing the necessary mappings between a generic test language and instrument-specific language.  By doing this, a user of the framework can standardise on names for things like commands, parameter names, setting names and so on and leave the Driver to translate on an instrument-by-instrument basis.
 
+`SerialDriver` should be used for instruments that will use a Serial communication method, e.g. Arduino Uno.  This operates the same way as the standard Driver but expects a device to be available on a mapped `COM` port rather than on, say, a `USB` port.
+
 It is envisaged that future versions of the framework will be able to load mappings between the generic and specific from an external source to allow tests to be more configurable.
 
 A Driver will execute a query for an Executable when directed by the framework, obtaining a response as necessary.
@@ -120,6 +127,10 @@ So what do you need to do?  When you instantiate an Executable you need to give 
 ![UML class diagram of concrete Driver classes](./images/image04.png)
 
 You can see here that all you need to provide is a concrete implementation for `buildDriverSettingsMappings` and `getInstrumentAlias` as the framework handles everything else.
+
+The Arduino Uno Driver also provides an overridden `readSerialPortAttributes` because I want to communicate with it at 115200 baud, rather than the default 9600 baud, and I need the initialisation to wait 2000milliseconds after opening a port to ensure the Arduino will be available to process commands.
+
+These concrete Drivers are available in namespace `Z_Implementation`.
 
 #### Setting
 ![UML class diagram of Setting classes](./images/image05.png)
@@ -134,6 +145,8 @@ You add Executable Settings to the Executable as you instantiate it.  If you cre
 
 ***
 **Note:** The framework is currently very SCPI focussed and settings aren't actually used yet.  As the framework evolves it is envisaged they will become more integrated and the feature finished.
+
+Therefore, currently, you should not use Settings as they are not implemented.
 ***
 
 #### Processing
@@ -190,6 +203,54 @@ The lead-in is the same as a Write Executable but the additional steps are:
 * **Write Result:** saves the unformatted Instrument response for later processing
 * **Write Param Vals:** saves the unformatted Parameter responses for later processing
 * **Post Result:** adds a `result` message on the `Notification Queue` with the Executable set as message data.  The test application should read this message and arrange for the result to be processed as required - not forgetting that results may be stored in the parameters if used.
+
+## Examples
+Example usage of the framework is provided so that you can use these as a basis of your own test applications but also get a better idea of how the framework actually works.  All examples are in folder `HAF Examples`.
+
+The examples are provided in an order of increasing complexity and show different Executables and Executable Directors as well as the use of Events and Notifiers for result handling.  The basic test application follows the same structure (which could be deemed 'overkill' for the simplest example!)
+
+They make use of the Drivers found in namespace `Z_Implementation`.  To run these with your own instruments you will need to create your own Drivers and make the necessary changes to the example implementations.  In some cases it may be as simple as ensuring that the VI `Map To Driver` in class `ResourceEnumerator` is modified and that you have followed the implementation pattern for the existing instruments.
+
+### 1-Instrument Identification
+This example enumerates any instruments connected to the PC running LabView NXG and presents the list to the user.  Selecting an instrument, by name, and pressing 'Get Id' will return the instrument identity.  
+
+This is accomplished using the Driver associated to the selected name, the `Identity` Executable and an `Executable Director` (one-time execution.)  Results are provided on the `Messages` queue for handling and displaying on the UI.
+
+If you use a Serial device, e.g. Arduino, a sample sketch is provided that will respond correctly to the commands the framework sends it.
+
+### 2-Take Measurement
+This example enumerates instruments connected to the PC, but the user should select a DMM - Keithley DMM6500 using my instruments - as the example 'measures' a selected function.  The UI allows selection of a function that the DMM knows about, e.g. DC Voltage, AC Voltage, Current, Resistance, Frequency etc.  It also allows the selection of parameters (Buffer Elements for the DMM6500) that are passed along with the command.
+
+You should set up a test circuit and connect the DMM to it according to the function that will run.
+
+When ready, press 'Measure' and the DMM will attempt to take the correct measurement and display the result, including the results of any parameters also selected.  The DMM identity is also returned.
+
+This uses the `Identity` Executable; the `Measure` Executable configured with the selected function and parameters; the `User Defined Write` Executable to create a buffer which the DMM needs (this Executable allows you to provide a hand-crafted SCPI command to be executed); and an `Executable Director`.  Results are provided on the `Messages` queue for handling and displaying on the UI. 
+
+### 3-Generate Voltage
+This example makes use of a PSU instrument to generate a voltage and a DMM instrument to measure that voltage (in the specific case, a Rohde & Schwarz HMC8043 and a Keithley DMM6500).  Select the instruments correctly, enter a Voltage (in mV) and click on Generate.
+
+You will need to connect the PSU and DMM to a test circuit for this to work.
+
+This uses the `Identity` Executable; the `Voltage` Executable; the `Measure` Executable configured with the Voltage function and no additional parameters; and two `Executable Director` instances - one for the identities and one for the generation and measure.  Results are provided on the `Messages` queue for handling and displaying on the UI. 
+
+### 4-Waveform Measurement
+This example makes use of a DMM instrument to continually take measurements, displaying the results on a Waveform graph.  It will run indefinitely, until 'Stop' is pressed.
+
+You will need to connect the DMM to a suitable test circuit for the function you select.  For example, I connected the DMM to a potentiometer to measure the change in resistance as the pot was adjusted.
+
+The example responds to the Pause and Resume events.
+
+This uses the `Identity` Executable; the `Measure` Executable (no parameters); a `Executable Director` for the identity; and a `Continuous Director` for the measure.  Results are provided through the `Results Notifier` because the framework will block the main processing loop whilst it does its work - thus the UI cannot be updated via the previously used `Messages` queue.
+
+### 5-Generate Stepped Voltage
+This example makes use of a PSU to generate a voltage and a DMM to measure the voltage.  The PSU is directed to output a voltage in steps, from a start value to an end value in increments.  The DMM measures every step change and the result is displayed on a waveform.
+
+You will need to connect the PSU and DMM to a suitable test circuit.  For example, a simple circuit is to provide voltage across a resistor and connect the DMM across the resistor.
+
+This example also responds to the Pause and Resume events.
+
+This uses the `Identity` Executable; the `Voltage` Executable for the voltage generation; the `measure` Executable configured for Voltage measurement; a `Executable Director` for the identities and a `Repeating Director` for the generate and measurement.  It demonstrates the use of the Voltage executable with an increment which changes the voltage-to-be-generated to the next value after every execution.  The Repeating Director is configured to ensure that it runs the Generate executable until the End Voltage is reached. Again, results are provided through the `Results Notifier` because the framework will block the main processing loop whilst it does its work - thus the UI cannot be updated via the previously used `Messages` queue.
 
 ## Summary
 Whilst not particularly complicated, it's reasonably difficult to document clearly what happens.  It is highly recommended that you follow through one of the existing examples to see how it works.  These examples also form a template for your own test application so that it deals with events and notifications in a well-controlled and performant manner.
