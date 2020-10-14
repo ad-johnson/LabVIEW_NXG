@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="8D27FF8FF5898EFE500CE8C765A651AE34D3E0BB22B2DB43180F7196D7A96955B3D16DF5B306FAD542C93D00292A3D7DF349572723570AA365F2BC93F1AD4D77" Timestamp="1D6A23C161FFC9A" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@11cd8568929242bf95e29e645b106eb8" Id="345fe01d93924b04900a225d767eb045" xmlns="http://www.ni.com/MocCommon">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Cluster of data attributes that can be used to configure a serial port.&lt;/p&gt;</p.UserDescription>
+		<Icon Id="3c20959e005a4cb0860e05b9d8a9b8c1" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="aa17adc529450aa9f3ff7633a504c3" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="2cb47e7a9a3a45bbaf2370168c424eff" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@11cd8568929242bf95e29e645b106eb8" Id="3b6ad6944c254e589fc88a3069f9e30a" Name="Serial Port Attributes">
+			<p.DefaultValue>9600_8_0_0_10_0_</p.DefaultValue>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="8d450a0754354d74a6750bc73a681acd" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="4bd79bccb0094a7184cba048f4590341" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="e6175f37d0e44d6c986ade90871f4efd" Name="SerialPortAttributes.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="7ab1e87f645244bfa07fcd5b1d0ac062" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="a9d7ec5960684dbbbb71ea7fcb416432" xmlns="http://www.ni.com/MocCommon">
+					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@11cd8568929242bf95e29e645b106eb8" Height="[float]354" Id="9eb943e9899841bebee2a9f33630c5b6" Label="[UIModel]fbadfff662c647a28fd74d4fc3a34b77" Left="[float]51" TabIndex="[int]0" Top="[float]67" Value="{DataItemBinding Id=3b6ad6944c254e589fc88a3069f9e30a}" Width="[float]138" xmlns="http://www.ni.com/PanelCommon">
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="b24586f1adb3495abca8507e4e8f8437" Interval="[uint]1" Label="[UIModel]a16173079a964a7ab4e462a0e230a662" Left="[float]16" TabIndex="[int]0" Top="[float]37" Value="{ClusterBinding FieldName=Baud\ Rate}" ValueFormatter="[string]LV:0" ValueType="[Type]UInt32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="a16173079a964a7ab4e462a0e230a662" LabelOwner="[UIModel]b24586f1adb3495abca8507e4e8f8437" Left="[float]16" Text="[string]Baud Rate" Top="[float]17" Width="[float]54" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="15e0391c8ff0447ea653b5b6bde8983d" Interval="[ushort]1" Label="[UIModel]9fb490e52e624fd790cf02ed00d2bd64" Left="[float]16" TabIndex="[int]1" Top="[float]93" Value="{ClusterBinding FieldName=Data\ Bits}" ValueFormatter="[string]LV:0" ValueType="[Type]UInt16" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="9fb490e52e624fd790cf02ed00d2bd64" LabelOwner="[UIModel]15e0391c8ff0447ea653b5b6bde8983d" Left="[float]16" Text="[string]Data Bits" Top="[float]73" Width="[float]47" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="8078f90928f946ebb80fdd3144694482" Interval="[ushort]1" Label="[UIModel]ad5f1880e6ea402c989f2671b870598d" Left="[float]16" TabIndex="[int]2" Top="[float]146" Value="{ClusterBinding FieldName=Parity}" ValueFormatter="[string]LV:0" ValueType="[Type]UInt16" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="ad5f1880e6ea402c989f2671b870598d" LabelOwner="[UIModel]8078f90928f946ebb80fdd3144694482" Left="[float]16" Text="[string]Parity" Top="[float]126" Width="[float]30" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="9f3c148134ff412f864e312a589fe1ab" Interval="[ushort]1" Label="[UIModel]30f27582a4f24dc09a9e934489c262cc" Left="[float]15" TabIndex="[int]3" Top="[float]259" Value="{ClusterBinding FieldName=Data\ Flow}" ValueFormatter="[string]LV:0" ValueType="[Type]UInt16" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="30f27582a4f24dc09a9e934489c262cc" LabelOwner="[UIModel]9f3c148134ff412f864e312a589fe1ab" Left="[float]15" Text="[string]Data Flow" Top="[float]239" Width="[float]53" />
+						<RingSelector AllowNonSequentialValues="[bool]True" AllowUndefinedValueEntry="[bool]False" BaseName="[string]Text Ring" Height="[float]24" Id="dac00e883e27470b835cabec47b5600f" IsTypeAheadEnabled="[bool]True" Label="[UIModel]7b8d6937d7c74bf0afb50393978ad780" Left="[float]15" TabIndex="[int]4" Top="[float]200" Value="{ClusterBinding FieldName=Stop\ Bits}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<RingSelectorInfo DisplayValue="[string]1.0" DisplayValueOverride="[string]" IsEnabled="[bool]True" Value="[ushort]10" ValueType="[Type]UInt16" />
+							<RingSelectorInfo DisplayValue="[string]1.5" DisplayValueOverride="[string]" IsEnabled="[bool]True" Value="[ushort]15" ValueType="[Type]UInt16" />
+							<RingSelectorInfo DisplayValue="[string]2.0" DisplayValueOverride="[string]" IsEnabled="[bool]True" Value="[ushort]0" ValueType="[Type]UInt16" />
+						</RingSelector>
+						<Label Height="[float]16" Id="7b8d6937d7c74bf0afb50393978ad780" LabelOwner="[UIModel]dac00e883e27470b835cabec47b5600f" Left="[float]15" Text="[string]Stop Bits" Top="[float]180" Width="[float]47" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="a2a7b4465e3f4420aa86f5fbcd827a7b" Interval="[uint]1" Label="[UIModel]9bfb8021291f4fb0b0bc50fc4e0cb4ff" Left="[float]16" TabIndex="[int]5" Top="[float]311" UnitAnnotation="[string]ms" Value="{ClusterBinding FieldName=Establish\ Wait}" ValueFormatter="[string]LV:0" ValueType="[Type]UInt32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.InfoTipDescription xmlns="http://www.ni.com/PlatformFramework">"Some serial devices need time after establishing a serial connection to stabilise before sending them commands, e.g. Arduino.  "</p.InfoTipDescription>
+						</NumericText>
+						<Label Height="[float]16" Id="9bfb8021291f4fb0b0bc50fc4e0cb4ff" LabelOwner="[UIModel]a2a7b4465e3f4420aa86f5fbcd827a7b" Left="[float]16" Text="[string]Establish Wait" Top="[float]291" Width="[float]74" />
+					</Cluster>
+					<Label Height="[float]16" Id="fbadfff662c647a28fd74d4fc3a34b77" LabelOwner="[UIModel]9eb943e9899841bebee2a9f33630c5b6" Left="[float]51" Text="[string]Serial Port Attributes" Top="[float]47" Width="[float]109" xmlns="http://www.ni.com/PanelCommon" />
+					<Text BaseName="[string]Text" Height="[float]32" Id="da9190f6616e4b3495f202af10843af2" Left="[float]234" Text="[string]Stop Bits is a Ring Constant because that seems to be&#xD;&#xA;what is used by the NI Visa Serial configuration member" TextWrapping="[TextWrapping]Wrap" Top="[float]273" Width="[float]297" xmlns="http://www.ni.com/PlatformFramework" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="11cd8568929242bf95e29e645b106eb8">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Baud Rate" DataType="UInt32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Data Bits" DataType="UInt16" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Parity" DataType="UInt16" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Data Flow" DataType="UInt16" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Stop Bits" DataType="UInt16" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Establish Wait" DataType="UInt32" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>
