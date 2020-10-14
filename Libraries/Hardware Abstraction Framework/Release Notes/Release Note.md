@@ -2,11 +2,26 @@
 
 Hardware Abstraction Framework releases
 
+[V1.3.0](#v1.3.0)    14th October 2020
+
 [V1.2.0](#v1.2.0)    3rd September 2020
 
 [V1.1.0](#v1.1.0)    24th August 2020
 
 [V1.0.1](#v1.0.1)    Older
+
+## V1.3.0
+Extended the functionality of the framework to handle Serial connected devices and provide a more complex example showing iteratively stepping a voltage.
+
+* Updated the Voltage Executable to take an increment value.  After processing the Executable, the VI 'Post-Exec Callout' increments the Volts value by the Increment value.  This is best used with an Executable Director that runs multiple times, e.g. Repeating Director.  The default value for Increment is 0 (zero) so no increment is applied.
+* Created an example to show Stepping Voltage to demonstrate the increment change. 
+* Refactored the examples to order them by complexity, with the simplest first.
+* Created a new class Serial Driver to encapsulate functionality for interacting with an instrument connected over a COM port.  Basically, this just ensures that the Driver is initialised in the correct manner and allows the provision of specific values for driving the Serial connection.
+* Created a new data type Serial Port Attributes that is used to configure a serial connection, e.g. Baud rate.  It can be used as-is with reasonable defaults but can be changed as necessary.
+* Created an implementation of an Arduino Uno R3 Driver to make use of the Serial Driver.
+* Updated the Instrument Identification example to show a sample Arduino sketch that can be used with the Arduino Driver to return an Identity.
+* Updated the ReadME to reflect changes to the framework.
+* Fixed a bug with Repeating Director not repeating executions the correct number of times.
 
 ## V1.2.0
 Extended the functionality of the framework to provide a Voltage generate executable.  This also required the provision of an Instrument exectuable and an Output executable which are used to control generation output channels and channel on/off switching.
