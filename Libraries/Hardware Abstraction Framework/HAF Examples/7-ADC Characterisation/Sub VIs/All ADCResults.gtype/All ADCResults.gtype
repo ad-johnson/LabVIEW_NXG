@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="A5BF3D7C6FCE76410CA6E0AF9911FC46C1BF7031625FAFD9FAEFB73BB5285B5121694D8A453498BECECCEF2129AB32561CEF4FC9C6204785EF8E292A5D7EE836" Timestamp="1D77B3257D152E2" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@0214cbee6927471497c0061733812b1e" Id="c232ade1008748569318cbbed4e74f0c" xmlns="http://www.ni.com/MocCommon">
+		<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+			<TypeDefinitionTarget TargetName="ADCResult.gtype" />
+		</p.TypeDefinitionTargets>
+		<Icon Id="4fca9f23389446fbb492f837f44b5cef" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="5e4022b9b91249eaa303693ec0be8add" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="83d0f3830b4c4a9eaf37afa1e5987204" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@0214cbee6927471497c0061733812b1e" Id="2d7c5ac4540d49a8bb2a7360ded8baca" Name="All ADC Results">
+			<p.DefaultValue>null</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="ADCResult.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="bd3f7f69c932405cb6205fb6fa9e272a" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="c915a64027bf4e0d866a3f47cf9fff25" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="8202d2524ab844e79b76efdda138fb0d" Name="All ADCResults.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="5dfc8b36a4fa489d978573ff1ca64181" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="45dbe1e19958416f8b389022b7d01b7a" xmlns="http://www.ni.com/MocCommon">
+					<ArrayViewer ArrayElement="[UIModel]1db4ec7d9cd043569b29fc4d93449aa1" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]234" Id="2f125af90f124b3fb074f2d50d6daff5" IndexVisibility="[Visibility]Visible" IsFixedSize="[bool]False" Label="[UIModel]745f54c523b47b9ae6a928ac89910e3" Left="[float]40" Orientation="[SMOrientation]Horizontal" Rows="[int]1" TabIndex="[int]0" Top="[float]42" Value="{DataItemBinding Id=2d7c5ac4540d49a8bb2a7360ded8baca}" Width="[float]297" xmlns="http://www.ni.com/PanelCommon">
+						<p.DefaultElementValue>0x0_0x0_0x0_0x0_60052752000;0;Utc_0x0_</p.DefaultElementValue>
+						<Cluster BaseName="[string]ADC Result" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@5cf029fb43814b268d8f917656d7c020" Height="[float]222" Id="1db4ec7d9cd043569b29fc4d93449aa1" Label="[UIModel]a0c8cd1ab34e4bda86e2ed8616ccc44f" TabIndex="[int]0" Width="[float]230" p7:ControlDefinitionChecksum="zOLknlJL41YI6IkZpVw0TNhci4P9MSqt7NeCrqdbVW0=" xmlns:p7="http://www.ni.com/PanelCommon">
+							<p7:p.TypeDefinitionTargets>
+								<p7:TypeDefinitionTarget TargetName="ADCResult.gtype::ControlDefinition" />
+							</p7:p.TypeDefinitionTargets>
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="fa7a2260162f447c8e6c646e430e18f4" Interval="[double]0.001" Label="[UIModel]541465bac4134d85b8e4645046d22a7e" Left="[float]3" Maximum="[double]2.5" Minimum="[double]0" TabIndex="[int]0" Top="[float]21" Value="{ClusterBinding FieldName=PSU\ Output\ Volts}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<p7:Label Height="[float]16" Id="541465bac4134d85b8e4645046d22a7e" LabelOwner="[UIModel]fa7a2260162f447c8e6c646e430e18f4" Left="[float]3" Text="[string]PSU Output Volts" Top="[float]1" Width="[float]92" />
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="9f5b3fef870e483d85a31118653b3ff3" Interval="[double]0.001" Label="[UIModel]be687def4b5540e499e663b2622d8510" Left="[float]4" TabIndex="[int]1" Top="[float]72" Value="{ClusterBinding FieldName=ADC\ Read\ Volts}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<p7:Label Height="[float]16" Id="be687def4b5540e499e663b2622d8510" LabelOwner="[UIModel]9f5b3fef870e483d85a31118653b3ff3" Left="[float]4" Text="[string]ADC Read Volts" Top="[float]52" Width="[float]82" />
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="4fc3adf9d884474590d96541177ffec9" Label="[UIModel]6fd620f43a9d48a3aff4da46cb668595" Left="[float]106" TabIndex="[int]2" Top="[float]72" Value="{ClusterBinding FieldName=DMM\ Measured\ Volts}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<p7:Label Height="[float]16" Id="6fd620f43a9d48a3aff4da46cb668595" LabelOwner="[UIModel]4fc3adf9d884474590d96541177ffec9" Left="[float]106" Text="[string]DMM Measured Volts" Top="[float]52" Width="[float]115" />
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="cb8461ee92c4f80bd5bb4482be5d5f3" Label="[UIModel]998847fbebfa42829bec34a54d400456" Left="[float]6" TabIndex="[int]3" Top="[float]118" Value="{ClusterBinding FieldName=Difference}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<p7:Label Height="[float]16" Id="998847fbebfa42829bec34a54d400456" LabelOwner="[UIModel]cb8461ee92c4f80bd5bb4482be5d5f3" Left="[float]6" Text="[string]Difference" Top="[float]98" Width="[float]54" />
+							<TimeStampTextBox BaseName="[string]Timestamp" Height="[float]24" Id="eae8d9f14b6944e1aba030897e802f7c" Label="[UIModel]20bf04f678e54b3fa030d2100a35d120" Left="[float]6" Maximum="[PrecisionDateTime]3001-01-01T00:00:00.0" Minimum="[PrecisionDateTime]1600-01-01T00:00:00.0" TabIndex="[int]4" Top="[float]164" Value="{ClusterBinding FieldName=Timestamp}" Width="[float]216" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<p7:Label Height="[float]16" Id="20bf04f678e54b3fa030d2100a35d120" LabelOwner="[UIModel]eae8d9f14b6944e1aba030897e802f7c" Left="[float]6" Text="[string]Timestamp" Top="[float]144" Width="[float]59" />
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="a41af00b63c4a0a890288ea01819471" Label="[UIModel]3536a1fa198f446bb6d844b41684b911" Left="[float]106" TabIndex="[int]5" Top="[float]120" Value="{ClusterBinding FieldName=LSBs}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<p7:Label Height="[float]16" Id="3536a1fa198f446bb6d844b41684b911" LabelOwner="[UIModel]a41af00b63c4a0a890288ea01819471" Left="[float]106" Text="[string]LSBs" Top="[float]100" Width="[float]24" />
+							<p7:Label Height="[float]16" Id="a0c8cd1ab34e4bda86e2ed8616ccc44f" IsVisualChild="[bool]False" LabelOwner="[UIModel]1db4ec7d9cd043569b29fc4d93449aa1" Left="[float]61" Text="[string]ADC Result" Top="[float]-14" Width="[float]59" />
+						</Cluster>
+					</ArrayViewer>
+					<Label Height="[float]16" Id="745f54c523b47b9ae6a928ac89910e3" LabelOwner="[UIModel]2f125af90f124b3fb074f2d50d6daff5" Left="[float]40" Text="[string]All ADC Results" Top="[float]22" Width="[float]81" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="0214cbee6927471497c0061733812b1e">
+			<VariableArray DereferenceType="@5cf029fb43814b268d8f917656d7c020" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="5cf029fb43814b268d8f917656d7c020">
+			<Typedef TypedefName="ADCResult.gtype" UnderlyingType="@e060ca0d36054008bd4e6b099eab4895" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="e060ca0d36054008bd4e6b099eab4895">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="PSU Output Volts" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="ADC Read Volts" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="DMM Measured Volts" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Difference" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Timestamp" DataType="Timestamp" />
+					<Field FieldAccessPolicy="ReadWrite" Name="LSBs" DataType="Double" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>
