@@ -2,6 +2,8 @@
 
 Hardware Abstraction Framework releases
 
+[V1.4.0](#v1.4.0)    17th July 2021
+
 [V1.3.0](#v1.3.0)    14th October 2020
 
 [V1.2.0](#v1.2.0)    3rd September 2020
@@ -9,6 +11,13 @@ Hardware Abstraction Framework releases
 [V1.1.0](#v1.1.0)    24th August 2020
 
 [V1.0.1](#v1.0.1)    Older
+
+## V1.4.0
+Minor bug fixes and added an Arduino Mega 2560 device
+
+* Timestamp (used in Parameters) now parses days and months correctly
+* Possible to use an Arduino Mega 2560 as a serial connected device
+* Added a new example using the DMM6500 and something called an Instrument Control Board (a serially connected device that interfaces to an Arduino created and built by the framework author.)  Whilst you won't have such a device, the example shows how these two devices can cooperate to create a chart and allow the export of correlated Voltage readings against DAC output (from the ICB.)
 
 ## V1.3.0
 Extended the functionality of the framework to handle Serial connected devices and provide a more complex example showing iteratively stepping a voltage.
