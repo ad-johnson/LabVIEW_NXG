@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="7EB88A13569FFBB55E0C7503FD612AED1F555514518EA9831111A9EB706586CC43576AB8F79E2EC13511066AB190595752B76160E4B0CB08450F770872412B08" Timestamp="1D77D8B108AB22D" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="F878F336BDA682A5CAB9BCA9036FD5774EBEC4E422F46D032E87C308659D0FC3A8FE79202ECA1657FAFBC2030553499FB276B57B5EE48FA4675E7AFC5D2F5E11" Timestamp="1D77EF5C39BD94B" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
@@ -43,8 +43,8 @@
 				</CaseStructure.Case>
 				<CaseStructure.Case Bounds="5 5 1268 500" Id="c2f15d5c93d0400fae6135baccdccfcc" Pattern="No Error">
 					<InitializeArray Bounds="485 50 40 30" Id="cec729049b6f44b1af6fd0cf0ec035fe" Terminals="element=6e22cdcfee16477fa18bb113ef5236ae, outArray=75c0b202d72a4bbfa715dc946a417f08, c0t0v=ca2a921c100242a1b5cf9c4c8a420a01" />
-					<Literal Bounds="10 50 440 15" DataType="String" Id="3f743da969f0467da0f16e31db9f183f" xmlns="http://www.ni.com/MocCommon">
-						<p.Data>Timestamp, Expected Voltage, DMM Voltage, ADC Voltage, Difference, LSBs</p.Data>
+					<Literal Bounds="5 50 445 15" DataType="String" Id="3f743da969f0467da0f16e31db9f183f" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>Timestamp, Requested Voltage, DMM Voltage, ADC Voltage, Difference, LSBs</p.Data>
 						<StringBehavior TextDisplayMode="Default" />
 					</Literal>
 					<Wire Id="6e22cdcfee16477fa18bb113ef5236ae" Joints="N(3f743da969f0467da0f16e31db9f183f:Out)|(450,55) N(cec729049b6f44b1af6fd0cf0ec035fe:element)|(485,55)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -61,12 +61,12 @@
 						<InsertIntoArray Bounds="485 50 40 40" Id="a930b3c95bdf43cda377d03706d23df5" Terminals="inArray=c02c31fc745d4facb154a59b115c737a, outArray=d0ae03f44d3640f59ddecf14bb168bf7, index0, c0t0v=66164bc5f83e44119055d73fb08598ad" />
 						<Wire Id="d0ae03f44d3640f59ddecf14bb168bf7" Joints="N(a930b3c95bdf43cda377d03706d23df5:outArray)|(525,55) N(e65b2f83368e426597b64d880da87cc3:8cd349de86354d21ad5118045c82ff36)|(549,55)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="c02c31fc745d4facb154a59b115c737a" Joints="N(29afd57f23fe4d729e76547b19b8aaa6:i0)|(6,55) N(a930b3c95bdf43cda377d03706d23df5:inArray)|(485,55)" xmlns="http://www.ni.com/PlatformFramework" />
-						<PropertyNode Bounds="25 165 149 110" HasErrorTerminals="False" Id="c6ed134be3644b4fb5779cc76a1db022" InstanceDataType="@04b03d1724b9464bb729ac41dd79ede1" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
+						<PropertyNode Bounds="25 165 149 110" HasErrorTerminals="False" Id="c6ed134be3644b4fb5779cc76a1db022" InstanceDataType="@fc04b856da464eee8f5a77543e747cbb" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
 							<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 								<TypeDefinitionTarget TargetName="ADCResult.gtype" />
 							</p.TypeDefinitionTargets>
 							<PropertyItemTerminal DataType="Timestamp" Hotspot="149 15" Id="c0t0v" Path="Timestamp" PathElementMemberKinds="Field" Usage="Optional" />
-							<PropertyItemTerminal DataType="Single" Hotspot="149 30" Id="c1t0v" Path="PSU Output Volts" PathElementMemberKinds="Field" Usage="Optional" />
+							<PropertyItemTerminal DataType="Single" Hotspot="149 30" Id="c1t0v" Path="PSU Requested Volts" PathElementMemberKinds="Field" Usage="Optional" />
 							<PropertyItemTerminal DataType="Double" Hotspot="149 45" Id="c2t0v" Path="DMM Measured Volts" PathElementMemberKinds="Field" Usage="Optional" />
 							<PropertyItemTerminal DataType="Double" Hotspot="149 60" Id="c3t0v" Path="ADC Read Volts" PathElementMemberKinds="Field" Usage="Optional" />
 							<PropertyItemTerminal DataType="Double" Hotspot="149 75" Id="c4t0v" Path="Difference" PathElementMemberKinds="Field" Usage="Optional" />
@@ -147,7 +147,7 @@
 						<LeftShiftRegister Bounds="-5 52 13 10" Docking="Left" Id="29afd57f23fe4d729e76547b19b8aaa6" RightRegister="e65b2f83368e426597b64d880da87cc3" Terminals="o0=75c0b202d72a4bbfa715dc946a417f08, i0=c02c31fc745d4facb154a59b115c737a" />
 					</ForLoop>
 					<DataAccessor Bounds="485 225 40 15" DataItem="28eff9d46df24aa49cf4d6ff8958127f" Id="2ef2483b9df345149753d34d4512a7f6" Label="fadd239d0dae44a1b696c61bab2caa68" xmlns="http://www.ni.com/MocCommon">
-						<Terminal DataType="@9ecdb488cb964f598e93bbfde9f129be" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="@60c8a656638647aaa0b2e1aa531bd9e2" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 					</DataAccessor>
 					<NodeLabel AttachedTo="2ef2483b9df345149753d34d4512a7f6" Bounds="395 225 85 14" Id="fadd239d0dae44a1b696c61bab2caa68" xmlns="http://www.ni.com/PlatformFramework">
 						<p.Text>All ADC Results</p.Text>
@@ -188,22 +188,22 @@
 				<p4:p.TypeDefinitionTargets>
 					<p4:TypeDefinitionTarget TargetName="All ADCResults.gtype::ControlDefinition" />
 				</p4:p.TypeDefinitionTargets>
-				<p4:Cluster BaseName="[string]ADC Result" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@04b03d1724b9464bb729ac41dd79ede1" Height="[float]222" Id="89e4831b89ee4aa694963d5689d29709" IsTabStop="[bool]True" Label="[UIModel]e7445eaf4fcb497b893f9a0db011b4a2" LabelLinked="[bool]True" TabIndex="[int]0" Width="[float]230" p4:ControlDefinitionChecksum="Tx39we6AfAuHwYaHp+MOqnecVl6SOaduZNd/gQvjFqs=">
+				<p4:Cluster BaseName="[string]ADC Result" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@fc04b856da464eee8f5a77543e747cbb" Height="[float]222" Id="89e4831b89ee4aa694963d5689d29709" IsTabStop="[bool]True" Label="[UIModel]e7445eaf4fcb497b893f9a0db011b4a2" LabelLinked="[bool]True" TabIndex="[int]0" Width="[float]230" p4:ControlDefinitionChecksum="HSoOtYaHuizi69PfRPywDZRcIP4uvl+7YbTlzD6R4mQ=">
 					<p4:p.TypeDefinitionTargets>
 						<p4:TypeDefinitionTarget TargetName="ADCResult.gtype::ControlDefinition" />
 					</p4:p.TypeDefinitionTargets>
-					<NumericText BaseName="[string]Numeric" Height="[float]24" Id="567678fe317a4676840e83a8eb8b1e74" Interval="[float]0.001" IsReadOnly="[bool]False" Label="[UIModel]7ef71fe4760746c49ba0712a7ce98bf8" Left="[float]3" Maximum="[float]2.5" Minimum="[float]0" TabIndex="[int]0" Top="[float]21" Value="{ClusterBinding FieldName=PSU\ Output\ Volts}" ValueFormatter="[string]LV:G6" ValueType="[Type]Single" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-					<p4:Label Height="[float]16" Id="7ef71fe4760746c49ba0712a7ce98bf8" LabelOwner="[UIModel]567678fe317a4676840e83a8eb8b1e74" Left="[float]3" Text="[string]PSU Output Volts" Top="[float]1" Width="[float]92" />
-					<NumericText BaseName="[string]Numeric" Height="[float]24" Id="27b2015479e94612b42976c9e9686da6" Interval="[double]0.001" IsReadOnly="[bool]False" Label="[UIModel]ed17c1e6daab4325994d7b54d6901b52" Left="[float]4" TabIndex="[int]1" Top="[float]72" Value="{ClusterBinding FieldName=ADC\ Read\ Volts}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-					<p4:Label Height="[float]16" Id="ed17c1e6daab4325994d7b54d6901b52" LabelOwner="[UIModel]27b2015479e94612b42976c9e9686da6" Left="[float]4" Text="[string]ADC Read Volts" Top="[float]52" Width="[float]82" />
-					<NumericText BaseName="[string]Numeric" Height="[float]24" Id="6c1314af4c649428a3da3bc614ba50f" IsReadOnly="[bool]False" Label="[UIModel]93d87fe99a5942528fbe5624b53009b4" Left="[float]106" TabIndex="[int]2" Top="[float]72" Value="{ClusterBinding FieldName=DMM\ Measured\ Volts}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-					<p4:Label Height="[float]16" Id="93d87fe99a5942528fbe5624b53009b4" LabelOwner="[UIModel]6c1314af4c649428a3da3bc614ba50f" Left="[float]106" Text="[string]DMM Measured Volts" Top="[float]52" Width="[float]115" />
-					<NumericText BaseName="[string]Numeric" Height="[float]24" Id="333e81752bfd4e67afb28518a911f4d9" IsReadOnly="[bool]False" Label="[UIModel]a632a4470ed6449d8b6d45d361cb77e2" Left="[float]6" TabIndex="[int]3" Top="[float]118" Value="{ClusterBinding FieldName=Difference}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-					<p4:Label Height="[float]16" Id="a632a4470ed6449d8b6d45d361cb77e2" LabelOwner="[UIModel]333e81752bfd4e67afb28518a911f4d9" Left="[float]6" Text="[string]Difference" Top="[float]98" Width="[float]54" />
-					<TimeStampTextBox BaseName="[string]Timestamp" Height="[float]24" Id="d586bc027ebb4021b3325bd0af19a71c" InteractionMode="[TimeStampTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput, CalendarButton" Label="[UIModel]355128f74b9d4bb0aaa395a5b19b420e" Left="[float]6" Maximum="[PrecisionDateTime]3001-01-01T00:00:00.0" Minimum="[PrecisionDateTime]1600-01-01T00:00:00.0" TabIndex="[int]4" Top="[float]164" Value="{ClusterBinding FieldName=Timestamp}" Width="[float]216" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-					<p4:Label Height="[float]16" Id="355128f74b9d4bb0aaa395a5b19b420e" LabelOwner="[UIModel]d586bc027ebb4021b3325bd0af19a71c" Left="[float]6" Text="[string]Timestamp" Top="[float]144" Width="[float]59" />
-					<NumericText BaseName="[string]Numeric" Height="[float]24" Id="e61c2425aeff4682b54babea320141cd" IsReadOnly="[bool]False" Label="[UIModel]9b781a3e263d4789af404b86ed3fa173" Left="[float]106" TabIndex="[int]5" Top="[float]120" Value="{ClusterBinding FieldName=LSBs}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-					<p4:Label Height="[float]16" Id="9b781a3e263d4789af404b86ed3fa173" LabelOwner="[UIModel]e61c2425aeff4682b54babea320141cd" Left="[float]106" Text="[string]LSBs" Top="[float]100" Width="[float]24" />
+					<NumericText BaseName="[string]Numeric" Height="[float]24" Id="7e7783742a60425e9966e544e3404766" Interval="[float]0.001" Label="[UIModel]94a54a20e2854aa2976399b447c2702a" Left="[float]3" Maximum="[float]2.5" Minimum="[float]0" TabIndex="[int]0" Top="[float]21" Value="{ClusterBinding FieldName=PSU\ Requested\ Volts}" ValueFormatter="[string]LV:G6" ValueType="[Type]Single" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<p4:Label Height="[float]16" Id="94a54a20e2854aa2976399b447c2702a" LabelOwner="[UIModel]7e7783742a60425e9966e544e3404766" Left="[float]3" Text="[string]PSU Requested Volts" Top="[float]1" Width="[float]110" />
+					<NumericText BaseName="[string]Numeric" Height="[float]24" Id="d5bdf03b524447d486e096ad9e432d70" Interval="[double]0.001" Label="[UIModel]fd4b8e1a8991496ca2cc336088ac6701" Left="[float]4" TabIndex="[int]1" Top="[float]72" Value="{ClusterBinding FieldName=ADC\ Read\ Volts}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<p4:Label Height="[float]16" Id="fd4b8e1a8991496ca2cc336088ac6701" LabelOwner="[UIModel]d5bdf03b524447d486e096ad9e432d70" Left="[float]4" Text="[string]ADC Read Volts" Top="[float]52" Width="[float]82" />
+					<NumericText BaseName="[string]Numeric" Height="[float]24" Id="2c8478876e944181ae42b12009f22b0e" Label="[UIModel]2e66fc9d585a4607ab03220700ec1d23" Left="[float]106" TabIndex="[int]2" Top="[float]72" Value="{ClusterBinding FieldName=DMM\ Measured\ Volts}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<p4:Label Height="[float]16" Id="2e66fc9d585a4607ab03220700ec1d23" LabelOwner="[UIModel]2c8478876e944181ae42b12009f22b0e" Left="[float]106" Text="[string]DMM Measured Volts" Top="[float]52" Width="[float]115" />
+					<NumericText BaseName="[string]Numeric" Height="[float]24" Id="bb027a38f1b1480193114e004b7b4e3d" Label="[UIModel]359bda9960704a7cbc85cfc28c6df2ee" Left="[float]6" TabIndex="[int]3" Top="[float]118" Value="{ClusterBinding FieldName=Difference}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<p4:Label Height="[float]16" Id="359bda9960704a7cbc85cfc28c6df2ee" LabelOwner="[UIModel]bb027a38f1b1480193114e004b7b4e3d" Left="[float]6" Text="[string]Difference" Top="[float]98" Width="[float]54" />
+					<TimeStampTextBox BaseName="[string]Timestamp" Height="[float]24" Id="fc004f09784bc59c8a6d07d452f176" Label="[UIModel]68cbb0b1185f4aecb6a7385ed87c6dd2" Left="[float]6" Maximum="[PrecisionDateTime]3001-01-01T00:00:00.0" Minimum="[PrecisionDateTime]1600-01-01T00:00:00.0" TabIndex="[int]4" Top="[float]164" Value="{ClusterBinding FieldName=Timestamp}" Width="[float]216" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<p4:Label Height="[float]16" Id="68cbb0b1185f4aecb6a7385ed87c6dd2" LabelOwner="[UIModel]fc004f09784bc59c8a6d07d452f176" Left="[float]6" Text="[string]Timestamp" Top="[float]144" Width="[float]59" />
+					<NumericText BaseName="[string]Numeric" Height="[float]24" Id="7218d4d56cc64cf181e59bfa69ea7982" Label="[UIModel]2521f549f884a789f1b09e32e5bee4c" Left="[float]106" TabIndex="[int]5" Top="[float]120" Value="{ClusterBinding FieldName=LSBs}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<p4:Label Height="[float]16" Id="2521f549f884a789f1b09e32e5bee4c" LabelOwner="[UIModel]7218d4d56cc64cf181e59bfa69ea7982" Left="[float]106" Text="[string]LSBs" Top="[float]100" Width="[float]24" />
 					<p4:Label Height="[float]16" Id="e7445eaf4fcb497b893f9a0db011b4a2" IsVisualChild="[bool]False" LabelOwner="[UIModel]89e4831b89ee4aa694963d5689d29709" Left="[float]61" Text="[string]ADC Result" Top="[float]-14" Width="[float]59" />
 				</p4:Cluster>
 			</ArrayViewer>
@@ -240,7 +240,7 @@
 			<Label Foreground="[SMColor]#ff2b3033" Height="[float]16" Id="c5fc60655cf04a1c8326977f76b199a9" LabelOwner="[UIModel]2266ff236c61423b9533d124c3445e52" Left="[float]500" Text="[string]Error Out" Top="[float]384" Width="[float]49" xmlns="http://www.ni.com/PanelCommon" />
 			<Label Foreground="[SMColor]#ff2b3033" Height="[float]16" Id="26a70596d77a41189f6cfaa173ab976f" LabelOwner="[UIModel]5fabc676ac894644a80cddbcaa68f81f" Left="[float]500" Text="[string]ResultsAsStrings" Top="[float]64" Width="[float]86" xmlns="http://www.ni.com/PanelCommon" />
 		</NativeFrontPanel>
-		<DataItem CallDirection="Input" CallIndex="0" DataType="@9ecdb488cb964f598e93bbfde9f129be" Id="28eff9d46df24aa49cf4d6ff8958127f" Name="All ADC Results" xmlns="http://www.ni.com/MocCommon">
+		<DataItem CallDirection="Input" CallIndex="0" DataType="@60c8a656638647aaa0b2e1aa531bd9e2" Id="28eff9d46df24aa49cf4d6ff8958127f" Name="All ADC Results" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>null</p.DefaultValue>
 			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 				<TypeDefinitionTarget TargetName="All ADCResults.gtype" />
@@ -275,16 +275,16 @@
 		</DataItem>
 	</VirtualInstrument>
 	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
-		<p.TypeReference TypeId="04b03d1724b9464bb729ac41dd79ede1">
-			<Typedef TypedefName="ADCResult.gtype" UnderlyingType="@5845f35d7667455eb0eae8ddd4f6a580" />
+		<p.TypeReference TypeId="fc04b856da464eee8f5a77543e747cbb">
+			<Typedef TypedefName="ADCResult.gtype" UnderlyingType="@93ee3a06afc247149fd52eb2a9a4e83a" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="9ecdb488cb964f598e93bbfde9f129be">
-			<Typedef TypedefName="All ADCResults.gtype" UnderlyingType="@4ebbfd8a7dc844adb5dcfe99938e46f8" />
+		<p.TypeReference TypeId="60c8a656638647aaa0b2e1aa531bd9e2">
+			<Typedef TypedefName="All ADCResults.gtype" UnderlyingType="@0e9218b4c9c8449b87bb6c1506fad616" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="5845f35d7667455eb0eae8ddd4f6a580">
+		<p.TypeReference TypeId="93ee3a06afc247149fd52eb2a9a4e83a">
 			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
 				<Members>
-					<Field FieldAccessPolicy="ReadWrite" Name="PSU Output Volts" DataType="Single" />
+					<Field FieldAccessPolicy="ReadWrite" Name="PSU Requested Volts" DataType="Single" />
 					<Field FieldAccessPolicy="ReadWrite" Name="ADC Read Volts" DataType="Double" />
 					<Field FieldAccessPolicy="ReadWrite" Name="DMM Measured Volts" DataType="Double" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Difference" DataType="Double" />
@@ -293,8 +293,8 @@
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="4ebbfd8a7dc844adb5dcfe99938e46f8">
-			<VariableArray DereferenceType="@04b03d1724b9464bb729ac41dd79ede1" />
+		<p.TypeReference TypeId="0e9218b4c9c8449b87bb6c1506fad616">
+			<VariableArray DereferenceType="@fc04b856da464eee8f5a77543e747cbb" />
 		</p.TypeReference>
 	</DataTypeReferenceTable>
 </SourceFile>
