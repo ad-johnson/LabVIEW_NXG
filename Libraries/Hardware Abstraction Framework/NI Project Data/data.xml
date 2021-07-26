@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="3ECD4B6F1C31952500447334C3F13BD1D654CB7432D76EE849450EBB8E79BBEFA75FAFBD9D4937F77D3478C62E313A5C5557931FE7D6FCE640ECA150B05C2CB1" Timestamp="1D777FE982D75CD" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="CF57E7682D20D4E86F2E4864F5772B2881A5B6A1627337FDB17A4E000346C0D998FC8051066FF3BEE2E1F38901920EB4EA4331B780A8348A8EFBE9FE25CAB009" Timestamp="1D7814C7E6FEFDA" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Data" Name="http://www.ni.com/Data" OldestCompatibleVersion="6.2.0.0" Version="6.2.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
@@ -27,6 +27,15 @@
 					</EmbeddedDefinitionReference>
 				</EmbeddedDefinitionReference>
 			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Id="be1fb7acccbd4a6d8cc88bb87751fef2" ModelDefinitionType="TDMSRootDefinition" Name="TDMS_Root">
+				<TDMSRootDefinition StoragePath="Data-2021-07-25 115916 633.tdms" xmlns="http://www.ni.com/Data" />
+				<EmbeddedDefinitionReference Id="8bfc7eade47e491b8b602dde1e80cf2e" ModelDefinitionType="TDMSGroupDefinition" Name="TDMS_GROUP_3">
+					<TDMSGroupDefinition GroupName="Capture 3" Source="ADC Characterisation.gvi" SourceType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Timestamp="07/25/2021 11:59:16" xmlns="http://www.ni.com/Data" />
+					<EmbeddedDefinitionReference Id="da2c771e6c6048e78c986605f50232bb" ModelDefinitionType="TDMSDataItemDefinition" Name="All ADC Results">
+						<TDMSDataItemDefinition DataName="All ADC Results" DataType="@311e619f282a482dac787335d46082c4" xmlns="http://www.ni.com/Data" />
+					</EmbeddedDefinitionReference>
+				</EmbeddedDefinitionReference>
+			</EmbeddedDefinitionReference>
 		</NameScopingEnvoy>
 	</EnvoyManagerFile>
 	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
@@ -35,6 +44,9 @@
 		</p.TypeReference>
 		<p.TypeReference TypeId="74aefed555ab44819f4e9927284c9dff">
 			<VariableArray DereferenceType="@d303f3f171e947f9a0176346cfe4c837" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="311e619f282a482dac787335d46082c4">
+			<VariableArray DereferenceType="@93ee3a06afc247149fd52eb2a9a4e83a" />
 		</p.TypeReference>
 		<p.TypeReference TypeId="1ee3d35b00434c72abaf4ad33e1e6c1a">
 			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
@@ -52,6 +64,18 @@
 					<Field FieldAccessPolicy="ReadWrite" Name="Timestamp" DataType="Timestamp" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Voltage" DataType="Double" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Nominal" DataType="Double" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="93ee3a06afc247149fd52eb2a9a4e83a">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="PSU Requested Volts" DataType="Single" />
+					<Field FieldAccessPolicy="ReadWrite" Name="ADC Read Volts" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="DMM Measured Volts" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Difference" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Timestamp" DataType="Timestamp" />
+					<Field FieldAccessPolicy="ReadWrite" Name="LSBs" DataType="Double" />
 				</Members>
 			</Composite>
 		</p.TypeReference>
