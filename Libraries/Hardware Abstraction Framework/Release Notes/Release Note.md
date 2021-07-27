@@ -2,6 +2,8 @@
 
 Hardware Abstraction Framework releases
 
+[V1.4.1](#v1.4.1)    27th July 2021
+
 [V1.4.0](#v1.4.0)    17th July 2021
 
 [V1.3.0](#v1.3.0)    14th October 2020
@@ -11,6 +13,9 @@ Hardware Abstraction Framework releases
 [V1.1.0](#v1.1.0)    24th August 2020
 
 [V1.0.1](#v1.0.1)    Older
+
+## V1.4.1
+Minor bug fixes and added an example for running an ADC on the Instrument Control Board.
 
 ## V1.4.0
 Minor bug fixes and added an Arduino Mega 2560 device
